@@ -17,7 +17,7 @@ public class Compiler {
 
     public static void main(String[] args) {
         // Set the source and output directories
-        String sourceDirectory = "generatedCode"; // Update this path
+        String sourceDirectory = "generatedCode/codestral"; // Update this path
         String outputDirectory = "out"; // Update this path
 
         try {
@@ -72,7 +72,8 @@ public class Compiler {
             fileOptions.add("-d");
             fileOptions.add(outputPath.toString());
 
-            JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, diagnostics, fileOptions, null, compilationUnits);
+            JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, diagnostics,
+                    fileOptions, null, compilationUnits);
             boolean success = task.call();
 
             if (success) {
