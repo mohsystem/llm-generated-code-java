@@ -5,30 +5,29 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Task74_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static Connection getConnection() {
+    public static Connection createConnection() {
         String url = "jdbc:postgresql://localhost:5432/your_database";
         String user = "your_username";
         String password = "your_password";
-        
+
         try {
-            return DriverManager.getConnection(url, user, password);
+            Connection connection = DriverManager.getConnection(url, user, password);
+            System.out.println("Connection created successfully");
+            return connection;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error while connecting to PostgreSQL: " + e.getMessage());
             return null;
         }
     }
 
     public static void main(String[] args) {
-        Connection conn = getConnection();
-        if (conn != null) {
-            System.out.println("Connected to the database!");
+        Connection connection = createConnection();
+        if (connection != null) {
             try {
-                conn.close();
+                connection.close();
             } catch (SQLException e) {
-                e.printStackTrace();
+                System.out.println("Error while closing connection: " + e.getMessage());
             }
-        } else {
-            System.out.println("Failed to connect to the database.");
         }
     }
 }

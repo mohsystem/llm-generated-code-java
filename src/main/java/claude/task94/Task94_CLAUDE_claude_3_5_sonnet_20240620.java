@@ -1,27 +1,37 @@
 package claude.task94;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Task94_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
-        String fileName = "input.txt";
-        TreeMap<String, String> sortedMap = new TreeMap<>();
+        if (args.length != 1) {
+            System.out.println("Usage: java Task94_CLAUDE_claude_3_5_sonnet_20240620 <filename>");
+            return;
+        }
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        String filename = args[0];
+        Map<String, String> records = new TreeMap<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(":", 2);
                 if (parts.length == 2) {
-                    sortedMap.put(parts[0].trim(), parts[1].trim());
+                    records.put(parts[0].trim(), parts[1].trim());
+                } else {
+                    System.out.println("Warning: Skipping invalid line: " + line);
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error reading file: " + e.getMessage());
             return;
         }
 
-        for (Map.Entry<String, String> entry : sortedMap.entrySet()) {
+        for (Map.Entry<String, String> entry : records.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }

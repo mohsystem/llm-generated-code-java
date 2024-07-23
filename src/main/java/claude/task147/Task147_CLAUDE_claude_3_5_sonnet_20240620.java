@@ -20,8 +20,7 @@ public class Task147_CLAUDE_claude_3_5_sonnet_20240620 {
         }
         System.out.print("Enter the value of k: ");
         int k = scanner.nextInt();
-        int result = findKthLargest(nums, k);
-        System.out.println("The " + k + "th largest element is: " + result);
+        System.out.println("The " + k + "th largest element is: " + findKthLargest(nums, k));
         scanner.close();
     }
 }

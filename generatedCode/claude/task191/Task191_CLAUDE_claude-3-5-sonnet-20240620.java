@@ -1,10 +1,8 @@
 package claude.task191;
 
-import java.util.Stack;
-
 class Solution {
     public int longestValidParentheses(String s) {
-        Stack<Integer> stack = new Stack<>();
+        java.util.Stack<Integer> stack = new java.util.Stack<>();
         stack.push(-1);
         int maxLength = 0;
         
@@ -22,5 +20,12 @@ class Solution {
         }
         
         return maxLength;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.longestValidParentheses("(()"));  // Output: 2
+        System.out.println(solution.longestValidParentheses(")()())"));  // Output: 4
+        System.out.println(solution.longestValidParentheses(""));  // Output: 0
     }
 }

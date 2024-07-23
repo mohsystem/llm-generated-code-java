@@ -4,29 +4,29 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.SecureRandom;
-import java.util.Base64;
+import java.util.Arrays;
 
 public class Task72_CLAUDE_claude_3_5_sonnet_20240620 {
-    private static final String AES = "AES";
-    private static final String AES_CBC_PADDING = "AES/CBC/PKCS5Padding";
-    private static final byte[] IV = new byte[16];
+    public static byte[] encryptData(byte[] data, byte[] key) throws Exception {
+        // Create a static initialization vector (IV)
+        byte[] iv = new byte[16];
+        Arrays.fill(iv, (byte) 0);
 
-    static {
-        new SecureRandom().nextBytes(IV);
-    }
+        // Initialize a cipher using AES in CBC mode with the static IV
+        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
+        IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
+        cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
 
-    public static String encrypt(String data, String key) throws Exception {
-        SecretKeySpec secretKey = new SecretKeySpec(key.getBytes(), AES);
-        Cipher cipher = Cipher.getInstance(AES_CBC_PADDING);
-        IvParameterSpec ivSpec = new IvParameterSpec(IV);
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivSpec);
-        byte[] encryptedData = cipher.doFinal(data.getBytes());
-        return Base64.getEncoder().encodeToString(encryptedData);
+        // Encrypt the data using the cipher (padding is handled automatically)
+        return cipher.doFinal(data);
     }
 
     public static void main(String[] args) throws Exception {
-        String data = "Hello, World!";
-        String key = "1234567890123456";
-        System.out.println("Encrypted: " + encrypt(data, key));
+        byte[] key = new byte[32];
+        new SecureRandom().nextBytes(key);
+        byte[] data = "This is a secret message.".getBytes();
+        byte[] encrypted = encryptData(data, key);
+        System.out.println(Arrays.toString(encrypted));
     }
 }

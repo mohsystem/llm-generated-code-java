@@ -25,10 +25,12 @@ class Solution {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of times to call rand10(): ");
         int n = scanner.nextInt();
+        
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             result.add(rand10());
         }
+        
         System.out.println(result);
         scanner.close();
     }

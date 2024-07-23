@@ -1,23 +1,37 @@
 package claude.task79;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
-import java.util.Base64;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Task79_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static void main(String[] args) throws Exception {
-        String message = "Hello, World!";
-        String secretKey = "MySecretKey12345";
-
-        String encryptedMessage = encrypt(message, secretKey);
-        System.out.println("Encrypted message: " + encryptedMessage);
+    public static String encryptMessage(String message, int key) {
+        ArrayList<Character> cipher = new ArrayList<>();
+        for (char c = 'A'; c <= 'Z'; c++) {
+            cipher.add(c);
+        }
+        
+        Random random = new Random(key);
+        Collections.shuffle(cipher, random);
+        
+        StringBuilder encrypted = new StringBuilder();
+        for (char c : message.toUpperCase().toCharArray()) {
+            if (Character.isLetter(c)) {
+                int index = c - 'A';
+                encrypted.append(cipher.get(index));
+            } else {
+                encrypted.append(c);
+            }
+        }
+        
+        return encrypted.toString();
     }
 
-    public static String encrypt(String message, String secretKey) throws Exception {
-        SecretKeySpec key = new SecretKeySpec(secretKey.getBytes(), "AES");
-        Cipher cipher = Cipher.getInstance("AES");
-        cipher.init(Cipher.ENCRYPT_MODE, key);
-        byte[] encryptedBytes = cipher.doFinal(message.getBytes());
-        return Base64.getEncoder().encodeToString(encryptedBytes);
+    public static void main(String[] args) {
+        String message = "Hello, World!";
+        int key = 42;
+        String encrypted = encryptMessage(message, key);
+        System.out.println("Original: " + message);
+        System.out.println("Encrypted: " + encrypted);
     }
 }

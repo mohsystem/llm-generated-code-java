@@ -1,68 +1,50 @@
 package claude.task40;
 
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+@SpringBootApplication
+@Controller
+public class Task40_CLAUDE_claude_3_5_sonnet_20240620 {
 
-@WebServlet("/settings")
-public class Task40_CLAUDE_claude_3_5_sonnet_20240620 extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-    private static final SecureRandom RANDOM = new SecureRandom();
-    private static final Base64.Encoder ENCODER = Base64.getUrlEncoder();
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String csrfToken = generateCSRFToken();
-        session.setAttribute("csrfToken", csrfToken);
-
-        response.setContentType("text/html");
-        response.getWriter().println("<html><body>");
-        response.getWriter().println("<h1>User Settings</h1>");
-        response.getWriter().println("<form method=\'post\' action=\'settings\'>");
-        response.getWriter().println("<input type=\'hidden\' name=\'csrf_token\' value=\'" + csrfToken + "\'>");
-        response.getWriter().println("Name: <input type=\'text\' name=\'name\'><br>");
-        response.getWriter().println("Email: <input type=\'email\' name=\'email\'><br>");
-        response.getWriter().println("<input type=\'submit\' value=\'Update\'>");
-        response.getWriter().println("</form>");
-        response.getWriter().println("</body></html>");
+    public static void main(String[] args) {
+        SpringApplication.run(Task40_CLAUDE_claude_3_5_sonnet_20240620.class, args);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String sessionToken = (String) session.getAttribute("csrfToken");
-        String requestToken = request.getParameter("csrf_token");
-
-        if (sessionToken == null || !sessionToken.equals(requestToken)) {
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, "Invalid CSRF Token");
-            return;
-        }
-
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-
-        // Update user settings in database (not implemented in this example)
-        // updateUserSettings(name, email);
-
-        response.setContentType("text/html");
-        response.getWriter().println("<html><body>");
-        response.getWriter().println("<h1>Settings Updated</h1>");
-        response.getWriter().println("<p>Name: " + name + "</p>");
-        response.getWriter().println("<p>Email: " + email + "</p>");
-        response.getWriter().println("</body></html>");
+    @GetMapping("/")
+    public String settingsForm(Model model) {
+        model.addAttribute("settings", new Settings());
+        return "settings";
     }
 
-    private String generateCSRFToken() {
-        byte[] buffer = new byte[16];
-        RANDOM.nextBytes(buffer);
-        return ENCODER.encodeToString(buffer);
+    @PostMapping("/")
+    public String settingsSubmit(@ModelAttribute Settings settings) {
+        // Process the settings update (not implemented here)
+        return "result";
     }
 }
+
+class Settings {
+    private String username;
+    private String email;
+
+    // Getters and setters
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+
+// Note: You'll need to create 'settings.html' and 'result.html' in src/main/resources/templates/
+// settings.html should include a form with CSRF token:
+// <form action="#" th:action="@{/}" th:object="${settings}" method="post">
+//     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+//     <p>Username: <input type="text" th:field="*{username}" /></p>
+//     <p>Email: <input type="text" th:field="*{email}" /></p>
+//     <p><input type="submit" value="Submit" /></p>
+// </form>

@@ -1,19 +1,18 @@
 package claude.task5;
 
 public class Task5_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static int persistence(long n) {
-        if (n < 10) return 0;
-        int count = 0;
-        while (n >= 10) {
-            long product = 1;
-            while (n > 0) {
-                product *= n % 10;
-                n /= 10;
-            }
-            n = product;
-            count++;
+    public static int persistence(long num) {
+        if (num < 10) {
+            return 0;
         }
-        return count;
+        
+        long product = 1;
+        while (num > 0) {
+            product *= num % 10;
+            num /= 10;
+        }
+        
+        return 1 + persistence(product);
     }
 
     public static void main(String[] args) {

@@ -10,20 +10,20 @@ class Graph {
         graph.get(u).add(v);
     }
 
-    public void dfs(int start) {
-        Set<Integer> visited = new HashSet<>();
-        dfsUtil(start, visited);
-    }
-
     private void dfsUtil(int v, Set<Integer> visited) {
         visited.add(v);
         System.out.print(v + " ");
 
-        for (int neighbor : graph.getOrDefault(v, new ArrayList<>())) {
-            if (!visited.contains(neighbor)) {
-                dfsUtil(neighbor, visited);
+        for (int neighbour : graph.getOrDefault(v, new ArrayList<>())) {
+            if (!visited.contains(neighbour)) {
+                dfsUtil(neighbour, visited);
             }
         }
+    }
+
+    public void dfs(int v) {
+        Set<Integer> visited = new HashSet<>();
+        dfsUtil(v, visited);
     }
 
     public static void main(String[] args) {

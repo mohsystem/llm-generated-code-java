@@ -2,16 +2,19 @@ package claude.task106;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.Scanner;
 
 public class Task106_CLAUDE_claude_3_5_sonnet_20240620 {
-    private BigInteger n, d, e;
+    private BigInteger p, q, n, phi, e, d;
+    private int bitLength = 1024;
+    private SecureRandom r;
 
-    public Task106_CLAUDE_claude_3_5_sonnet_20240620(int bitLength) {
-        SecureRandom r = new SecureRandom();
-        BigInteger p = BigInteger.probablePrime(bitLength / 2, r);
-        BigInteger q = BigInteger.probablePrime(bitLength / 2, r);
+    public Task106_CLAUDE_claude_3_5_sonnet_20240620() {
+        r = new SecureRandom();
+        p = BigInteger.probablePrime(bitLength, r);
+        q = BigInteger.probablePrime(bitLength, r);
         n = p.multiply(q);
-        BigInteger phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
+        phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));
         e = BigInteger.probablePrime(bitLength / 2, r);
         while (phi.gcd(e).compareTo(BigInteger.ONE) > 0 && e.compareTo(phi) < 0) {
             e = e.add(BigInteger.ONE);
@@ -28,13 +31,22 @@ public class Task106_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     public static void main(String[] args) {
-        Task106_CLAUDE_claude_3_5_sonnet_20240620 rsa = new Task106_CLAUDE_claude_3_5_sonnet_20240620(1024);
-        String message = "Hello, RSA!";
+        Task106_CLAUDE_claude_3_5_sonnet_20240620 rsa = new Task106_CLAUDE_claude_3_5_sonnet_20240620();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a message to encrypt: ");
+        String message = scanner.nextLine();
+
         BigInteger plaintext = new BigInteger(message.getBytes());
         BigInteger ciphertext = rsa.encrypt(plaintext);
+
+        System.out.println("Encrypted message: " + ciphertext);
+
         BigInteger decrypted = rsa.decrypt(ciphertext);
-        System.out.println("Original: " + message);
-        System.out.println("Encrypted: " + ciphertext);
-        System.out.println("Decrypted: " + new String(decrypted.toByteArray()));
+        String decryptedMessage = new String(decrypted.toByteArray());
+
+        System.out.println("Decrypted message: " + decryptedMessage);
+
+        scanner.close();
     }
 }

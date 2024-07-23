@@ -3,23 +3,23 @@ package claude.task128;
 import java.util.Random;
 
 public class Task128_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static void main(String[] args) {
-        Random random = new Random();
-        
-        System.out.println("Random Number: " + generateRandomNumber(random));
-        System.out.println("Random Token: " + generateRandomToken(random));
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final Random random = new Random();
+
+    public static int generateRandomNumber(int minVal, int maxVal) {
+        return random.nextInt(maxVal - minVal + 1) + minVal;
     }
-    
-    public static int generateRandomNumber(Random random) {
-        return random.nextInt(100) + 1;
-    }
-    
-    public static String generateRandomToken(Random random) {
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        StringBuilder token = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            token.append(characters.charAt(random.nextInt(characters.length())));
+
+    public static String generateRandomToken(int length) {
+        StringBuilder token = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            token.append(CHARACTERS.charAt(random.nextInt(CHARACTERS.length())));
         }
         return token.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Random number: " + generateRandomNumber(1, 100));
+        System.out.println("Random token: " + generateRandomToken(10));
     }
 }

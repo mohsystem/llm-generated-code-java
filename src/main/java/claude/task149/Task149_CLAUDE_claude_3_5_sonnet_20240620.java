@@ -9,6 +9,10 @@ public class Task149_CLAUDE_claude_3_5_sonnet_20240620<T> {
         items = new LinkedList<>();
     }
 
+    public boolean isEmpty() {
+        return items.isEmpty();
+    }
+
     public void enqueue(T item) {
         items.addLast(item);
     }
@@ -27,21 +31,17 @@ public class Task149_CLAUDE_claude_3_5_sonnet_20240620<T> {
         return null;
     }
 
-    public boolean isEmpty() {
-        return items.isEmpty();
-    }
-
-    public int size() {
-        return items.size();
-    }
-
     public static void main(String[] args) {
-        Task149_CLAUDE_claude_3_5_sonnet_20240620<Integer> q = new Task149_CLAUDE_claude_3_5_sonnet_20240620<>();
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        System.out.println(q.peek());  // Output: 1
-        System.out.println(q.dequeue());  // Output: 1
-        System.out.println(q.size());  // Output: 2
+        Task149_CLAUDE_claude_3_5_sonnet_20240620<Integer> queue = new Task149_CLAUDE_claude_3_5_sonnet_20240620<>();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        System.out.println(queue.peek());  // Output: 1
+        System.out.println(queue.dequeue());  // Output: 1
+        System.out.println(queue.dequeue());  // Output: 2
+        System.out.println(queue.isEmpty());  // Output: false
+        System.out.println(queue.dequeue());  // Output: 3
+        System.out.println(queue.isEmpty());  // Output: true
     }
 }

@@ -1,6 +1,6 @@
 package claude.task101;
 
-import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,16 +10,16 @@ import java.util.Set;
 
 public class Task101_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
-        String fileName = "script.sh";
-        File file = new File(fileName);
+        String filename = "script.sh";
+        String content = "#!/bin/bash \n echo \"Hello, World!\"";
 
         try {
-            if (file.createNewFile()) {
-                System.out.println("File created: " + file.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
+            // Create the file
+            FileWriter writer = new FileWriter(filename);
+            writer.write(content);
+            writer.close();
 
+            // Make it executable
             Set<PosixFilePermission> perms = new HashSet<>();
             perms.add(PosixFilePermission.OWNER_READ);
             perms.add(PosixFilePermission.OWNER_WRITE);
@@ -29,11 +29,11 @@ public class Task101_CLAUDE_claude_3_5_sonnet_20240620 {
             perms.add(PosixFilePermission.OTHERS_READ);
             perms.add(PosixFilePermission.OTHERS_EXECUTE);
 
-            Files.setPosixFilePermissions(Paths.get(fileName), perms);
-            System.out.println("File permissions set to executable.");
+            Files.setPosixFilePermissions(Paths.get(filename), perms);
+
+            System.out.println("File created and made executable successfully.");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            System.out.println("An error occurred: " + e.getMessage());
         }
     }
 }

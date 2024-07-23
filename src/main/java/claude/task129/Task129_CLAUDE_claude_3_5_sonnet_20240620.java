@@ -26,10 +26,11 @@ public class Task129_CLAUDE_claude_3_5_sonnet_20240620 {
                 
                 outputStream.close();
                 inputStream.close();
-                System.out.println("File \'" + filename + "\' successfully retrieved and saved.");
+                System.out.println("File '" + filename + "' successfully retrieved and saved.");
             } else {
-                System.out.println("Failed to retrieve file. Response Code: " + responseCode);
+                System.out.println("Failed to retrieve file. Response code: " + responseCode);
             }
+            
             connection.disconnect();
         } catch (IOException e) {
             System.out.println("Error retrieving file: " + e.getMessage());

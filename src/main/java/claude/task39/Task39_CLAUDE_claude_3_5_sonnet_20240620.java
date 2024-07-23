@@ -10,14 +10,11 @@ public class Task39_CLAUDE_claude_3_5_sonnet_20240620 {
         scanner.close();
 
         try {
-            Process process = Runtime.getRuntime().exec("cat " + filename);
-            Scanner outputScanner = new Scanner(process.getInputStream());
-            while (outputScanner.hasNextLine()) {
-                System.out.println(outputScanner.nextLine());
-            }
-            outputScanner.close();
+            ProcessBuilder pb = new ProcessBuilder("cat", filename);
+            Process process = pb.inheritIO().start();
+            process.waitFor();
         } catch (Exception e) {
-            System.out.println("An error occurred: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

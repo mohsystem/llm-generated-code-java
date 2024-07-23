@@ -1,48 +1,68 @@
 package claude.task194;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
-
-// Mock Master class
 class Master {
     private String secret;
+    private int guesses;
 
     public Master(String secret) {
         this.secret = secret;
+        this.guesses = 0;
     }
 
     public int guess(String word) {
-        if (word.length() != 6) return -1;
+        guesses++;
         int matches = 0;
         for (int i = 0; i < 6; i++) {
-            if (word.charAt(i) == secret.charAt(i)) {
+            if (secret.charAt(i) == word.charAt(i)) {
                 matches++;
             }
         }
         return matches;
     }
+
+    public int getGuesses() {
+        return guesses;
+    }
 }
 
 class Solution {
     public void findSecretWord(String[] words, Master master) {
-        for (int i = 0, n = 0; i < 10 && n < 6; ++i) {
-            String guess = words[new Random().nextInt(words.length)];
-            n = master.guess(guess);
-            List<String> candidates = new ArrayList<>();
-            for (String w : words)
-                if (match(guess, w) == n)
-                    candidates.add(w);
-            words = candidates.toArray(new String[0]);
+        List<String> wordList = new ArrayList<>(Arrays.asList(words));
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            String guess = wordList.get(random.nextInt(wordList.size()));
+            int matches = master.guess(guess);
+            if (matches == 6) return;
+
+            List<String> newList = new ArrayList<>();
+            for (String word : wordList) {
+                if (getMatches(word, guess) == matches) {
+                    newList.add(word);
+                }
+            }
+            wordList = newList;
         }
     }
 
-    private int match(String a, String b) {
+    private int getMatches(String word1, String word2) {
         int matches = 0;
-        for (int i = 0; i < a.length(); ++i)
-            if (a.charAt(i) == b.charAt(i))
+        for (int i = 0; i < 6; i++) {
+            if (word1.charAt(i) == word2.charAt(i)) {
                 matches++;
+            }
+        }
         return matches;
+    }
+
+    public static void main(String[] args) {
+        String secret = "acckzz";
+        String[] words = {"acckzz", "ccbazz", "eiowzz", "abcczz"};
+        Master master = new Master(secret);
+        Solution solution = new Solution();
+        solution.findSecretWord(words, master);
+        System.out.println(master.getGuesses() <= 10 ? "You guessed the secret word correctly." : "Either you took too many guesses, or you did not find the secret word.");
     }
 }

@@ -3,30 +3,35 @@ package claude.task64;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import org.json.JSONObject;
 
 public class Task64_CLAUDE_claude_3_5_sonnet_20240620 {
+    public static JSONObject fetchJSON(String urlString) throws Exception {
+        URL url = new URL(urlString);
+        URLConnection connection = url.openConnection();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        StringBuilder jsonString = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            jsonString.append(line);
+        }
+        reader.close();
+        return new JSONObject(jsonString.toString());
+    }
+
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java JSONFetcher <url>");
-            return;
+            System.out.println("Usage: java Task64_CLAUDE_claude_3_5_sonnet_20240620 <url>");
+            System.exit(1);
         }
 
+        String url = args[0];
         try {
-            String urlString = args[0];
-            URL url = new URL(urlString);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            StringBuilder jsonString = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                jsonString.append(line);
-            }
-            reader.close();
-
-            JSONObject jsonObject = new JSONObject(jsonString.toString());
-            System.out.println(jsonObject.toString(4));
+            JSONObject jsonData = fetchJSON(url);
+            System.out.println(jsonData.toString(2));
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

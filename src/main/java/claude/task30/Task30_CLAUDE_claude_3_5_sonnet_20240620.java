@@ -4,17 +4,17 @@ import java.util.*;
 
 public class Task30_CLAUDE_claude_3_5_sonnet_20240620 {
     public static String longest(String s1, String s2) {
-        Set<Character> charSet = new HashSet<>();
+        Set<Character> set = new HashSet<>();
         for (char c : (s1 + s2).toCharArray()) {
-            charSet.add(c);
+            set.add(c);
         }
-        List<Character> charList = new ArrayList<>(charSet);
-        Collections.sort(charList);
-        StringBuilder result = new StringBuilder();
-        for (char c : charList) {
-            result.append(c);
+        List<Character> list = new ArrayList<>(set);
+        Collections.sort(list);
+        StringBuilder sb = new StringBuilder();
+        for (char c : list) {
+            sb.append(c);
         }
-        return result.toString();
+        return sb.toString();
     }
 
     public static void main(String[] args) {

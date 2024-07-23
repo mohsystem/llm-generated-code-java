@@ -69,10 +69,6 @@ public class Task162_CLAUDE_claude_3_5_sonnet_20240620 {
 
         String startNode = "A";
         Map<String, Integer> shortestPaths = dijkstra(graph, startNode);
-
-        System.out.println("Shortest paths from " + startNode);
-        for (Map.Entry<String, Integer> entry : shortestPaths.entrySet()) {
-            System.out.println("To " + entry.getKey() + ": " + entry.getValue());
-        }
+        System.out.println(shortestPaths);
     }
 }

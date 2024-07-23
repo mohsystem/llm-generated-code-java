@@ -1,5 +1,7 @@
 package claude.task171;
 
+import java.util.Arrays;
+
 class Solution {
     public int reversePairs(int[] nums) {
         return mergeSort(nums, 0, nums.length - 1);
@@ -46,5 +48,13 @@ class Solution {
         }
         
         System.arraycopy(temp, 0, nums, left, temp.length);
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] nums1 = {1, 3, 2, 3, 1};
+        int[] nums2 = {2, 4, 3, 5, 1};
+        System.out.println(solution.reversePairs(nums1));  // Output: 2
+        System.out.println(solution.reversePairs(nums2));  // Output: 3
     }
 }

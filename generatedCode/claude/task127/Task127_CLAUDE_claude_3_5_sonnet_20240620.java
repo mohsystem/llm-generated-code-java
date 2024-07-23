@@ -22,8 +22,32 @@ public class Task127_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     public static void main(String[] args) {
-        String sourcePath = "path/to/source/file.txt";
-        String destPath = "/tmp/copied_file.txt";
-        copyFile(sourcePath, destPath);
+        String sourceFile = "source.txt";
+        String tempDir = "temp";
+        String tempFile = tempDir + File.separator + "temp_copy.txt";
+
+        try {
+            Files.createDirectories(Paths.get(tempDir));
+            copyFile(sourceFile, tempFile);
+        } catch (IOException e) {
+            System.out.println("Error creating temporary directory: " + e.getMessage());
+        } finally {
+            try {
+                Files.deleteIfExists(Paths.get(tempFile));
+                System.out.println("Temporary file " + tempFile + " removed.");
+            } catch (IOException e) {
+                System.out.println("Error removing temporary file: " + e.getMessage());
+            }
+
+            try {
+                Files.walk(Paths.get(tempDir))
+                    .sorted(java.util.Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+                System.out.println("Temporary directory " + tempDir + " removed.");
+            } catch (IOException e) {
+                System.out.println("Error removing temporary directory: " + e.getMessage());
+            }
+        }
     }
 }

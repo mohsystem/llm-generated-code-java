@@ -1,20 +1,19 @@
 package claude.task99;
 
-import java.io.*;
-import java.util.regex.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.regex.Pattern;
 
 public class Task99_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
-        String fileName = "input.txt";
-        String regex = "^\\\\d+.*\\\\.$";
-        Pattern pattern = Pattern.compile(regex);
-
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        String pattern = "^\\\\d+.*\\\\.$";
+        
+        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
-                Matcher matcher = pattern.matcher(line);
-                if (matcher.matches()) {
-                    System.out.println(line);
+                if (Pattern.matches(pattern, line.trim())) {
+                    System.out.println(line.trim());
                 }
             }
         } catch (IOException e) {

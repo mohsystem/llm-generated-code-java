@@ -7,8 +7,9 @@ public class Task51_CLAUDE_claude_3_5_sonnet_20240620 {
         StringBuilder result = new StringBuilder();
         for (char character : text.toCharArray()) {
             if (Character.isLetter(character)) {
-                char base = Character.isUpperCase(character) ? 'A' : 'a';
-                result.append((char) ((character - base + shift) % 26 + base));
+                int asciiOffset = Character.isUpperCase(character) ? 65 : 97;
+                char shiftedChar = (char) ((character - asciiOffset + shift) % 26 + asciiOffset);
+                result.append(shiftedChar);
             } else {
                 result.append(character);
             }
@@ -18,12 +19,12 @@ public class Task51_CLAUDE_claude_3_5_sonnet_20240620 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a string to encrypt: ");
+        System.out.print("Enter text to encrypt: ");
         String text = scanner.nextLine();
-        System.out.print("Enter the shift value: ");
+        System.out.print("Enter shift value: ");
         int shift = scanner.nextInt();
-        String encrypted = encrypt(text, shift);
-        System.out.println("Encrypted string: " + encrypted);
+        String encryptedText = encrypt(text, shift);
+        System.out.println("Encrypted text: " + encryptedText);
         scanner.close();
     }
 }

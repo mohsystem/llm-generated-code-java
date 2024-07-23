@@ -39,9 +39,9 @@ public class Task137_CLAUDE_claude_3_5_sonnet_20240620 {
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 System.out.printf("ID: %d, Name: %s, Price: $%.2f%n",
-                        rs.getInt("id"),
-                        rs.getString("name"),
-                        rs.getDouble("price"));
+                                  rs.getInt("id"),
+                                  rs.getString("name"),
+                                  rs.getDouble("price"));
             } else {
                 System.out.println("Product not found.");
             }
@@ -55,7 +55,7 @@ public class Task137_CLAUDE_claude_3_5_sonnet_20240620 {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("1. Add product");
+            System.out.println("\\n1. Add product");
             System.out.println("2. Get product details");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Task130_CLAUDE_claude_3_5_sonnet_20240620 implements Filter {
 
+    @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin", "*");
@@ -20,11 +21,9 @@ public class Task130_CLAUDE_claude_3_5_sonnet_20240620 implements Filter {
         chain.doFilter(req, res);
     }
 
+    @Override
     public void init(FilterConfig filterConfig) {}
 
+    @Override
     public void destroy() {}
 }
-
-// In your main application or servlet:
-// @WebFilter("/*")
-// public class Task130_CLAUDE_claude_3_5_sonnet_20240620 extends CORSFilter {}

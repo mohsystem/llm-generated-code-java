@@ -1,44 +1,51 @@
 package claude.task118;
 
-import java.util.regex.Pattern;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Task118_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static boolean isValidIPv4(String ip) {
-        String[] octets = ip.split("\\\\.");
-        if (octets.length != 4) {
+    public static boolean validateIP(String ip) {
+        String pattern = "^(\\\\d{1,3}\\\\.){3}\\\\d{1,3}$";
+        if (!Pattern.matches(pattern, ip)) {
             return false;
         }
+        String[] octets = ip.split("\\\\.");
         for (String octet : octets) {
-            try {
-                int num = Integer.parseInt(octet);
-                if (num < 0 || num > 255 || (octet.length() > 1 && octet.startsWith("0"))) {
-                    return false;
-                }
-            } catch (NumberFormatException e) {
+            int value = Integer.parseInt(octet);
+            if (value < 0 || value > 255) {
                 return false;
             }
         }
         return true;
     }
 
-    public static boolean isValidIPv6(String ip) {
-        String regex = "([0-9a-fA-F]{1,4}:){7}([0-9a-fA-F]{1,4})";
-        return Pattern.matches(regex, ip);
+    public static void processIP(String ip) {
+        if (validateIP(ip)) {
+            String[] octets = ip.split("\\\\.");
+            int firstOctet = Integer.parseInt(octets[0]);
+            String classType = "";
+            if (firstOctet >= 1 && firstOctet <= 126) {
+                classType = "A";
+            } else if (firstOctet >= 128 && firstOctet <= 191) {
+                classType = "B";
+            } else if (firstOctet >= 192 && firstOctet <= 223) {
+                classType = "C";
+            } else if (firstOctet >= 224 && firstOctet <= 239) {
+                classType = "D";
+            } else if (firstOctet >= 240 && firstOctet <= 255) {
+                classType = "E";
+            }
+            System.out.println("Valid IP address. Class: " + classType);
+        } else {
+            System.out.println("Invalid IP address");
+        }
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter an IP address: ");
         String ip = scanner.nextLine();
-        
-        if (isValidIPv4(ip)) {
-            System.out.println("Valid IPv4 address");
-        } else if (isValidIPv6(ip)) {
-            System.out.println("Valid IPv6 address");
-        } else {
-            System.out.println("Invalid IP address");
-        }
+        processIP(ip);
         scanner.close();
     }
 }

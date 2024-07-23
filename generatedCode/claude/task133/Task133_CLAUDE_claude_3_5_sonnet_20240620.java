@@ -14,8 +14,8 @@ public class Task133_CLAUDE_claude_3_5_sonnet_20240620 {
         Random random = new Random();
         StringBuilder password = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
-            int index = random.nextInt(PASSWORD_ALLOW.length());
-            password.append(PASSWORD_ALLOW.charAt(index));
+            int randomIndex = random.nextInt(PASSWORD_ALLOW.length());
+            password.append(PASSWORD_ALLOW.charAt(randomIndex));
         }
         return password.toString();
     }
@@ -24,7 +24,7 @@ public class Task133_CLAUDE_claude_3_5_sonnet_20240620 {
         String newPassword = generatePassword(12);
         System.out.println("Password for " + username + " has been reset.");
         System.out.println("New password: " + newPassword);
-        // In a real system, you would hash and save this password
+        // In a real system, you would hash and save this password securely
         return newPassword;
     }
 

@@ -1,0 +1,1243 @@
+3:03:24 AM: Executing ':Compiler.main()'...
+
+
+> Configure project :
+The 'sonarqube' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+The 'sonar' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+
+> Task :compileJava
+C:\sourceCode\PhD\llm-generated-code-java\src\main\java\gtp4o\task157\Task157_OPENAI_gpt_4o.java:6: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
+        Integer myVar = new Integer(42);
+                        ^
+C:\sourceCode\PhD\llm-generated-code-java\src\main\java\llama3\task116\Task116_PERPLEXITY_llama_3_sonar_large_32k_chat.java:21: warning: [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+            System.setSecurityManager(null);
+                  ^
+Note: C:\sourceCode\PhD\llm-generated-code-java\src\main\java\gemini\task152\Task152_GEMINI_gemini-1.5-pro-001.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+2 warnings
+
+> Task :processResources NO-SOURCE
+> Task :classes
+
+> Task :Compiler.main()
+Compiling: generatedCode\claude2\task0\Task0_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task0\Task0_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task1\Task1_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task1\Task1_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task10\Task10_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task10\Task10_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task100\Task100_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task100\Task100_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task101\Task101_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task101\Task101_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task102\Task102_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task102\Task102_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task103\Task103_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task103\Task103_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task104\Task104_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task104\Task104_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task105\Task105_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task105\Task105_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task106\Task106_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task106\Task106_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task107\Task107_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task107\Task107_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task108\Task108_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task108\Task108_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task109\Task109_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task109\Task109_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task11\Task11_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task11\Task11_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task110\Task110_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task110\Task110_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task111\Task111_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task111\Task111_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task112\Task112_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task112\Task112_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task113\Task113_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task113\Task113_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task114\Task114_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task114\Task114_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task115\Task115_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task115\Task115_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task116\Task116_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task116\Task116_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task117\Task117_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task117\Task117_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task118\Task118_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task118\Task118_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task119\Task119_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task119\Task119_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task12\Task12_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task12\Task12_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 29: illegal character: '\'
+Error Type: Compilation Error
+Error on line 29: unclosed character literal
+Error Type: Compilation Error
+Error on line 29: illegal character: '\'
+Error Type: Compilation Error
+Error on line 29: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task120\Task120_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task120\Task120_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task121\Task121_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task121\Task121_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task122\Task122_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task122\Task122_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 40: illegal character: '\'
+Error Type: Compilation Error
+Error on line 40: unclosed character literal
+Error Type: Compilation Error
+Error on line 40: illegal character: '\'
+Error Type: Compilation Error
+Error on line 40: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task123\Task123_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task123\Task123_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task124\Task124_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task124\Task124_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task125\Task125_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task125\Task125_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task126\Task126_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task126\Task126_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task127\Task127_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task127\Task127_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task128\Task128_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task128\Task128_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task129\Task129_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task129\Task129_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task13\Task13_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task13\Task13_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: : or -> expected
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: : or -> expected
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: : or -> expected
+Error Type: Compilation Error
+Error on line 13: illegal character: '\'
+Error Type: Compilation Error
+Error on line 13: unclosed character literal
+Error Type: Compilation Error
+Error on line 13: illegal character: '\'
+Error Type: Compilation Error
+Error on line 13: unclosed character literal
+Error Type: Compilation Error
+Error on line 13: : or -> expected
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: illegal character: '\'
+Error Type: Compilation Error
+Error on line 22: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task130\Task130_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task130\Task130_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task131\Task131_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task131\Task131_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task132\Task132_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task132\Task132_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task133\Task133_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task133\Task133_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task134\Task134_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task134\Task134_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task135\Task135_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task135\Task135_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task136\Task136_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task136\Task136_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 46: illegal escape character
+Error Type: Compilation Error
+Error on line 46: unclosed string literal
+Error Type: Compilation Error
+Error on line 47: illegal character: '\'
+Error Type: Compilation Error
+Error on line 47: not a statement
+Error Type: Compilation Error
+Error on line 48: unclosed string literal
+Error Type: Compilation Error
+Error on line 48: not a statement
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task137\Task137_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task137\Task137_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 58: illegal escape character
+Error Type: Compilation Error
+Error on line 58: unclosed string literal
+Error Type: Compilation Error
+Error on line 59: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task138\Task138_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task138\Task138_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task139\Task139_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task139\Task139_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task14\Task14_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task14\Task14_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task140\Task140_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task140\Task140_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 21: illegal character: '\'
+Error Type: Compilation Error
+Error on line 21: unclosed character literal
+Error Type: Compilation Error
+Error on line 22: : or -> expected
+Error Type: Compilation Error
+Error on line 24: illegal character: '\'
+Error Type: Compilation Error
+Error on line 24: unclosed character literal
+Error Type: Compilation Error
+Error on line 24: illegal character: '\'
+Error Type: Compilation Error
+Error on line 24: unclosed character literal
+Error Type: Compilation Error
+Error on line 25: : or -> expected
+Error Type: Compilation Error
+Error on line 27: illegal character: '\'
+Error Type: Compilation Error
+Error on line 27: unclosed character literal
+Error Type: Compilation Error
+Error on line 27: illegal character: '\'
+Error Type: Compilation Error
+Error on line 27: unclosed character literal
+Error Type: Compilation Error
+Error on line 28: : or -> expected
+Error Type: Compilation Error
+Error on line 30: illegal character: '\'
+Error Type: Compilation Error
+Error on line 30: unclosed character literal
+Error Type: Compilation Error
+Error on line 30: illegal character: '\'
+Error Type: Compilation Error
+Error on line 30: unclosed character literal
+Error Type: Compilation Error
+Error on line 31: illegal start of expression
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task141\Task141_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task141\Task141_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task142\Task142_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task142\Task142_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 22: illegal escape character
+Error Type: Compilation Error
+Error on line 22: unclosed string literal
+Error Type: Compilation Error
+Error on line 23: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task143\Task143_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task143\Task143_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task144\Task144_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task144\Task144_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task145\Task145_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task145\Task145_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task146\Task146_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task146\Task146_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task147\Task147_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task147\Task147_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task148\Task148_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task148\Task148_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 39: cannot find symbol
+  symbol:   class Stack
+  location: class claude2.task148.Task148_CLAUDE_claude_3_5_sonnet_20240620<T>
+Error Type: Compilation Error
+Error on line 39: cannot find symbol
+  symbol:   class Stack
+  location: class claude2.task148.Task148_CLAUDE_claude_3_5_sonnet_20240620<T>
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task149\Task149_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task149\Task149_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 39: cannot find symbol
+  symbol:   class Queue
+  location: class claude2.task149.Task149_CLAUDE_claude_3_5_sonnet_20240620<T>
+Error Type: Compilation Error
+Error on line 39: cannot find symbol
+  symbol:   class Queue
+  location: class claude2.task149.Task149_CLAUDE_claude_3_5_sonnet_20240620<T>
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task15\Task15_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task15\Task15_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task150\Task150_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task150\Task150_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task151\Task151_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task151\Task151_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task152\Task152_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task152\Task152_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task153\Task153_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task153\Task153_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task154\Task154_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task154\Task154_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task155\Task155_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task155\Task155_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task156\Task156_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task156\Task156_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 47: illegal escape character
+Error Type: Compilation Error
+Error on line 47: unclosed string literal
+Error Type: Compilation Error
+Error on line 48: ';' expected
+Error Type: Syntax Error
+Error on line 48: unclosed string literal
+Error Type: Compilation Error
+Error on line 50: illegal escape character
+Error Type: Compilation Error
+Error on line 50: unclosed string literal
+Error Type: Compilation Error
+Error on line 51: ';' expected
+Error Type: Syntax Error
+Error on line 51: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task157\Task157_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task157\Task157_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task158\Task158_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task158\Task158_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task159\Task159_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task159\Task159_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: not a statement
+Error Type: Compilation Error
+Error on line 12: ';' expected
+Error Type: Syntax Error
+Compiling: generatedCode\claude2\task16\Task16_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task16\Task16_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task160\Task160_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task160\Task160_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task161\Task161_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task161\Task161_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task162\Task162_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task162\Task162_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task163\Task163_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task163\Task163_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task164\Task164_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task164\Task164_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task165\Task165_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task165\Task165_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task166\Task166_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task166\Task166_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task167\Task167_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task167\Task167_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task168\Task168_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task168\Task168_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: not a statement
+Error Type: Compilation Error
+Error on line 9: ';' expected
+Error Type: Syntax Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task169\Task169_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task169\Task169_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 20: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 23: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 24: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 25: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 28: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 32: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 32: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 33: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 34: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 37: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 43: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 44: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 49: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Error on line 53: as of release 5, 'enum' is a keyword, and may not be used as an identifier
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task17\Task17_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task17\Task17_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task170\Task170_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task170\Task170_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task171\Task171_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task171\Task171_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task172\Task172_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task172\Task172_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task173\Task173_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task173\Task173_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 32: illegal character: '\'
+Error Type: Compilation Error
+Error on line 32: unclosed character literal
+Error Type: Compilation Error
+Error on line 32: illegal character: '\'
+Error Type: Compilation Error
+Error on line 32: unclosed character literal
+Error Type: Compilation Error
+Error on line 32: not a statement
+Error Type: Compilation Error
+Error on line 39: illegal character: '\'
+Error Type: Compilation Error
+Error on line 39: unclosed character literal
+Error Type: Compilation Error
+Error on line 39: illegal character: '\'
+Error Type: Compilation Error
+Error on line 39: unclosed character literal
+Error Type: Compilation Error
+Error on line 39: not a statement
+Error Type: Compilation Error
+Error on line 39: ';' expected
+Error Type: Syntax Error
+Error on line 39: not a statement
+Error Type: Compilation Error
+Error on line 40: illegal character: '\'
+Error Type: Compilation Error
+Error on line 40: unclosed character literal
+Error Type: Compilation Error
+Error on line 40: illegal character: '\'
+Error Type: Compilation Error
+Error on line 40: unclosed character literal
+Error Type: Compilation Error
+Error on line 40: not a statement
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task174\Task174_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task174\Task174_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task175\Task175_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task175\Task175_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 13: cannot find symbol
+  symbol:   class MountainArray
+  location: class claude2.task175.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task176\Task176_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task176\Task176_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task177\Task177_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task177\Task177_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 6: cannot find symbol
+  symbol:   variable Arrays
+  location: class claude2.task177.Solution
+Error Type: Compilation Error
+Error on line 7: cannot find symbol
+  symbol:   class Deque
+  location: class claude2.task177.Solution
+Error Type: Compilation Error
+Error on line 7: cannot find symbol
+  symbol:   class ArrayDeque
+  location: class claude2.task177.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task178\Task178_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task178\Task178_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 11: cannot find symbol
+  symbol:   class Deque
+  location: class claude2.task178.Solution
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class ArrayDeque
+  location: class claude2.task178.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task179\Task179_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task179\Task179_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task18\Task18_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task18\Task18_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task180\Task180_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task180\Task180_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 78: illegal escape character
+Error Type: Compilation Error
+Error on line 78: unclosed string literal
+Error Type: Compilation Error
+Error on line 79: ';' expected
+Error Type: Syntax Error
+Error on line 79: not a statement
+Error Type: Compilation Error
+Error on line 79: ';' expected
+Error Type: Syntax Error
+Error on line 79: ';' expected
+Error Type: Syntax Error
+Error on line 79: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task181\Task181_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task181\Task181_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task182\Task182_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task182\Task182_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task183\Task183_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task183\Task183_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task184\Task184_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task184\Task184_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task185\Task185_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task185\Task185_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task186\Task186_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task186\Task186_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task187\Task187_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task187\Task187_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task188\Task188_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task188\Task188_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task189\Task189_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task189\Task189_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task19\Task19_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task19\Task19_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task190\Task190_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task190\Task190_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task191\Task191_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task191\Task191_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: 'else' without 'if'
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task192\Task192_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task192\Task192_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task193\Task193_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task193\Task193_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task194\Task194_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation failed: generatedCode\claude2\task194\Task194_CLAUDE_claude-3-5-sonnet-20240620.java
+Error on line 4: cannot find symbol
+  symbol:   class Master
+  location: class claude2.task194.Solution
+Error Type: Compilation Error
+Error on line 6: cannot find symbol
+  symbol:   class Random
+  location: class claude2.task194.Solution
+Error Type: Compilation Error
+Error on line 8: cannot find symbol
+  symbol:   class List
+  location: class claude2.task194.Solution
+Error Type: Compilation Error
+Error on line 8: cannot find symbol
+  symbol:   class ArrayList
+  location: class claude2.task194.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task195\Task195_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task195\Task195_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task196\Task196_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task196\Task196_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task197\Task197_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task197\Task197_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task198\Task198_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task198\Task198_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task199\Task199_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task199\Task199_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 19: cannot find symbol
+  symbol:   class Clock
+  location: class claude2.task199.Task199_CLAUDE_claude_3_5_sonnet_20240620
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task2\Task2_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task2\Task2_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task20\Task20_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task20\Task20_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task21\Task21_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task21\Task21_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task22\Task22_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task22\Task22_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task23\Task23_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task23\Task23_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task24\Task24_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task24\Task24_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task25\Task25_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task25\Task25_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task26\Task26_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task26\Task26_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task27\Task27_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task27\Task27_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task28\Task28_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task28\Task28_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task29\Task29_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task29\Task29_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task3\Task3_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task3\Task3_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task30\Task30_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task30\Task30_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task31\Task31_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task31\Task31_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 11: illegal character: '\'
+Error Type: Compilation Error
+Error on line 11: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 12: illegal character: '\'
+Error Type: Compilation Error
+Error on line 12: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Error on line 17: illegal character: '\'
+Error Type: Compilation Error
+Error on line 17: unclosed character literal
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: unclosed character literal
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task32\Task32_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task32\Task32_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task33\Task33_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task33\Task33_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task34\Task34_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task34\Task34_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task35\Task35_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task35\Task35_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task36\Task36_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task36\Task36_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 15: constructor Task36_CLAUDE_claude_3_5_sonnet_20240620 in class claude2.task36.Task36_CLAUDE_claude_3_5_sonnet_20240620 cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task37\Task37_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task37\Task37_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task38\Task38_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task38\Task38_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task39\Task39_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task39\Task39_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task4\Task4_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task4\Task4_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task40\Task40_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task40\Task40_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task41\Task41_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task41\Task41_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task42\Task42_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task42\Task42_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task43\Task43_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task43\Task43_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task44\Task44_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task44\Task44_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task45\Task45_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task45\Task45_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task46\Task46_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task46\Task46_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task47\Task47_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task47\Task47_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task48\Task48_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task48\Task48_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task49\Task49_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task49\Task49_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task5\Task5_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task5\Task5_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task50\Task50_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task50\Task50_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task51\Task51_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task51\Task51_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task52\Task52_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task52\Task52_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task53\Task53_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task53\Task53_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task54\Task54_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task54\Task54_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task55\Task55_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task55\Task55_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task56\Task56_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task56\Task56_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task57\Task57_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task57\Task57_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task58\Task58_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task58\Task58_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Error on line 9: illegal character: '\'
+Error Type: Compilation Error
+Error on line 9: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task59\Task59_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task59\Task59_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task6\Task6_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task6\Task6_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task60\Task60_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task60\Task60_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Error on line 8: illegal character: '\'
+Error Type: Compilation Error
+Error on line 8: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task61\Task61_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task61\Task61_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task62\Task62_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task62\Task62_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 18: ';' expected
+Error Type: Syntax Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: not a statement
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: not a statement
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: not a statement
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Error on line 18: illegal character: '\'
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task63\Task63_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task63\Task63_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task64\Task64_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task64\Task64_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task65\Task65_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task65\Task65_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 29: illegal escape character
+Error Type: Compilation Error
+Error on line 29: unclosed string literal
+Error Type: Compilation Error
+Error on line 30: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task66\Task66_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task66\Task66_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task67\Task67_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task67\Task67_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task68\Task68_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task68\Task68_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 27: no suitable constructor found for InitialDirContext(javax.naming.directory.InitialDirContext)
+    constructor javax.naming.directory.InitialDirContext.InitialDirContext(boolean) is not applicable
+      (argument mismatch; javax.naming.directory.InitialDirContext cannot be converted to boolean)
+    constructor javax.naming.directory.InitialDirContext.InitialDirContext(java.util.Hashtable<?,?>) is not applicable
+      (argument mismatch; javax.naming.directory.InitialDirContext cannot be converted to java.util.Hashtable<?,?>)
+Error Type: Compilation Error
+Error on line -1: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Error Type: Other
+Compiling: generatedCode\claude2\task69\Task69_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task69\Task69_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task7\Task7_CLAUDE_claude-3-5-sonnet-20240620.java
+Compilation successful: generatedCode\claude2\task7\Task7_CLAUDE_claude-3-5-sonnet-20240620.java
+Compiling: generatedCode\claude2\task70\Task70_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task70\Task70_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task71\Task71_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task71\Task71_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task72\Task72_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task72\Task72_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task73\Task73_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task73\Task73_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal start of type
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: illegal character: '\'
+Error Type: Compilation Error
+Error on line 25: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task74\Task74_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task74\Task74_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task75\Task75_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task75\Task75_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task76\Task76_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task76\Task76_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task77\Task77_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task77\Task77_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task78\Task78_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task78\Task78_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 15: illegal escape character
+Error Type: Compilation Error
+Error on line 15: unclosed string literal
+Error Type: Compilation Error
+Error on line 16: unclosed string literal
+Error Type: Compilation Error
+Error on line 18: illegal escape character
+Error Type: Compilation Error
+Error on line 18: unclosed string literal
+Error Type: Compilation Error
+Error on line 19: ';' expected
+Error Type: Syntax Error
+Error on line 19: ';' expected
+Error Type: Syntax Error
+Error on line 19: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task79\Task79_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task79\Task79_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task8\Task8_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task8\Task8_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '\'
+Error Type: Compilation Error
+Error on line 10: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 14: illegal character: '\'
+Error Type: Compilation Error
+Error on line 14: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task80\Task80_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task80\Task80_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task81\Task81_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task81\Task81_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task82\Task82_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task82\Task82_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task83\Task83_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task83\Task83_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task84\Task84_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task84\Task84_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task85\Task85_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task85\Task85_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task86\Task86_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task86\Task86_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task87\Task87_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task87\Task87_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task88\Task88_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task88\Task88_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task89\Task89_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task89\Task89_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task9\Task9_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task9\Task9_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task90\Task90_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task90\Task90_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task91\Task91_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation failed: generatedCode\claude2\task91\Task91_CLAUDE_claude_3_5_sonnet_20240620.java
+Error on line 51: illegal character: '\'
+Error Type: Compilation Error
+Error on line 51: unclosed character literal
+Error Type: Compilation Error
+Error on line 51: illegal character: '\'
+Error Type: Compilation Error
+Error on line 51: unclosed character literal
+Error Type: Compilation Error
+Compiling: generatedCode\claude2\task92\Task92_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task92\Task92_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task93\Task93_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task93\Task93_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task94\Task94_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task94\Task94_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task95\Task95_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task95\Task95_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task96\Task96_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task96\Task96_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task97\Task97_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task97\Task97_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task98\Task98_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task98\Task98_CLAUDE_claude_3_5_sonnet_20240620.java
+Compiling: generatedCode\claude2\task99\Task99_CLAUDE_claude_3_5_sonnet_20240620.java
+Compilation successful: generatedCode\claude2\task99\Task99_CLAUDE_claude_3_5_sonnet_20240620.java
+
+Summary:
+Valid files: 165
+Files with syntax errors: 7
+Files with compilation errors: 28
+Files with other errors: 0
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 22s
+2 actionable tasks: 2 executed
+3:04:47 AM: Execution finished ':Compiler.main()'.

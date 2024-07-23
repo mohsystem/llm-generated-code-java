@@ -15,9 +15,10 @@ public class Compiler {
 
     private static final Map<String, Integer> summary = new HashMap<>();
 
+
     public static void main(String[] args) {
         // Set the source and output directories
-        String sourceDirectory = "generatedCode/codestral"; // Update this path
+        String sourceDirectory = "generatedCode/llama3"; // Update this path
         String outputDirectory = "out"; // Update this path
 
         try {

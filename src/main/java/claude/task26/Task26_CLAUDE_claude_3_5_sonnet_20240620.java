@@ -1,36 +1,19 @@
 package claude.task26;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Task26_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static int findOddOccurrence(int[] arr) {
-        Map<Integer, Integer> countMap = new HashMap<>();
-        
+    public static int findOdd(int[] arr) {
+        int result = 0;
         for (int num : arr) {
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+            result ^= num;
         }
-        
-        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
-            if (entry.getValue() % 2 != 0) {
-                return entry.getKey();
-            }
-        }
-        
-        return -1; // This line should never be reached given the problem constraints
+        return result;
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {7};
-        int[] arr2 = {0};
-        int[] arr3 = {1,1,2};
-        int[] arr4 = {0,1,0,1,0};
-        int[] arr5 = {1,2,2,3,3,3,4,3,3,3,2,2,1};
-
-        System.out.println(findOddOccurrence(arr1));
-        System.out.println(findOddOccurrence(arr2));
-        System.out.println(findOddOccurrence(arr3));
-        System.out.println(findOddOccurrence(arr4));
-        System.out.println(findOddOccurrence(arr5));
+        System.out.println(findOdd(new int[]{7}));
+        System.out.println(findOdd(new int[]{0}));
+        System.out.println(findOdd(new int[]{1,1,2}));
+        System.out.println(findOdd(new int[]{0,1,0,1,0}));
+        System.out.println(findOdd(new int[]{1,2,2,3,3,3,4,3,3,3,2,2,1}));
     }
 }

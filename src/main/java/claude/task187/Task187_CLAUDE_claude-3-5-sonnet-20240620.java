@@ -1,6 +1,7 @@
 package claude.task187;
 
-import java.util.concurrent.*;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.CyclicBarrier;
 
 class H2O {
     private Semaphore hydrogenSemaphore = new Semaphore(2);
@@ -14,7 +15,7 @@ class H2O {
         try {
             barrier.await();
             releaseHydrogen.run();
-        } catch (BrokenBarrierException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             hydrogenSemaphore.release();
@@ -26,7 +27,7 @@ class H2O {
         try {
             barrier.await();
             releaseOxygen.run();
-        } catch (BrokenBarrierException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             oxygenSemaphore.release();

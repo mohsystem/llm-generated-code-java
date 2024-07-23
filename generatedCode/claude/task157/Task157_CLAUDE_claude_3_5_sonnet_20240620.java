@@ -5,7 +5,7 @@ public class Task157_CLAUDE_claude_3_5_sonnet_20240620 {
         // Allocate memory
         int[] array = new int[10];
 
-        // Use the allocated memory
+        // Use the memory
         array[0] = 5;
         System.out.println(array[0]);
 

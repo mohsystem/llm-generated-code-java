@@ -1,47 +1,35 @@
 package claude.task44;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Task44_CLAUDE_claude_3_5_sonnet_20240620 {
+    private static final Pattern VALID_INPUT_PATTERN = Pattern.compile("^[a-zA-Z0-9\\\\s]+$");
+
+    public static boolean validateInput(String input) {
+        return VALID_INPUT_PATTERN.matcher(input).matches();
+    }
+
+    public static String processInput(String input) {
+        return input.toUpperCase();
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter a number between 1 and 100: ");
-        int number = getValidNumber(scanner, 1, 100);
-        
-        System.out.print("Enter your name (max 50 characters): ");
-        String name = getValidString(scanner, 50);
-        
-        System.out.println("Hello, " + name + "!");
-        System.out.println("Your number squared is: " + (number * number));
-        System.out.println("Your number cubed is: " + (number * number * number));
-        
-        scanner.close();
-    }
-    
-    private static int getValidNumber(Scanner scanner, int min, int max) {
+
         while (true) {
-            try {
-                int input = Integer.parseInt(scanner.nextLine());
-                if (input >= min && input <= max) {
-                    return input;
-                } else {
-                    System.out.print("Please enter a number between " + min + " and " + max + ": ");
-                }
-            } catch (NumberFormatException e) {
-                System.out.print("Invalid input. Please enter a number: ");
-            }
-        }
-    }
-    
-    private static String getValidString(Scanner scanner, int maxLength) {
-        while (true) {
-            String input = scanner.nextLine().trim();
-            if (!input.isEmpty() && input.length() <= maxLength) {
-                return input;
+            System.out.print("Enter some text (alphanumeric characters and spaces only): ");
+            String userInput = scanner.nextLine();
+
+            if (validateInput(userInput)) {
+                String processedInput = processInput(userInput);
+                System.out.println("Processed input: " + processedInput);
+                break;
             } else {
-                System.out.print("Please enter a non-empty string with max " + maxLength + " characters: ");
+                System.out.println("Invalid input. Please try again.");
             }
         }
+
+        scanner.close();
     }
 }

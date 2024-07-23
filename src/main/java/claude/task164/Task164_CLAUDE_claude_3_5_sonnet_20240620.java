@@ -3,29 +3,30 @@ package claude.task164;
 import java.util.*;
 
 public class Task164_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static List<String> lastNameLenSort(List<String> names) {
-        names.sort((a, b) -> {
+    public static String[] lastNameLensort(String[] names) {
+        Arrays.sort(names, (a, b) -> {
             String[] aParts = a.split(" ");
             String[] bParts = b.split(" ");
-            String aLastName = aParts[aParts.length - 1];
-            String bLastName = bParts[bParts.length - 1];
+            String aLast = aParts[aParts.length - 1];
+            String bLast = bParts[bParts.length - 1];
             
-            if (aLastName.length() != bLastName.length()) {
-                return Integer.compare(aLastName.length(), bLastName.length());
+            if (aLast.length() != bLast.length()) {
+                return Integer.compare(aLast.length(), bLast.length());
             }
-            return aLastName.compareTo(bLastName);
+            return aLast.compareTo(bLast);
         });
         return names;
     }
 
     public static void main(String[] args) {
-        List<String> names = Arrays.asList(
+        String[] names = {
             "Jennifer Figueroa",
             "Heather Mcgee",
             "Amanda Schwartz",
             "Nicole Yoder",
             "Melissa Hoffman"
-        );
-        System.out.println(lastNameLenSort(names));
+        };
+        String[] sorted = lastNameLensort(names);
+        System.out.println(Arrays.toString(sorted));
     }
 }

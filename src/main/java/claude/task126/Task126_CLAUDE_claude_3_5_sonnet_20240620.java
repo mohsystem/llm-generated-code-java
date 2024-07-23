@@ -12,10 +12,9 @@ public class Task126_CLAUDE_claude_3_5_sonnet_20240620 {
         System.out.println("1. Google");
         System.out.println("2. YouTube");
         System.out.println("3. Wikipedia");
-        System.out.println("4. GitHub");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your choice (1-4): ");
+        System.out.print("Enter your choice (1-3): ");
         String choice = scanner.nextLine();
 
         String url;
@@ -29,12 +28,8 @@ public class Task126_CLAUDE_claude_3_5_sonnet_20240620 {
             case "3":
                 url = "https://www.wikipedia.org";
                 break;
-            case "4":
-                url = "https://www.github.com";
-                break;
             default:
                 System.out.println("Invalid choice. Please try again.");
-                scanner.close();
                 return;
         }
 

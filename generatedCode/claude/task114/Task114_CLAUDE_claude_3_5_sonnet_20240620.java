@@ -2,25 +2,28 @@ package claude.task114;
 
 public class Task114_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
-        String str1 = "Hello";
-        String str2 = "World";
+        // String copy
+        String original = "Hello, World!";
+        String copied = new String(original);
+        System.out.println("Original: " + original);
+        System.out.println("Copied: " + copied);
 
-        // Copy
-        String copy = new String(str1);
+        // String concatenation
+        String str1 = "Java ";
+        String str2 = "is awesome!";
+        String concatenated = str1 + str2;
+        System.out.println("Concatenated: " + concatenated);
 
-        // Concatenate
-        String concat = str1 + " " + str2;
+        // String manipulation
+        String text = "   Java Programming   ";
+        String stripped = text.trim();
+        String upper = text.toUpperCase();
+        String lower = text.toLowerCase();
+        String replaced = text.replace("Java", "Python");
 
-        // Manipulate
-        String upper = concat.toUpperCase();
-        String sub = concat.substring(0, 5);
-        String replace = concat.replace('o', '0');
-
-        System.out.println("Original: " + str1 + ", " + str2);
-        System.out.println("Copy: " + copy);
-        System.out.println("Concatenated: " + concat);
+        System.out.println("Stripped: '" + stripped + "'");
         System.out.println("Uppercase: " + upper);
-        System.out.println("Substring: " + sub);
-        System.out.println("Replaced: " + replace);
+        System.out.println("Lowercase: " + lower);
+        System.out.println("Replaced: " + replaced);
     }
 }

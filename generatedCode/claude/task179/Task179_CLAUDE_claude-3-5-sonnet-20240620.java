@@ -15,7 +15,7 @@ class Solution {
         Deque<Integer> deque = new ArrayDeque<>();
         
         for (int i = 0; i < n; i++) {
-            while (!deque.isEmpty() && deque.peekFirst() <= i - k) {
+            while (!deque.isEmpty() && deque.peekFirst() < i - k + 1) {
                 deque.pollFirst();
             }
             

@@ -1,40 +1,43 @@
 package claude.task108;
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.rmi.RemoteException;
+import java.rmi.Remote;
 
 interface RemoteObject extends Remote {
     int getValue() throws RemoteException;
-    void setValue(int value) throws RemoteException;
+    void setValue(int newValue) throws RemoteException;
+    void increment() throws RemoteException;
 }
 
-class RemoteObjectImpl extends UnicastRemoteObject implements RemoteObject {
-    private int value;
-
-    public RemoteObjectImpl() throws RemoteException {
-        super();
-        this.value = 0;
-    }
+class RemoteObjectImpl implements RemoteObject {
+    private int value = 0;
 
     public int getValue() throws RemoteException {
         return value;
     }
 
-    public void setValue(int value) throws RemoteException {
-        this.value = value;
+    public void setValue(int newValue) throws RemoteException {
+        value = newValue;
+    }
+
+    public void increment() throws RemoteException {
+        value++;
     }
 }
 
 public class Task108_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
         try {
-            RemoteObject obj = new RemoteObjectImpl();
+            RemoteObjectImpl obj = new RemoteObjectImpl();
+            RemoteObject stub = (RemoteObject) UnicastRemoteObject.exportObject(obj, 0);
+
             Registry registry = LocateRegistry.createRegistry(1099);
-            registry.rebind("RemoteObject", obj);
-            System.out.println("Server is running...");
+            registry.bind("RemoteObject", stub);
+
+            System.out.println("Server ready");
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();

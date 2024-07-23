@@ -1,25 +1,26 @@
 package claude.task63;
 
 import java.util.Base64;
-import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 
 public class Task63_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static JSONObject processRequest(String raw_data) {
+    public static JSONObject processRequest(String rawData) {
         try {
-            // Ensure raw_data is UTF-8 encoded
-            byte[] utf8Bytes = raw_data.getBytes(StandardCharsets.UTF_8);
-            String utf8EncodedData = new String(utf8Bytes, StandardCharsets.UTF_8);
-
-            // Decode Base64
-            byte[] decodedBytes = Base64.getDecoder().decode(utf8EncodedData);
-            String decodedData = new String(decodedBytes, StandardCharsets.UTF_8);
-
-            // Deserialize JSON
-            JSONObject deserializedData = new JSONObject(decodedData);
-
-            // Store and return the deserialized data
-            return deserializedData;
+            // Ensure rawData is UTF-8 encoded
+            byte[] rawBytes = rawData.getBytes("UTF-8");
+            
+            // Decode the rawData using Base64
+            byte[] decodedBytes = Base64.getDecoder().decode(rawBytes);
+            
+            // Deserialize the decoded data (assuming JSON in this example)
+            String decodedString = new String(decodedBytes, "UTF-8");
+            JSONObject deserializedData = new JSONObject(decodedString);
+            
+            // Store the deserialized data in a variable
+            JSONObject storedData = deserializedData;
+            
+            // Return the stored data
+            return storedData;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -27,8 +28,8 @@ public class Task63_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     public static void main(String[] args) {
-        String raw_data = "eyJuYW1lIjogIkpvaG4gRG9lIiwgImFnZSI6IDMwfQ==";
-        JSONObject result = processRequest(raw_data);
+        String rawInput = "eyJuYW1lIjogIkpvaG4gRG9lIiwgImFnZSI6IDMwfQ==";
+        JSONObject result = processRequest(rawInput);
         System.out.println(result);
     }
 }

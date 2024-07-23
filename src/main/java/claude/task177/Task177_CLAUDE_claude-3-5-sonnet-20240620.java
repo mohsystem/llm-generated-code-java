@@ -1,36 +1,26 @@
 package claude.task177;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
+import java.util.LinkedList;
 
 class Solution {
     public int constrainedSubsetSum(int[] nums, int k) {
-        int n = nums.length;
-        int[] dp = Arrays.copyOf(nums, n);
-        Deque<Integer> dq = new ArrayDeque<>();
-        
-        int maxSum = nums[0];
-        for (int i = 0; i < n; i++) {
-            if (!dq.isEmpty() && i - dq.peekFirst() > k) {
-                dq.pollFirst();
-            }
-            
+        Deque<Integer> dq = new LinkedList<>();
+        for (int i = 0; i < nums.length; i++) {
             if (!dq.isEmpty()) {
-                dp[i] = Math.max(dp[i], nums[i] + dp[dq.peekFirst()]);
+                nums[i] += dq.peekFirst();
             }
-            
-            while (!dq.isEmpty() && dp[dq.peekLast()] <= dp[i]) {
+            while (!dq.isEmpty() && dq.peekLast() < nums[i]) {
                 dq.pollLast();
             }
-            
-            if (dp[i] > 0) {
-                dq.offerLast(i);
+            if (nums[i] > 0) {
+                dq.offerLast(nums[i]);
             }
-            
-            maxSum = Math.max(maxSum, dp[i]);
+            if (i >= k && !dq.isEmpty() && dq.peekFirst() == nums[i - k]) {
+                dq.pollFirst();
+            }
         }
-        
-        return maxSum;
+        return Arrays.stream(nums).max().getAsInt();
     }
 }

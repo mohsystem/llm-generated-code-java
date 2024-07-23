@@ -1,23 +1,25 @@
 package claude.task113;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Task113_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
+        ArrayList<String> strings = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-        StringBuilder result = new StringBuilder();
-        
-        System.out.println("Enter strings to concatenate (type \'done\' to finish):");
-        
+
         while (true) {
-            String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("done")) {
+            System.out.print("Enter a string (or press Enter to finish): ");
+            String s = scanner.nextLine();
+            if (s.isEmpty()) {
                 break;
             }
-            result.append(input);
+            strings.add(s);
         }
-        
-        System.out.println("Concatenated string: " + result.toString());
+
+        String result = String.join(" ", strings);
+        System.out.println("Concatenated string: " + result);
+
         scanner.close();
     }
 }

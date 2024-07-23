@@ -21,7 +21,12 @@ class BankAccount {
     public boolean deposit(double amount) {
         lock.lock();
         try {
-            if (!isOpen) return false;
+            if (!isOpen) {
+                return false;
+            }
+            if (amount <= 0) {
+                return false;
+            }
             balance += amount;
             return true;
         } finally {
@@ -32,7 +37,12 @@ class BankAccount {
     public boolean withdraw(double amount) {
         lock.lock();
         try {
-            if (!isOpen || balance < amount) return false;
+            if (!isOpen) {
+                return false;
+            }
+            if (amount <= 0 || amount > balance) {
+                return false;
+            }
             balance -= amount;
             return true;
         } finally {
@@ -43,7 +53,9 @@ class BankAccount {
     public boolean close() {
         lock.lock();
         try {
-            if (!isOpen) return false;
+            if (!isOpen) {
+                return false;
+            }
             isOpen = false;
             return true;
         } finally {
@@ -51,14 +63,8 @@ class BankAccount {
         }
     }
 
-    public Double getBalance() {
-        lock.lock();
-        try {
-            if (!isOpen) return null;
-            return balance;
-        } finally {
-            lock.unlock();
-        }
+    public double getBalance() {
+        return balance;
     }
 }
 
@@ -74,7 +80,9 @@ class Bank {
     public boolean openAccount(String accountNumber, double initialBalance) {
         lock.lock();
         try {
-            if (accounts.containsKey(accountNumber)) return false;
+            if (accounts.containsKey(accountNumber)) {
+                return false;
+            }
             accounts.put(accountNumber, new BankAccount(accountNumber, initialBalance));
             return true;
         } finally {
@@ -86,7 +94,9 @@ class Bank {
         lock.lock();
         try {
             BankAccount account = accounts.get(accountNumber);
-            if (account == null) return false;
+            if (account == null) {
+                return false;
+            }
             return account.close();
         } finally {
             lock.unlock();
@@ -97,7 +107,9 @@ class Bank {
         lock.lock();
         try {
             BankAccount account = accounts.get(accountNumber);
-            if (account == null) return false;
+            if (account == null) {
+                return false;
+            }
             return account.deposit(amount);
         } finally {
             lock.unlock();
@@ -108,49 +120,17 @@ class Bank {
         lock.lock();
         try {
             BankAccount account = accounts.get(accountNumber);
-            if (account == null) return false;
+            if (account == null) {
+                return false;
+            }
             return account.withdraw(amount);
         } finally {
             lock.unlock();
         }
     }
 
-    public Double getBalance(String accountNumber) {
-        lock.lock();
-        try {
-            BankAccount account = accounts.get(accountNumber);
-            if (account == null) return null;
-            return account.getBalance();
-        } finally {
-            lock.unlock();
-        }
-    }
-}
-
-class AccountOperations implements Runnable {
-    private final Bank bank;
-    private final String accountNumber;
-
-    public AccountOperations(Bank bank, String accountNumber) {
-        this.bank = bank;
-        this.accountNumber = accountNumber;
-    }
-
-    @Override
-    public void run() {
-        bank.deposit(accountNumber, 100);
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        bank.withdraw(accountNumber, 50);
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Account " + accountNumber + " balance: " + bank.getBalance(accountNumber));
+    public BankAccount getAccount(String accountNumber) {
+        return accounts.get(accountNumber);
     }
 }
 
@@ -158,25 +138,25 @@ public class Task181_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) throws InterruptedException {
         Bank bank = new Bank();
         bank.openAccount("123", 1000);
-        bank.openAccount("456", 2000);
+        bank.openAccount("456", 500);
 
-        Thread[] threads = new Thread[10];
-        for (int i = 0; i < 5; i++) {
-            threads[i * 2] = new Thread(new AccountOperations(bank, "123"));
-            threads[i * 2 + 1] = new Thread(new AccountOperations(bank, "456"));
-            threads[i * 2].start();
-            threads[i * 2 + 1].start();
-        }
+        Thread thread1 = new Thread(() -> {
+            bank.deposit("123", 200);
+            bank.withdraw("456", 100);
+        });
 
-        for (Thread thread : threads) {
-            thread.join();
-        }
+        Thread thread2 = new Thread(() -> {
+            bank.withdraw("123", 300);
+            bank.deposit("456", 150);
+        });
 
-        System.out.println("Final balances:");
-        System.out.println("Account 123: " + bank.getBalance("123"));
-        System.out.println("Account 456: " + bank.getBalance("456"));
+        thread1.start();
+        thread2.start();
 
-        bank.closeAccount("123");
-        System.out.println("Closed account 123 balance: " + bank.getBalance("123"));
+        thread1.join();
+        thread2.join();
+
+        System.out.println("Account 123 balance: " + bank.getAccount("123").getBalance());
+        System.out.println("Account 456 balance: " + bank.getAccount("456").getBalance());
     }
 }

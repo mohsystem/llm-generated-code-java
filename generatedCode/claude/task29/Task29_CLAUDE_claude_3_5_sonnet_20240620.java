@@ -13,6 +13,6 @@ public class Task29_CLAUDE_claude_3_5_sonnet_20240620 {
             }
             numMap.put(numbers[i], i);
         }
-        return new int[]{};
+        return null;
     }
 }

@@ -5,18 +5,10 @@ public class Task17_CLAUDE_claude_3_5_sonnet_20240620 {
         if (phrase == null || phrase.isEmpty()) {
             return null;
         }
-        
         String[] words = phrase.split("\\\\s+");
-        StringBuilder result = new StringBuilder();
-        
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                result.append(Character.toUpperCase(word.charAt(0)))
-                      .append(word.substring(1))
-                      .append(" ");
-            }
+        for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
         }
-        
-        return result.toString().trim();
+        return String.join(" ", words);
     }
 }

@@ -1,33 +1,28 @@
 package claude.task12;
 
-import java.util.Scanner;
-
 public class Task12_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        scanner.close();
-
-        String[] words = input.split(" ");
-        String highestScoringWord = "";
-        int highestScore = 0;
-
+    public static String high(String s) {
+        String[] words = s.split(" ");
+        int maxScore = 0;
+        String maxWord = "";
+        
         for (String word : words) {
-            int score = calculateScore(word);
-            if (score > highestScore) {
-                highestScore = score;
-                highestScoringWord = word;
+            int score = 0;
+            for (char c : word.toCharArray()) {
+                score += c - 'a' + 1;
+            }
+            if (score > maxScore) {
+                maxScore = score;
+                maxWord = word;
             }
         }
-
-        System.out.println(highestScoringWord);
+        
+        return maxWord;
     }
 
-    private static int calculateScore(String word) {
-        int score = 0;
-        for (char c : word.toCharArray()) {
-            score += c - 'a' + 1;
-        }
-        return score;
+    public static void main(String[] args) {
+        System.out.println(high("man i need a taxi up to ubud")); // Output: taxi
+        System.out.println(high("what time are we climbing up the volcano")); // Output: volcano
+        System.out.println(high("take me to semynak")); // Output: semynak
     }
 }

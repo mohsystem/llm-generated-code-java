@@ -5,49 +5,53 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
-import java.nio.file.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
 public class Task134_CLAUDE_claude_3_5_sonnet_20240620 {
-    private static final String KEY_FILE = "secret.key";
     private static final String ALGORITHM = "AES";
+    private static final String KEY_FILE = "secret.key";
 
     public static void generateKey() throws NoSuchAlgorithmException, IOException {
         KeyGenerator keyGen = KeyGenerator.getInstance(ALGORITHM);
         keyGen.init(256);
         SecretKey secretKey = keyGen.generateKey();
-        byte[] encoded = secretKey.getEncoded();
-        Files.write(Paths.get(KEY_FILE), encoded);
+        try (FileOutputStream fos = new FileOutputStream(KEY_FILE)) {
+            fos.write(secretKey.getEncoded());
+        }
     }
 
     public static SecretKey loadKey() throws IOException {
-        byte[] encoded = Files.readAllBytes(Paths.get(KEY_FILE));
-        return new SecretKeySpec(encoded, ALGORITHM);
+        byte[] keyBytes = new byte[32];
+        try (FileInputStream fis = new FileInputStream(KEY_FILE)) {
+            fis.read(keyBytes);
+        }
+        return new SecretKeySpec(keyBytes, ALGORITHM);
     }
 
-    public static String encrypt(String data, SecretKey key) throws Exception {
+    public static String encrypt(String input, SecretKey key) throws Exception {
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.ENCRYPT_MODE, key);
-        byte[] encryptedBytes = cipher.doFinal(data.getBytes());
+        byte[] encryptedBytes = cipher.doFinal(input.getBytes());
         return Base64.getEncoder().encodeToString(encryptedBytes);
     }
 
-    public static String decrypt(String encryptedData, SecretKey key) throws Exception {
+    public static String decrypt(String encryptedInput, SecretKey key) throws Exception {
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, key);
-        byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(encryptedData));
+        byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(encryptedInput));
         return new String(decryptedBytes);
     }
 
     public static void main(String[] args) {
         try {
-            if (!Files.exists(Paths.get(KEY_FILE))) {
+            File keyFile = new File(KEY_FILE);
+            if (!keyFile.exists()) {
                 generateKey();
             }
+            
             SecretKey key = loadKey();
-
-            String message = "Hello, this is a secret message!";
+            String message = "Hello, World!";
             String encrypted = encrypt(message, key);
             String decrypted = decrypt(encrypted, key);
 

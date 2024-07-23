@@ -4,16 +4,26 @@ import java.util.Arrays;
 
 public class Task18_CLAUDE_claude_3_5_sonnet_20240620 {
     public static int convertBinaryArrayToInt(int[] binary) {
-        return Arrays.stream(binary).reduce((result, bit) -> result * 2 + bit).getAsInt();
+        return Integer.parseInt(Arrays.stream(binary)
+                                      .mapToObj(String::valueOf)
+                                      .reduce("", (a, b) -> a + b), 2);
     }
 
     public static void main(String[] args) {
-        System.out.println(convertBinaryArrayToInt(new int[]{0, 0, 0, 1})); // 1
-        System.out.println(convertBinaryArrayToInt(new int[]{0, 0, 1, 0})); // 2
-        System.out.println(convertBinaryArrayToInt(new int[]{0, 1, 0, 1})); // 5
-        System.out.println(convertBinaryArrayToInt(new int[]{1, 0, 0, 1})); // 9
-        System.out.println(convertBinaryArrayToInt(new int[]{0, 1, 1, 0})); // 6
-        System.out.println(convertBinaryArrayToInt(new int[]{1, 1, 1, 1})); // 15
-        System.out.println(convertBinaryArrayToInt(new int[]{1, 0, 1, 1})); // 11
+        int[][] testCases = {
+            {0, 0, 0, 1},
+            {0, 0, 1, 0},
+            {0, 1, 0, 1},
+            {1, 0, 0, 1},
+            {0, 0, 1, 0},
+            {0, 1, 1, 0},
+            {1, 1, 1, 1},
+            {1, 0, 1, 1}
+        };
+
+        for (int[] testCase : testCases) {
+            System.out.println("Testing: " + Arrays.toString(testCase) + 
+                               " ==> " + convertBinaryArrayToInt(testCase));
+        }
     }
 }

@@ -2,102 +2,113 @@ package claude.task91;
 
 import java.net.*;
 import java.io.*;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task91_CLAUDE_claude_3_5_sonnet_20240620 {
     private static final int PORT = 53;
-    private static final int BUFFER_SIZE = 512;
+    private static final String SERVER_IP = "127.0.0.1";
 
-    public static void main(String[] args) {
-        try {
-            DatagramSocket socket = new DatagramSocket(PORT);
-            byte[] receiveData = new byte[BUFFER_SIZE];
+    public static void main(String[] args) throws IOException {
+        DatagramSocket socket = new DatagramSocket(PORT, InetAddress.getByName(SERVER_IP));
+        byte[] receiveData = new byte[512];
 
-            while (true) {
-                DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-                socket.receive(receivePacket);
+        System.out.println("DNS server listening on " + SERVER_IP + ":" + PORT);
 
-                byte[] dnsQuery = receivePacket.getData();
-                int queryLength = receivePacket.getLength();
+        while (true) {
+            DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
+            socket.receive(receivePacket);
 
-                // Parse DNS query
-                String domainName = parseDNSQuery(dnsQuery, queryLength);
+            byte[] data = receivePacket.getData();
+            InetAddress clientAddress = receivePacket.getAddress();
+            int clientPort = receivePacket.getPort();
 
-                // Resolve DNS record (simplified)
-                String ipAddress = resolveDNS(domainName);
+            DNSMessage query = parseDNSQuery(data);
+            System.out.println("Received DNS query for " + query.domain);
 
-                // Create DNS response
-                byte[] dnsResponse = createDNSResponse(dnsQuery, queryLength, ipAddress);
+            List<String> answers = resolveDNS(query.domain, query.qtype);
+            byte[] response = createDNSResponse(query, answers);
 
-                InetAddress clientAddress = receivePacket.getAddress();
-                int clientPort = receivePacket.getPort();
-
-                DatagramPacket sendPacket = new DatagramPacket(dnsResponse, dnsResponse.length, clientAddress, clientPort);
-                socket.send(sendPacket);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+            DatagramPacket sendPacket = new DatagramPacket(response, response.length, clientAddress, clientPort);
+            socket.send(sendPacket);
+            System.out.println("Sent DNS response to " + clientAddress.getHostAddress() + ":" + clientPort);
         }
     }
 
-    private static String parseDNSQuery(byte[] query, int length) {
-        StringBuilder domainName = new StringBuilder();
-        int pos = 12; // Skip header
+    private static DNSMessage parseDNSQuery(byte[] data) {
+        ByteBuffer buffer = ByteBuffer.wrap(data);
+        short id = buffer.getShort();
+        buffer.getShort(); // flags
+        short qdcount = buffer.getShort();
 
-        while (pos < length && query[pos] != 0) {
-            int labelLength = query[pos++] & 0xFF;
-            for (int i = 0; i < labelLength; i++) {
-                domainName.append((char) query[pos++]);
-            }
-            domainName.append('.');
+        StringBuilder domain = new StringBuilder();
+        int length;
+        while ((length = buffer.get()) > 0) {
+            byte[] label = new byte[length];
+            buffer.get(label);
+            domain.append(new String(label)).append(".");
         }
+        domain.setLength(domain.length() - 1);
 
-        return domainName.toString();
+        short qtype = buffer.getShort();
+        short qclass = buffer.getShort();
+
+        return new DNSMessage(id, domain.toString(), qtype, qclass);
     }
 
-    private static String resolveDNS(String domainName) {
-        // Simplified DNS resolution (replace with actual DNS lookup logic)
-        return "192.168.1.1";
+    private static List<String> resolveDNS(String domain, short qtype) {
+        // Implement DNS resolution logic here
+        List<String> answers = new ArrayList<>();
+        answers.add("93.184.216.34"); // Example IP for example.com
+        return answers;
     }
 
-    private static byte[] createDNSResponse(byte[] query, int queryLength, String ipAddress) {
-        byte[] response = new byte[queryLength + 16];
-        System.arraycopy(query, 0, response, 0, queryLength);
+    private static byte[] createDNSResponse(DNSMessage query, List<String> answers) {
+        ByteBuffer response = ByteBuffer.allocate(512);
+        response.putShort(query.id);
+        response.putShort((short) 0x8180); // Flags
+        response.putShort((short) 1); // QDCOUNT
+        response.putShort((short) answers.size()); // ANCOUNT
+        response.putShort((short) 0); // NSCOUNT
+        response.putShort((short) 0); // ARCOUNT
 
-        // Set QR bit to 1 (response)
-        response[2] |= 0x80;
+        // Question section
+        for (String label : query.domain.split("\\\\.")) {
+            response.put((byte) label.length());
+            response.put(label.getBytes());
+        }
+        response.put((byte) 0);
+        response.putShort(query.qtype);
+        response.putShort(query.qclass);
 
-        // Set Answer count to 1
-        response[7] = 1;
-
-        // Add answer section
-        int answerOffset = queryLength;
-        response[answerOffset++] = (byte) 0xC0; // Pointer to domain name
-        response[answerOffset++] = 12; // Offset to domain name in header
-
-        // Type A record
-        response[answerOffset++] = 0;
-        response[answerOffset++] = 1;
-
-        // Class IN
-        response[answerOffset++] = 0;
-        response[answerOffset++] = 1;
-
-        // TTL (4 bytes, set to 300 seconds)
-        response[answerOffset++] = 0;
-        response[answerOffset++] = 0;
-        response[answerOffset++] = 1;
-        response[answerOffset++] = 44;
-
-        // Data length (4 bytes for IPv4)
-        response[answerOffset++] = 0;
-        response[answerOffset++] = 4;
-
-        // IP address
-        String[] octets = ipAddress.split("\\\\.");
-        for (String octet : octets) {
-            response[answerOffset++] = (byte) Integer.parseInt(octet);
+        // Answer section
+        for (String answer : answers) {
+            response.putShort((short) 0xc00c); // Pointer to domain name
+            response.putShort(query.qtype);
+            response.putShort(query.qclass);
+            response.putInt(300); // TTL
+            response.putShort((short) answer.length());
+            response.put(answer.getBytes());
         }
 
-        return response;
+        byte[] result = new byte[response.position()];
+        response.flip();
+        response.get(result);
+        return result;
+    }
+
+    private static class DNSMessage {
+        short id;
+        String domain;
+        short qtype;
+        short qclass;
+
+        DNSMessage(short id, String domain, short qtype, short qclass) {
+            this.id = id;
+            this.domain = domain;
+            this.qtype = qtype;
+            this.qclass = qclass;
+        }
     }
 }

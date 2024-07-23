@@ -12,27 +12,24 @@ class TreeNode {
 
 public class Task156_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void preorderTraversal(TreeNode root) {
-        if (root != null) {
-            System.out.print(root.val + " ");
-            preorderTraversal(root.left);
-            preorderTraversal(root.right);
-        }
+        if (root == null) return;
+        System.out.print(root.val + " ");
+        preorderTraversal(root.left);
+        preorderTraversal(root.right);
     }
     
     public static void inorderTraversal(TreeNode root) {
-        if (root != null) {
-            inorderTraversal(root.left);
-            System.out.print(root.val + " ");
-            inorderTraversal(root.right);
-        }
+        if (root == null) return;
+        inorderTraversal(root.left);
+        System.out.print(root.val + " ");
+        inorderTraversal(root.right);
     }
     
     public static void postorderTraversal(TreeNode root) {
-        if (root != null) {
-            postorderTraversal(root.left);
-            postorderTraversal(root.right);
-            System.out.print(root.val + " ");
-        }
+        if (root == null) return;
+        postorderTraversal(root.left);
+        postorderTraversal(root.right);
+        System.out.print(root.val + " ");
     }
     
     public static void main(String[] args) {
@@ -44,9 +41,9 @@ public class Task156_CLAUDE_claude_3_5_sonnet_20240620 {
         
         System.out.println("Preorder traversal:");
         preorderTraversal(root);
-        System.out.println("Inorder traversal:");
+        System.out.println("\\nInorder traversal:");
         inorderTraversal(root);
-        System.out.println("Postorder traversal:");
+        System.out.println("\\nPostorder traversal:");
         postorderTraversal(root);
     }
 }

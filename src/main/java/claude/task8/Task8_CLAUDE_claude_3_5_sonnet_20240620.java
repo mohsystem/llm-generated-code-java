@@ -11,7 +11,7 @@ public class Task8_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     public static void main(String[] args) {
-        System.out.println(findMissingLetter(new char[] {'a','b','c','d','f'}));
-        System.out.println(findMissingLetter(new char[] {'O','Q','R','S'}));
+        System.out.println(findMissingLetter(new char[] {'a','b','c','d','f'}));  // Output: e
+        System.out.println(findMissingLetter(new char[] {'O','Q','R','S'}));  // Output: P
     }
 }

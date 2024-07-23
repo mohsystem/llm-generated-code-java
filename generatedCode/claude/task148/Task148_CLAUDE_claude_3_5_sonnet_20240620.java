@@ -1,6 +1,7 @@
 package claude.task148;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class Task148_CLAUDE_claude_3_5_sonnet_20240620<T> {
     private ArrayList<T> items;
@@ -36,13 +37,12 @@ public class Task148_CLAUDE_claude_3_5_sonnet_20240620<T> {
     }
 
     public static void main(String[] args) {
-        Task148_CLAUDE_claude_3_5_sonnet_20240620<Integer> stack = new Task148_CLAUDE_claude_3_5_sonnet_20240620<>();
+        Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
         System.out.println("Top element: " + stack.peek());
         System.out.println("Popped: " + stack.pop());
         System.out.println("Size: " + stack.size());
-        System.out.println("Is empty: " + stack.isEmpty());
     }
 }

@@ -1,7 +1,6 @@
 package claude.task178;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
 class Solution {
     public int shortestSubarray(int[] nums, int k) {

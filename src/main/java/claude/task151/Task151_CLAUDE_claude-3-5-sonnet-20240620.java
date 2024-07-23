@@ -18,38 +18,40 @@ class BinarySearchTree {
     }
 
     void insert(int key) {
-        root = insertRec(root, key);
+        root = insertRecursive(root, key);
     }
 
-    Node insertRec(Node root, int key) {
+    Node insertRecursive(Node root, int key) {
         if (root == null) {
             root = new Node(key);
             return root;
         }
         if (key < root.key)
-            root.left = insertRec(root.left, key);
+            root.left = insertRecursive(root.left, key);
         else if (key > root.key)
-            root.right = insertRec(root.right, key);
+            root.right = insertRecursive(root.right, key);
         return root;
     }
 
     void delete(int key) {
-        root = deleteRec(root, key);
+        root = deleteRecursive(root, key);
     }
 
-    Node deleteRec(Node root, int key) {
+    Node deleteRecursive(Node root, int key) {
         if (root == null) return root;
+
         if (key < root.key)
-            root.left = deleteRec(root.left, key);
+            root.left = deleteRecursive(root.left, key);
         else if (key > root.key)
-            root.right = deleteRec(root.right, key);
+            root.right = deleteRecursive(root.right, key);
         else {
             if (root.left == null)
                 return root.right;
             else if (root.right == null)
                 return root.left;
+
             root.key = minValue(root.right);
-            root.right = deleteRec(root.right, root.key);
+            root.right = deleteRecursive(root.right, root.key);
         }
         return root;
     }
@@ -63,16 +65,16 @@ class BinarySearchTree {
         return minv;
     }
 
-    Node search(int key) {
-        return searchRec(root, key);
+    boolean search(int key) {
+        return searchRecursive(root, key);
     }
 
-    Node searchRec(Node root, int key) {
+    boolean searchRecursive(Node root, int key) {
         if (root == null || root.key == key)
-            return root;
-        if (root.key > key)
-            return searchRec(root.left, key);
-        return searchRec(root.right, key);
+            return root != null;
+        if (key < root.key)
+            return searchRecursive(root.left, key);
+        return searchRecursive(root.right, key);
     }
 
     public static void main(String[] args) {
@@ -85,10 +87,10 @@ class BinarySearchTree {
         bst.insert(60);
         bst.insert(80);
 
-        System.out.println("Search for 40: " + (bst.search(40) != null ? "Found" : "Not Found"));
-        System.out.println("Search for 90: " + (bst.search(90) != null ? "Found" : "Not Found"));
+        System.out.println("Search for 40: " + (bst.search(40) ? "Found" : "Not Found"));
+        System.out.println("Search for 90: " + (bst.search(90) ? "Found" : "Not Found"));
 
         bst.delete(40);
-        System.out.println("Search for 40 after deletion: " + (bst.search(40) != null ? "Found" : "Not Found"));
+        System.out.println("Search for 40 after deletion: " + (bst.search(40) ? "Found" : "Not Found"));
     }
 }

@@ -15,13 +15,13 @@ public class Task160_CLAUDE_claude_3_5_sonnet_20240620 {
 
         try {
             URL url = new URL(urlString);
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
 
-            int statusCode = con.getResponseCode();
-            System.out.println("Status code: " + statusCode);
+            int responseCode = connection.getResponseCode();
+            System.out.println("Status code: " + responseCode);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
             StringBuilder content = new StringBuilder();
             while ((inputLine = in.readLine()) != null) {
@@ -32,7 +32,7 @@ public class Task160_CLAUDE_claude_3_5_sonnet_20240620 {
             System.out.println("Response content:");
             System.out.println(content.toString());
 
-            con.disconnect();
+            connection.disconnect();
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         }

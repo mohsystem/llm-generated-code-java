@@ -1,7 +1,6 @@
 package claude.task165;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Task165_CLAUDE_claude_3_5_sonnet_20240620 {
     public static boolean checkFlush(String[] table, String[] hand) {
@@ -10,20 +9,15 @@ public class Task165_CLAUDE_claude_3_5_sonnet_20240620 {
         suits.put('H', 0);
         suits.put('D', 0);
         suits.put('C', 0);
-
+        
         for (String card : table) {
             suits.put(card.charAt(card.length() - 1), suits.get(card.charAt(card.length() - 1)) + 1);
         }
         for (String card : hand) {
             suits.put(card.charAt(card.length() - 1), suits.get(card.charAt(card.length() - 1)) + 1);
         }
-
-        for (int count : suits.values()) {
-            if (count >= 5) {
-                return true;
-            }
-        }
-        return false;
+        
+        return Collections.max(suits.values()) >= 5;
     }
 
     public static void main(String[] args) {

@@ -4,20 +4,19 @@ import java.util.Scanner;
 
 public class Task161_CLAUDE_claude_3_5_sonnet_20240620 {
     static int knapsack(int capacity, int[] weights, int[] values, int n) {
-        int[][] K = new int[n + 1][capacity + 1];
+        int[][] dp = new int[n + 1][capacity + 1];
         
-        for (int i = 0; i <= n; i++) {
-            for (int w = 0; w <= capacity; w++) {
-                if (i == 0 || w == 0)
-                    K[i][w] = 0;
-                else if (weights[i-1] <= w)
-                    K[i][w] = Math.max(values[i-1] + K[i-1][w-weights[i-1]], K[i-1][w]);
-                else
-                    K[i][w] = K[i-1][w];
+        for (int i = 1; i <= n; i++) {
+            for (int w = 1; w <= capacity; w++) {
+                if (weights[i-1] <= w) {
+                    dp[i][w] = Math.max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w]);
+                } else {
+                    dp[i][w] = dp[i-1][w];
+                }
             }
         }
         
-        return K[n][capacity];
+        return dp[n][capacity];
     }
     
     public static void main(String[] args) {
@@ -42,7 +41,7 @@ public class Task161_CLAUDE_claude_3_5_sonnet_20240620 {
             values[i] = scanner.nextInt();
         }
         
-        System.out.println("Maximum value in Knapsack = " + knapsack(capacity, weights, values, n));
+        System.out.println("Maximum value: " + knapsack(capacity, weights, values, n));
         
         scanner.close();
     }

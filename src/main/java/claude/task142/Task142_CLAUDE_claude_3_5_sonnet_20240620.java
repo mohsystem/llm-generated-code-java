@@ -19,7 +19,7 @@ public class Task142_CLAUDE_claude_3_5_sonnet_20240620 {
         System.out.print("Enter second number: ");
         int num2 = scanner.nextInt();
         int result = gcd(num1, num2);
-        System.out.printf("The GCD of %d and %d is %d", num1, num2, result);
+        System.out.printf("The Task142_CLAUDE_claude_3_5_sonnet_20240620 of %d and %d is %d%n", num1, num2, result);
         scanner.close();
     }
 }

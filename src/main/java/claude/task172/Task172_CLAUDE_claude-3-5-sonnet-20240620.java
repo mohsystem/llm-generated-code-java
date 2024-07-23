@@ -18,4 +18,10 @@ class Solution {
         
         return result.size();
     }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.distinctEchoSubstrings("abcabcabc"));  // Output: 3
+        System.out.println(solution.distinctEchoSubstrings("leetcodeleetcode"));  // Output: 2
+    }
 }

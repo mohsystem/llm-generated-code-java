@@ -3,18 +3,18 @@ package claude.task180;
 import java.util.*;
 
 class Node {
-    int value;
+    int data;
     List<Node> children;
 
-    Node(int value) {
-        this.value = value;
+    Node(int data) {
+        this.data = data;
         this.children = new ArrayList<>();
     }
 }
 
 public class Task180_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static Node reparent(Node root, int newRootValue) {
-        Node newRoot = findNode(root, newRootValue);
+    public static Node reparent(Node root, int newRootData) {
+        Node newRoot = findNode(root, newRootData);
         if (newRoot == null) {
             return root;
         }
@@ -23,12 +23,12 @@ public class Task180_CLAUDE_claude_3_5_sonnet_20240620 {
         return newRoot;
     }
 
-    private static Node findNode(Node node, int value) {
-        if (node.value == value) {
+    private static Node findNode(Node node, int data) {
+        if (node.data == data) {
             return node;
         }
         for (Node child : node.children) {
-            Node result = findNode(child, value);
+            Node result = findNode(child, data);
             if (result != null) {
                 return result;
             }
@@ -37,23 +37,19 @@ public class Task180_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     private static void reparentHelper(Node node, Node parent) {
-        List<Node> newChildren = new ArrayList<>();
-        for (Node child : node.children) {
-            if (child != parent) {
-                newChildren.add(child);
-            }
-        }
         if (parent != null) {
-            newChildren.add(parent);
+            node.children.remove(parent);
+            node.children.add(parent);
         }
-        node.children = newChildren;
-        for (Node child : node.children) {
-            reparentHelper(child, node);
+        for (Node child : new ArrayList<>(node.children)) {
+            if (child != parent) {
+                reparentHelper(child, node);
+            }
         }
     }
 
     public static void printTree(Node node, int level) {
-        System.out.println("  ".repeat(level) + node.value);
+        System.out.println("  ".repeat(level) + node.data);
         for (Node child : node.children) {
             printTree(child, level + 1);
         }
@@ -75,7 +71,7 @@ public class Task180_CLAUDE_claude_3_5_sonnet_20240620 {
         printTree(root, 0);
 
         Node newRoot = reparent(root, 6);
-        System.out.println("Reparented tree with 6 as root:");
+        System.out.println("\\nReparented tree with 6 as root:");
         printTree(newRoot, 0);
     }
 }

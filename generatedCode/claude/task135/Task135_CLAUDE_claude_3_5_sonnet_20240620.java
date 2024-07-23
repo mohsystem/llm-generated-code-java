@@ -13,42 +13,41 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/")
 public class Task135_CLAUDE_claude_3_5_sonnet_20240620 extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    
+    private static final String CSRF_TOKEN = "csrfToken";
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String csrfToken = generateCSRFToken();
-        HttpSession session = request.getSession();
-        session.setAttribute("csrf_token", csrfToken);
-        
+        String csrfToken = generateCSRFToken(request.getSession());
         response.setContentType("text/html");
-        response.getWriter().println("<form method=\'post\'>");
-        response.getWriter().println("<input type=\'hidden\' name=\'csrf_token\' value=\'" + csrfToken + "\'>");
-        response.getWriter().println("<input type=\'submit\' value=\'Submit\'>");
+        response.getWriter().println("<form method='post'>");
+        response.getWriter().println("<input type='hidden' name='" + CSRF_TOKEN + "' value='" + csrfToken + "'>");
+        response.getWriter().println("<input type='submit' value='Submit'>");
         response.getWriter().println("</form>");
     }
-    
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String sessionToken = (String) session.getAttribute("csrf_token");
-        String requestToken = request.getParameter("csrf_token");
-        
-        if (sessionToken == null || !sessionToken.equals(requestToken)) {
-            response.sendError(HttpServletResponse.SC_FORBIDDEN, "CSRF token mismatch");
-            return;
+        if (isValidCSRFToken(request.getSession(), request.getParameter(CSRF_TOKEN))) {
+            response.getWriter().println("Form submitted successfully!");
+        } else {
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            response.getWriter().println("CSRF token validation failed");
         }
-        
-        response.getWriter().println("Form submitted successfully");
     }
-    
-    private String generateCSRFToken() {
+
+    private String generateCSRFToken(HttpSession session) {
+        String token = generateRandomToken();
+        session.setAttribute(CSRF_TOKEN, token);
+        return token;
+    }
+
+    private boolean isValidCSRFToken(HttpSession session, String token) {
+        String storedToken = (String) session.getAttribute(CSRF_TOKEN);
+        return storedToken != null && storedToken.equals(token);
+    }
+
+    private String generateRandomToken() {
         SecureRandom random = new SecureRandom();
-        byte[] bytes = new byte[24];
+        byte[] bytes = new byte[20];
         random.nextBytes(bytes);
         return Base64.getEncoder().encodeToString(bytes);
-    }
-    
-    public static void main(String[] args) {
-        // This main method is just a placeholder. 
-        // In a real scenario, you\'d deploy this servlet to a web container like Tomcat.
-        System.out.println("CSRF Protection Servlet");
     }
 }

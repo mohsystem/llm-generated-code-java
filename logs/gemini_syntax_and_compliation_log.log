@@ -1,0 +1,645 @@
+2:58:50 AM: Executing ':Compiler.main()'...
+
+
+> Configure project :
+The 'sonarqube' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+The 'sonar' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+
+> Task :compileJava
+C:\sourceCode\PhD\llm-generated-code-java\src\main\java\gtp4o\task157\Task157_OPENAI_gpt_4o.java:6: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
+        Integer myVar = new Integer(42);
+                        ^
+C:\sourceCode\PhD\llm-generated-code-java\src\main\java\llama3\task116\Task116_PERPLEXITY_llama_3_sonar_large_32k_chat.java:21: warning: [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+            System.setSecurityManager(null);
+                  ^
+Note: C:\sourceCode\PhD\llm-generated-code-java\src\main\java\gemini\task152\Task152_GEMINI_gemini-1.5-pro-001.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+2 warnings
+
+> Task :processResources NO-SOURCE
+> Task :classes
+
+> Task :Compiler.main()
+Compiling: generatedCode\gemini2\task0\Task0_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task0\Task0_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task1\Task1_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task1\Task1_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task10\Task10_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task10\Task10_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task100\Task100_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task100\Task100_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task101\Task101_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task101\Task101_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task102\Task102_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task102\Task102_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task103\Task103_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task103\Task103_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task104\Task104_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task104\Task104_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task105\Task105_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task105\Task105_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task106\Task106_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task106\Task106_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task107\Task107_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task107\Task107_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task108\Task108_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task108\Task108_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task109\Task109_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task109\Task109_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task11\Task11_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task11\Task11_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task110\Task110_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task110\Task110_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task111\Task111_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task111\Task111_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task112\Task112_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task112\Task112_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task113\Task113_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task113\Task113_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task114\Task114_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task114\Task114_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task115\Task115_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task115\Task115_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task116\Task116_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task116\Task116_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task117\Task117_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task117\Task117_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task118\Task118_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task118\Task118_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task119\Task119_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task119\Task119_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task12\Task12_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task12\Task12_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task120\Task120_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task120\Task120_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task121\Task121_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task121\Task121_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task122\Task122_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task122\Task122_GEMINI_gemini_1_5_pro_001.java
+Error on line 18: unclosed string literal
+Error Type: Compilation Error
+Error on line 19: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task123\Task123_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task123\Task123_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task124\Task124_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task124\Task124_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task125\Task125_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task125\Task125_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task126\Task126_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task126\Task126_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task127\Task127_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task127\Task127_GEMINI_gemini_1_5_pro_001.java
+Error on line 27: cannot find symbol
+  symbol:   class FileNotFoundException
+  location: class gemini2.task127.Task127_GEMINI_gemini_1_5_pro_001
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task128\Task128_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task128\Task128_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task129\Task129_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task129\Task129_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task13\Task13_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task13\Task13_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task130\Task130_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task130\Task130_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task131\Task131_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task131\Task131_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task132\Task132_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task132\Task132_GEMINI_gemini_1_5_pro_001.java
+Error on line 22: unclosed string literal
+Error Type: Compilation Error
+Error on line 23: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task133\Task133_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task133\Task133_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task134\Task134_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task134\Task134_GEMINI_gemini_1_5_pro_001.java
+Error on line 26: unclosed string literal
+Error Type: Compilation Error
+Error on line 27: ';' expected
+Error Type: Syntax Error
+Error on line 27: unclosed string literal
+Error Type: Compilation Error
+Error on line 34: unclosed string literal
+Error Type: Compilation Error
+Error on line 35: ';' expected
+Error Type: Syntax Error
+Error on line 35: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task135\Task135_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task135\Task135_GEMINI_gemini_1_5_pro_001.java
+Error on line 20: unclosed string literal
+Error Type: Compilation Error
+Error on line 21: unclosed string literal
+Error Type: Compilation Error
+Error on line 22: unclosed string literal
+Error Type: Compilation Error
+Error on line 23: unclosed string literal
+Error Type: Compilation Error
+Error on line 24: unclosed string literal
+Error Type: Compilation Error
+Error on line 25: unclosed string literal
+Error Type: Compilation Error
+Error on line 26: unclosed string literal
+Error Type: Compilation Error
+Error on line 27: unclosed string literal
+Error Type: Compilation Error
+Error on line 28: unclosed string literal
+Error Type: Compilation Error
+Error on line 29: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task136\Task136_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task136\Task136_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task137\Task137_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task137\Task137_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task138\Task138_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task138\Task138_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task139\Task139_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task139\Task139_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task14\Task14_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task14\Task14_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task140\Task140_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task140\Task140_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task141\Task141_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task141\Task141_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task142\Task142_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task142\Task142_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task143\Task143_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task143\Task143_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task144\Task144_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task144\Task144_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task145\Task145_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task145\Task145_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task146\Task146_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task146\Task146_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task147\Task147_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task147\Task147_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task148\Task148_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task148\Task148_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task149\Task149_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task149\Task149_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task15\Task15_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task15\Task15_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task150\Task150_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task150\Task150_GEMINI_gemini_1_5_pro_001.java
+Error on line 29: unclosed string literal
+Error Type: Compilation Error
+Error on line 30: ';' expected
+Error Type: Syntax Error
+Error on line 30: unclosed string literal
+Error Type: Compilation Error
+Error on line 36: unclosed string literal
+Error Type: Compilation Error
+Error on line 37: ';' expected
+Error Type: Syntax Error
+Error on line 37: unclosed string literal
+Error Type: Compilation Error
+Error on line 39: unclosed string literal
+Error Type: Compilation Error
+Error on line 40: ';' expected
+Error Type: Syntax Error
+Error on line 40: ';' expected
+Error Type: Syntax Error
+Error on line 40: unclosed string literal
+Error Type: Compilation Error
+Error on line 40: not a statement
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task151\Task151_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task151\Task151_GEMINI_gemini-1.5-pro-001.java
+Error on line 119: unclosed string literal
+Error Type: Compilation Error
+Error on line 120: unclosed string literal
+Error Type: Compilation Error
+Error on line 125: unclosed string literal
+Error Type: Compilation Error
+Error on line 126: not a statement
+Error Type: Compilation Error
+Error on line 126: ';' expected
+Error Type: Syntax Error
+Error on line 126: unclosed string literal
+Error Type: Compilation Error
+Error on line 130: unclosed string literal
+Error Type: Compilation Error
+Error on line 131: unclosed string literal
+Error Type: Compilation Error
+Error on line 137: unclosed string literal
+Error Type: Compilation Error
+Error on line 138: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task152\Task152_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task152\Task152_GEMINI_gemini-1.5-pro-001.java
+Error on line 5: cannot find symbol
+  symbol:   class LinkedList
+  location: class gemini2.task152.HashTable
+Error Type: Compilation Error
+Error on line 9: cannot find symbol
+  symbol:   class LinkedList
+  location: class gemini2.task152.HashTable
+Error Type: Compilation Error
+Error on line 31: cannot find symbol
+  symbol:   class LinkedList
+  location: class gemini2.task152.HashTable
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task153\Task153_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task153\Task153_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task154\Task154_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task154\Task154_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task155\Task155_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task155\Task155_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task156\Task156_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task156\Task156_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task157\Task157_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task157\Task157_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task158\Task158_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task158\Task158_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task159\Task159_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task159\Task159_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task16\Task16_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task16\Task16_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task160\Task160_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task160\Task160_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task161\Task161_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task161\Task161_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task162\Task162_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task162\Task162_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task163\Task163_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task163\Task163_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task164\Task164_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task164\Task164_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task165\Task165_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task165\Task165_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task166\Task166_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task166\Task166_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task167\Task167_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task167\Task167_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task168\Task168_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task168\Task168_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task169\Task169_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task169\Task169_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task17\Task17_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task17\Task17_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task170\Task170_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task170\Task170_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task171\Task171_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task171\Task171_GEMINI_gemini-1.5-pro-001.java
+Error on line 10: cannot find symbol
+  symbol:   variable Arrays
+  location: class gemini2.task171.Solution
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   variable Arrays
+  location: class gemini2.task171.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task172\Task172_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task172\Task172_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task173\Task173_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task173\Task173_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task174\Task174_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task174\Task174_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task175\Task175_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task175\Task175_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task176\Task176_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task176\Task176_GEMINI_gemini-1.5-pro-001.java
+Error on line 4: cannot find symbol
+  symbol:   class List
+  location: class gemini2.task176.ProductOfNumbers
+Error Type: Compilation Error
+Error on line 7: cannot find symbol
+  symbol:   class ArrayList
+  location: class gemini2.task176.ProductOfNumbers
+Error Type: Compilation Error
+Error on line 13: cannot find symbol
+  symbol:   class ArrayList
+  location: class gemini2.task176.ProductOfNumbers
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task177\Task177_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task177\Task177_GEMINI_gemini-1.5-pro-001.java
+Error on line 8: cannot find symbol
+  symbol:   class Deque
+  location: class gemini2.task177.Solution
+Error Type: Compilation Error
+Error on line 8: cannot find symbol
+  symbol:   class ArrayDeque
+  location: class gemini2.task177.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task178\Task178_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task178\Task178_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task179\Task179_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task179\Task179_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task18\Task18_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task18\Task18_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task180\Task180_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task180\Task180_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task181\Task181_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task181\Task181_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task182\Task182_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task182\Task182_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task183\Task183_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task183\Task183_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task184\Task184_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task184\Task184_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task185\Task185_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task185\Task185_GEMINI_gemini_1_5_pro_001.java
+Error on line 24: reached end of file while parsing
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task186\Task186_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task186\Task186_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task187\Task187_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task187\Task187_GEMINI_gemini-1.5-pro-001.java
+Error on line 20: unreported exception java.util.concurrent.BrokenBarrierException; must be caught or declared to be thrown
+Error Type: Compilation Error
+Error on line 31: unreported exception java.util.concurrent.BrokenBarrierException; must be caught or declared to be thrown
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task188\Task188_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task188\Task188_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task189\Task189_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task189\Task189_GEMINI_gemini-1.5-pro-001.java
+Error on line 16: cannot find symbol
+  symbol:   class IntConsumer
+  location: class gemini2.task189.ZeroEvenOdd
+Error Type: Compilation Error
+Error on line 28: cannot find symbol
+  symbol:   class IntConsumer
+  location: class gemini2.task189.ZeroEvenOdd
+Error Type: Compilation Error
+Error on line 36: cannot find symbol
+  symbol:   class IntConsumer
+  location: class gemini2.task189.ZeroEvenOdd
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task19\Task19_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task19\Task19_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task190\Task190_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task190\Task190_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task191\Task191_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task191\Task191_GEMINI_gemini-1.5-pro-001.java
+Error on line 6: cannot find symbol
+  symbol:   class Stack
+  location: class gemini2.task191.Solution
+Error Type: Compilation Error
+Error on line 6: cannot find symbol
+  symbol:   class Stack
+  location: class gemini2.task191.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task192\Task192_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task192\Task192_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task193\Task193_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task193\Task193_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task194\Task194_GEMINI_gemini-1.5-pro-001.java
+Compilation failed: generatedCode\gemini2\task194\Task194_GEMINI_gemini-1.5-pro-001.java
+Error on line 11: cannot find symbol
+  symbol:   class Master
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 47: cannot find symbol
+  symbol:   class Random
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 20: cannot find symbol
+  symbol:   class List
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 20: cannot find symbol
+  symbol:   class ArrayList
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 28: cannot find symbol
+  symbol:   class List
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 28: cannot find symbol
+  symbol:   class ArrayList
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Error on line 47: cannot find symbol
+  symbol:   class Random
+  location: class gemini2.task194.Solution
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task195\Task195_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task195\Task195_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task196\Task196_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task196\Task196_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task197\Task197_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task197\Task197_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task198\Task198_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task198\Task198_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task199\Task199_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task199\Task199_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task2\Task2_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task2\Task2_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task20\Task20_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task20\Task20_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task21\Task21_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task21\Task21_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task22\Task22_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task22\Task22_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task23\Task23_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task23\Task23_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task24\Task24_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task24\Task24_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task25\Task25_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task25\Task25_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task26\Task26_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task26\Task26_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task27\Task27_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task27\Task27_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task28\Task28_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task28\Task28_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task29\Task29_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task29\Task29_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task3\Task3_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task3\Task3_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task30\Task30_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task30\Task30_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task31\Task31_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task31\Task31_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task32\Task32_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task32\Task32_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task33\Task33_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task33\Task33_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task34\Task34_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task34\Task34_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task35\Task35_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task35\Task35_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task36\Task36_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task36\Task36_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task37\Task37_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task37\Task37_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task38\Task38_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task38\Task38_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task39\Task39_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task39\Task39_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task4\Task4_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task4\Task4_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task40\Task40_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task40\Task40_GEMINI_gemini_1_5_pro_001.java
+Error on line 54: incompatible types: void cannot be converted to java.lang.String
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task41\Task41_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task41\Task41_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task42\Task42_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task42\Task42_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task43\Task43_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task43\Task43_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task44\Task44_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task44\Task44_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task45\Task45_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task45\Task45_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task46\Task46_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task46\Task46_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task47\Task47_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task47\Task47_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task48\Task48_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task48\Task48_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task49\Task49_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task49\Task49_GEMINI_gemini_1_5_pro_001.java
+Error on line 13: unclosed string literal
+Error Type: Compilation Error
+Error on line 14: unclosed string literal
+Error Type: Compilation Error
+Error on line 15: unclosed string literal
+Error Type: Compilation Error
+Error on line 16: unclosed string literal
+Error Type: Compilation Error
+Error on line 17: unclosed string literal
+Error Type: Compilation Error
+Error on line 18: unclosed string literal
+Error Type: Compilation Error
+Error on line 19: unclosed string literal
+Error Type: Compilation Error
+Error on line 20: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task5\Task5_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task5\Task5_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task50\Task50_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task50\Task50_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task51\Task51_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task51\Task51_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task52\Task52_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task52\Task52_GEMINI_gemini_1_5_pro_001.java
+Error on line 72: unreported exception javax.crypto.IllegalBlockSizeException; must be caught or declared to be thrown
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task53\Task53_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task53\Task53_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task54\Task54_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task54\Task54_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task55\Task55_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task55\Task55_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task56\Task56_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task56\Task56_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task57\Task57_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task57\Task57_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task58\Task58_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task58\Task58_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task59\Task59_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task59\Task59_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task6\Task6_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task6\Task6_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task60\Task60_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task60\Task60_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task61\Task61_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task61\Task61_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task62\Task62_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task62\Task62_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task63\Task63_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task63\Task63_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task64\Task64_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task64\Task64_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task65\Task65_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task65\Task65_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task66\Task66_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task66\Task66_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task67\Task67_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task67\Task67_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task68\Task68_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task68\Task68_GEMINI_gemini_1_5_pro_001.java
+Error on line 28: incompatible types: try-with-resources not applicable to variable type
+    (javax.naming.directory.DirContext cannot be converted to java.lang.AutoCloseable)
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task69\Task69_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task69\Task69_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task7\Task7_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task7\Task7_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task70\Task70_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task70\Task70_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task71\Task71_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task71\Task71_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task72\Task72_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task72\Task72_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task73\Task73_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task73\Task73_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task74\Task74_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task74\Task74_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task75\Task75_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task75\Task75_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task76\Task76_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task76\Task76_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task77\Task77_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task77\Task77_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task78\Task78_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task78\Task78_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task79\Task79_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task79\Task79_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task8\Task8_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task8\Task8_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task80\Task80_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task80\Task80_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task81\Task81_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task81\Task81_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task82\Task82_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task82\Task82_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task83\Task83_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task83\Task83_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task84\Task84_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task84\Task84_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task85\Task85_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task85\Task85_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task86\Task86_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task86\Task86_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task87\Task87_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task87\Task87_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task88\Task88_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task88\Task88_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task89\Task89_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task89\Task89_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task9\Task9_GEMINI_gemini-1.5-pro-001.java
+Compilation successful: generatedCode\gemini2\task9\Task9_GEMINI_gemini-1.5-pro-001.java
+Compiling: generatedCode\gemini2\task90\Task90_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task90\Task90_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task91\Task91_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task91\Task91_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task92\Task92_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task92\Task92_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task93\Task93_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task93\Task93_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task94\Task94_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task94\Task94_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task95\Task95_GEMINI_gemini_1_5_pro_001.java
+Compilation failed: generatedCode\gemini2\task95\Task95_GEMINI_gemini_1_5_pro_001.java
+Error on line 9: cannot find symbol
+  symbol:   method getProcessCpuTime()
+  location: variable osBean of type java.lang.management.OperatingSystemMXBean
+Error Type: Compilation Error
+Compiling: generatedCode\gemini2\task96\Task96_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task96\Task96_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task97\Task97_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task97\Task97_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task98\Task98_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task98\Task98_GEMINI_gemini_1_5_pro_001.java
+Compiling: generatedCode\gemini2\task99\Task99_GEMINI_gemini_1_5_pro_001.java
+Compilation successful: generatedCode\gemini2\task99\Task99_GEMINI_gemini_1_5_pro_001.java
+
+Summary:
+Valid files: 179
+Files with syntax errors: 3
+Files with compilation errors: 18
+Files with other errors: 0
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 47s
+2 actionable tasks: 2 executed
+3:00:38 AM: Execution finished ':Compiler.main()'.

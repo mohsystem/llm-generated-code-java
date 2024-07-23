@@ -5,18 +5,19 @@ import java.net.*;
 import java.util.*;
 
 public class Task90_CLAUDE_claude_3_5_sonnet_20240620 {
-    private static final int PORT = 12345;
-    private static Set<PrintWriter> clients = new HashSet<>();
+    private static final int PORT = 5555;
+    private static Set<PrintWriter> clientWriters = new HashSet<>();
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Chat Server is running...");
-        ServerSocket listener = new ServerSocket(PORT);
+        System.out.println("Chat Server is running on port " + PORT);
+        ServerSocket serverSocket = new ServerSocket(PORT);
+        
         try {
             while (true) {
-                new ClientHandler(listener.accept()).start();
+                new ClientHandler(serverSocket.accept()).start();
             }
         } finally {
-            listener.close();
+            serverSocket.close();
         }
     }
 
@@ -33,27 +34,30 @@ public class Task90_CLAUDE_claude_3_5_sonnet_20240620 {
             try {
                 in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 out = new PrintWriter(socket.getOutputStream(), true);
-                synchronized (clients) {
-                    clients.add(out);
+                
+                synchronized (clientWriters) {
+                    clientWriters.add(out);
                 }
+
                 String message;
                 while ((message = in.readLine()) != null) {
                     System.out.println("Received: " + message);
-                    for (PrintWriter client : clients) {
-                        client.println(message);
+                    for (PrintWriter writer : clientWriters) {
+                        writer.println(message);
                     }
                 }
             } catch (IOException e) {
                 System.out.println(e);
             } finally {
                 if (out != null) {
-                    synchronized (clients) {
-                        clients.remove(out);
+                    synchronized (clientWriters) {
+                        clientWriters.remove(out);
                     }
                 }
                 try {
                     socket.close();
                 } catch (IOException e) {
+                    System.out.println(e);
                 }
             }
         }

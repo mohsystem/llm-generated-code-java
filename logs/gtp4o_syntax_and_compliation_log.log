@@ -1,0 +1,737 @@
+1:28:23 AM: Executing ':Compiler.main()'...
+
+
+> Configure project :
+The 'sonarqube' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+The 'sonar' task depends on compile tasks. This behavior is now deprecated and will be removed in version 5.x. To avoid implicit compilation, set property 'sonar.gradle.skipCompile' to 'true' and make sure your project is compiled, before analysis has started.
+
+> Task :compileJava
+Note: C:\sourceCode\PhD\llm-generated-code-java\src\main\java\gemini\task152\Task152_GEMINI_gemini-1.5-pro-001.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :processResources NO-SOURCE
+> Task :classes
+
+> Task :Compiler.main()
+Compiling: generatedCode\gtp4o\task0\Task0_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task0\Task0_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task1\Task1_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task1\Task1_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task10\Task10_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task10\Task10_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task100\Task100_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task100\Task100_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task101\Task101_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task101\Task101_OPENAI_gpt_4o.java
+Error on line 13: unclosed string literal
+Error Type: Compilation Error
+Error on line 14: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task102\Task102_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task102\Task102_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task103\Task103_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task103\Task103_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task104\Task104_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task104\Task104_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task105\Task105_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task105\Task105_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task106\Task106_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task106\Task106_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task107\Task107_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task107\Task107_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task108\Task108_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task108\Task108_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task109\Task109_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task109\Task109_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task11\Task11_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task11\Task11_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task110\Task110_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task110\Task110_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task111\Task111_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task111\Task111_OPENAI_gpt_4o.java
+Error on line 14: cannot find symbol
+  symbol:   class WebServer
+  location: class gtp4o.task111.Task111_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 14: cannot find symbol
+  symbol:   class WebServer
+  location: class gtp4o.task111.Task111_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task112\Task112_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task112\Task112_OPENAI_gpt_4o.java
+Error on line 3: cannot find symbol
+  symbol:   class MongoClient
+  location: package com.mongodb
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class MongoClient
+  location: class gtp4o.task112.Task112_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class MongoClient
+  location: class gtp4o.task112.Task112_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task113\Task113_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task113\Task113_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task114\Task114_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task114\Task114_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task115\Task115_OPENAI_gpt-4o.java
+Compilation failed: generatedCode\gtp4o\task115\Task115_OPENAI_gpt-4o.java
+Error on line 6: ';' expected
+Error Type: Syntax Error
+Error on line 7: ';' expected
+Error Type: Syntax Error
+Error on line 8: ';' expected
+Error Type: Syntax Error
+Compiling: generatedCode\gtp4o\task116\Task116_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task116\Task116_OPENAI_gpt_4o.java
+Error on line 29: unclosed string literal
+Error Type: Compilation Error
+Error on line 30: unclosed string literal
+Error Type: Compilation Error
+Error on line 31: unclosed string literal
+Error Type: Compilation Error
+Error on line 32: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task117\Task117_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task117\Task117_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task118\Task118_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task118\Task118_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task119\Task119_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task119\Task119_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task12\Task12_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task12\Task12_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task120\Task120_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task120\Task120_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task121\Task121_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task121\Task121_OPENAI_gpt_4o.java
+Error on line 17: unreported exception javax.servlet.ServletException; must be caught or declared to be thrown
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task122\Task122_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task122\Task122_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task123\Task123_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task123\Task123_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task124\Task124_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task124\Task124_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task125\Task125_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task125\Task125_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task126\Task126_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task126\Task126_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task127\Task127_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task127\Task127_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task128\Task128_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task128\Task128_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task129\Task129_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task129\Task129_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task13\Task13_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task13\Task13_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task130\Task130_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task130\Task130_OPENAI_gpt_4o.java
+Error on line 11: cannot find symbol
+  symbol:   class CorsApplication
+  location: class gtp4o.task130.Task130_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task131\Task131_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task131\Task131_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task132\Task132_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task132\Task132_OPENAI_gpt_4o.java
+Error on line 15: unclosed string literal
+Error Type: Compilation Error
+Error on line 16: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task133\Task133_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task133\Task133_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task134\Task134_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task134\Task134_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task135\Task135_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task135\Task135_OPENAI_gpt_4o.java
+Error on line 50: class CsrfFilter is public, should be declared in a file named CsrfFilter.java
+Error Type: Compilation Error
+Error on line 12: cannot find symbol
+  symbol: class WebServlet
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task136\Task136_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task136\Task136_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task137\Task137_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task137\Task137_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task138\Task138_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task138\Task138_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task139\Task139_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task139\Task139_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task14\Task14_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task14\Task14_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task140\Task140_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task140\Task140_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task141\Task141_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task141\Task141_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task142\Task142_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task142\Task142_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task143\Task143_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task143\Task143_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task144\Task144_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task144\Task144_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task145\Task145_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task145\Task145_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task146\Task146_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task146\Task146_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task147\Task147_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task147\Task147_OPENAI_gpt_4o.java
+Error on line 11: cannot find symbol
+  symbol:   class Scanner
+  location: class gtp4o.task147.Task147_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class Scanner
+  location: class gtp4o.task147.Task147_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 12: cannot find symbol
+  symbol:   variable Arrays
+  location: class gtp4o.task147.Task147_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task148\Task148_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task148\Task148_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task149\Task149_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task149\Task149_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task15\Task15_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task15\Task15_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task150\Task150_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task150\Task150_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task151\Task151_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task151\Task151_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task152\Task152_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task152\Task152_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task153\Task153_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task153\Task153_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task154\Task154_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task154\Task154_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task155\Task155_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task155\Task155_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task156\Task156_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task156\Task156_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task157\Task157_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task157\Task157_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task158\Task158_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task158\Task158_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task159\Task159_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task159\Task159_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task16\Task16_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task16\Task16_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task160\Task160_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task160\Task160_OPENAI_gpt_4o.java
+Error on line 5: cannot find symbol
+  symbol:   class Scanner
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 5: cannot find symbol
+  symbol:   class Scanner
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 10: cannot find symbol
+  symbol:   class URL
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 10: cannot find symbol
+  symbol:   class URL
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class HttpURLConnection
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 11: cannot find symbol
+  symbol:   class HttpURLConnection
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 15: cannot find symbol
+  symbol:   variable HttpURLConnection
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 16: cannot find symbol
+  symbol:   class BufferedReader
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 16: cannot find symbol
+  symbol:   class BufferedReader
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 16: cannot find symbol
+  symbol:   class InputStreamReader
+  location: class gtp4o.task160.Task160_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task161\Task161_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task161\Task161_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task162\Task162_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task162\Task162_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task163\Task163_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task163\Task163_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task164\Task164_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task164\Task164_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task165\Task165_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task165\Task165_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task166\Task166_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task166\Task166_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task167\Task167_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task167\Task167_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task168\Task168_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task168\Task168_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task169\Task169_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task169\Task169_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task17\Task17_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task17\Task17_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task170\Task170_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task170\Task170_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task171\Task171_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task171\Task171_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task172\Task172_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task172\Task172_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task173\Task173_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task173\Task173_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task174\Task174_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task174\Task174_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task175\Task175_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task175\Task175_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task176\Task176_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task176\Task176_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task177\Task177_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task177\Task177_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task178\Task178_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task178\Task178_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task179\Task179_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task179\Task179_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task18\Task18_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task18\Task18_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task180\Task180_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task180\Task180_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task181\Task181_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task181\Task181_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task182\Task182_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task182\Task182_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task183\Task183_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task183\Task183_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task184\Task184_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task184\Task184_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task185\Task185_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task185\Task185_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task186\Task186_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task186\Task186_OPENAI_gpt_4o.java
+Error on line 31: constructor ListNode in class gtp4o.task186.ListNode cannot be applied to given types;
+  required: int
+  found:    int,gtp4o.task186.ListNode
+  reason: actual and formal argument lists differ in length
+Error Type: Compilation Error
+Error on line 32: constructor ListNode in class gtp4o.task186.ListNode cannot be applied to given types;
+  required: int
+  found:    int,gtp4o.task186.ListNode
+  reason: actual and formal argument lists differ in length
+Error Type: Compilation Error
+Error on line 33: constructor ListNode in class gtp4o.task186.ListNode cannot be applied to given types;
+  required: int
+  found:    int,gtp4o.task186.ListNode
+  reason: actual and formal argument lists differ in length
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task187\Task187_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task187\Task187_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task188\Task188_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task188\Task188_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task189\Task189_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task189\Task189_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task19\Task19_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task19\Task19_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task190\Task190_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task190\Task190_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task191\Task191_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task191\Task191_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task192\Task192_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task192\Task192_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task193\Task193_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task193\Task193_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task194\Task194_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task194\Task194_OPENAI_gpt_4o.java
+Error on line 16: cannot find symbol
+  symbol:   variable words
+  location: class gtp4o.task194.Master
+Error Type: Compilation Error
+Error on line 19: cannot find symbol
+  symbol:   variable IntStream
+  location: class gtp4o.task194.Master
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task195\Task195_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task195\Task195_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task196\Task196_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task196\Task196_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task197\Task197_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task197\Task197_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task198\Task198_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task198\Task198_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task199\Task199_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task199\Task199_OPENAI_gpt_4o.java
+Error on line 28: cannot find symbol
+  symbol:   class Clock
+  location: class gtp4o.task199.Task199_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task2\Task2_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task2\Task2_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task20\Task20_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task20\Task20_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task21\Task21_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task21\Task21_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task22\Task22_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task22\Task22_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task23\Task23_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task23\Task23_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task24\Task24_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task24\Task24_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task25\Task25_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task25\Task25_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task26\Task26_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task26\Task26_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task27\Task27_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task27\Task27_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task28\Task28_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task28\Task28_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task29\Task29_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task29\Task29_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task3\Task3_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task3\Task3_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task30\Task30_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task30\Task30_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task31\Task31_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task31\Task31_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task32\Task32_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task32\Task32_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task33\Task33_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task33\Task33_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task34\Task34_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task34\Task34_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task35\Task35_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task35\Task35_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task36\Task36_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task36\Task36_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task37\Task37_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task37\Task37_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task38\Task38_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task38\Task38_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task39\Task39_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task39\Task39_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task4\Task4_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task4\Task4_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task40\Task40_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task40\Task40_OPENAI_gpt_4o.java
+Error on line 38: class, interface, enum, or record expected
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task41\Task41_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task41\Task41_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task42\Task42_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task42\Task42_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task43\Task43_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task43\Task43_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task44\Task44_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task44\Task44_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task45\Task45_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task45\Task45_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task46\Task46_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task46\Task46_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task47\Task47_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task47\Task47_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task48\Task48_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task48\Task48_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task49\Task49_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task49\Task49_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task5\Task5_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task5\Task5_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task50\Task50_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task50\Task50_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task51\Task51_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task51\Task51_OPENAI_gpt_4o.java
+Error on line 21: class, interface, enum, or record expected
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task52\Task52_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task52\Task52_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task53\Task53_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task53\Task53_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task54\Task54_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task54\Task54_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task55\Task55_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task55\Task55_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task56\Task56_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task56\Task56_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task57\Task57_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task57\Task57_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task58\Task58_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task58\Task58_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task59\Task59_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task59\Task59_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task6\Task6_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task6\Task6_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task60\Task60_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task60\Task60_OPENAI_gpt_4o.java
+Error on line 25: cannot find symbol
+  symbol:   variable Kata
+  location: class gtp4o.task60.Task60_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 26: cannot find symbol
+  symbol:   variable Kata
+  location: class gtp4o.task60.Task60_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 27: cannot find symbol
+  symbol:   variable Kata
+  location: class gtp4o.task60.Task60_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task61\Task61_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task61\Task61_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task62\Task62_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task62\Task62_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task63\Task63_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task63\Task63_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task64\Task64_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task64\Task64_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task65\Task65_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task65\Task65_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task66\Task66_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task66\Task66_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task67\Task67_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task67\Task67_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task68\Task68_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task68\Task68_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task69\Task69_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task69\Task69_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task7\Task7_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task7\Task7_OPENAI_gpt_4o.java
+Error on line 14: cannot find symbol
+  symbol:   variable ChatSystem
+  location: class gtp4o.task7.Task7_OPENAI_gpt_4o
+Error Type: Compilation Error
+Error on line 15: cannot find symbol
+  symbol:   variable ChatSystem
+  location: class gtp4o.task7.Task7_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task70\Task70_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task70\Task70_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task71\Task71_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task71\Task71_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task72\Task72_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task72\Task72_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task73\Task73_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task73\Task73_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task74\Task74_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task74\Task74_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task75\Task75_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task75\Task75_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task76\Task76_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task76\Task76_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task77\Task77_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task77\Task77_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task78\Task78_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task78\Task78_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task79\Task79_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task79\Task79_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task8\Task8_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task8\Task8_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task80\Task80_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task80\Task80_OPENAI_gpt_4o.java
+Error on line 21: no suitable method found for createSocket(java.net.InetSocketAddress,int)
+    method javax.net.SocketFactory.createSocket(java.lang.String,int) is not applicable
+      (argument mismatch; java.net.InetSocketAddress cannot be converted to java.lang.String)
+    method javax.net.SocketFactory.createSocket(java.net.InetAddress,int) is not applicable
+      (argument mismatch; java.net.InetSocketAddress cannot be converted to java.net.InetAddress)
+Error Type: Compilation Error
+Error on line -1: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Error Type: Other
+Compiling: generatedCode\gtp4o\task81\Task81_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task81\Task81_OPENAI_gpt_4o.java
+Error on line 4: package javax.xml.bind does not exist
+Error Type: Compilation Error
+Error on line 14: cannot find symbol
+  symbol:   variable DatatypeConverter
+  location: class gtp4o.task81.Task81_OPENAI_gpt_4o
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task82\Task82_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task82\Task82_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task83\Task83_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task83\Task83_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task84\Task84_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task84\Task84_OPENAI_gpt_4o.java
+Error on line 9: unclosed string literal
+Error Type: Compilation Error
+Error on line 10: illegal character: '#'
+Error Type: Compilation Error
+Error on line 11: illegal character: '#'
+Error Type: Compilation Error
+Error on line 10: not a statement
+Error Type: Compilation Error
+Error on line 12: illegal character: '#'
+Error Type: Compilation Error
+Error on line 11: not a statement
+Error Type: Compilation Error
+Error on line 12: not a statement
+Error Type: Compilation Error
+Error on line 12: ';' expected
+Error Type: Syntax Error
+Error on line 14: illegal start of expression
+Error Type: Compilation Error
+Error on line 14: ';' expected
+Error Type: Syntax Error
+Error on line 14: not a statement
+Error Type: Compilation Error
+Error on line 14: ';' expected
+Error Type: Syntax Error
+Error on line 14: not a statement
+Error Type: Compilation Error
+Error on line 14: ';' expected
+Error Type: Syntax Error
+Error on line 14: ';' expected
+Error Type: Syntax Error
+Error on line 15: illegal start of expression
+Error Type: Compilation Error
+Error on line 15: illegal character: '\'
+Error Type: Compilation Error
+Error on line 15: unclosed string literal
+Error Type: Compilation Error
+Error on line 20: unclosed character literal
+Error Type: Compilation Error
+Error on line 20: unclosed character literal
+Error Type: Compilation Error
+Error on line 23: ';' expected
+Error Type: Syntax Error
+Error on line 24: ']' expected
+Error Type: Compilation Error
+Error on line 27: illegal character: '\'
+Error Type: Compilation Error
+Error on line 27: illegal escape character
+Error Type: Compilation Error
+Error on line 27: unclosed string literal
+Error Type: Compilation Error
+Error on line 28: illegal character: '\'
+Error Type: Compilation Error
+Error on line 28: unclosed string literal
+Error Type: Compilation Error
+Error on line 31: unclosed string literal
+Error Type: Compilation Error
+Error on line 35: unclosed string literal
+Error Type: Compilation Error
+Error on line 36: illegal character: '#'
+Error Type: Compilation Error
+Error on line 37: illegal character: '#'
+Error Type: Compilation Error
+Error on line 36: not a statement
+Error Type: Compilation Error
+Error on line 38: illegal character: '#'
+Error Type: Compilation Error
+Error on line 37: not a statement
+Error Type: Compilation Error
+Error on line 39: illegal character: '#'
+Error Type: Compilation Error
+Error on line 38: not a statement
+Error Type: Compilation Error
+Error on line 41: ';' expected
+Error Type: Syntax Error
+Error on line 41: ';' expected
+Error Type: Syntax Error
+Error on line 41: ';' expected
+Error Type: Syntax Error
+Error on line 42: illegal start of expression
+Error Type: Compilation Error
+Error on line 42: illegal character: '\'
+Error Type: Compilation Error
+Error on line 42: unclosed string literal
+Error Type: Compilation Error
+Error on line 43: not a statement
+Error Type: Compilation Error
+Error on line 43: ';' expected
+Error Type: Syntax Error
+Error on line 43: not a statement
+Error Type: Compilation Error
+Error on line 52: ';' expected
+Error Type: Syntax Error
+Error on line 54: illegal character: '\'
+Error Type: Compilation Error
+Error on line 54: not a statement
+Error Type: Compilation Error
+Error on line 54: unclosed string literal
+Error Type: Compilation Error
+Error on line 57: unclosed string literal
+Error Type: Compilation Error
+Error on line 61: unclosed string literal
+Error Type: Compilation Error
+Error on line 62: not a statement
+Error Type: Compilation Error
+Error on line 62: ';' expected
+Error Type: Syntax Error
+Error on line 65: ';' expected
+Error Type: Syntax Error
+Error on line 65: ';' expected
+Error Type: Syntax Error
+Error on line 66: ';' expected
+Error Type: Syntax Error
+Error on line 67: empty character literal
+Error Type: Compilation Error
+Error on line 67: ')' expected
+Error Type: Compilation Error
+Error on line 67: '(' expected
+Error Type: Compilation Error
+Error on line 67: ';' expected
+Error Type: Syntax Error
+Error on line 67: ';' expected
+Error Type: Syntax Error
+Error on line 69: '(' expected
+Error Type: Compilation Error
+Error on line 69: illegal character: '\'
+Error Type: Compilation Error
+Error on line 69: unclosed string literal
+Error Type: Compilation Error
+Error on line 70: illegal character: '\'
+Error Type: Compilation Error
+Error on line 70: unclosed string literal
+Error Type: Compilation Error
+Error on line 71: unclosed string literal
+Error Type: Compilation Error
+Compiling: generatedCode\gtp4o\task85\Task85_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task85\Task85_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task86\Task86_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task86\Task86_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task87\Task87_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task87\Task87_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task88\Task88_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task88\Task88_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task89\Task89_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task89\Task89_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task9\Task9_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task9\Task9_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task90\Task90_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task90\Task90_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task91\Task91_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task91\Task91_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task92\Task92_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task92\Task92_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task93\Task93_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task93\Task93_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task94\Task94_OPENAI_gpt-4o.java
+Compilation successful: generatedCode\gtp4o\task94\Task94_OPENAI_gpt-4o.java
+Compiling: generatedCode\gtp4o\task95\Task95_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task95\Task95_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task96\Task96_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task96\Task96_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task97\Task97_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task97\Task97_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task98\Task98_OPENAI_gpt_4o.java
+Compilation successful: generatedCode\gtp4o\task98\Task98_OPENAI_gpt_4o.java
+Compiling: generatedCode\gtp4o\task99\Task99_OPENAI_gpt_4o.java
+Compilation failed: generatedCode\gtp4o\task99\Task99_OPENAI_gpt_4o.java
+Error on line 12: illegal escape character
+Error Type: Compilation Error
+
+Summary:
+Valid files: 178 +4 (valid)
+Files with syntax errors: 2
+Files with compilation errors: 20  - 4 (valid)
+Files with other errors: 0
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 27s
+2 actionable tasks: 2 executed
+1:29:51 AM: Execution finished ':Compiler.main()'.

@@ -51,15 +51,15 @@ class SessionManager {
     }
 
     void cleanupExpiredSessions() {
-        Instant now = Instant.now();
+        long currentTime = Instant.now().toEpochMilli();
         sessions.entrySet().removeIf(entry ->
-                now.toEpochMilli() - entry.getValue().lastActivity.toEpochMilli() > sessionTimeout);
+                currentTime - entry.getValue().lastActivity.toEpochMilli() > sessionTimeout);
     }
 }
 
 public class Task123_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) throws InterruptedException {
-        SessionManager sessionManager = new SessionManager(1800000); // 30 minutes
+        SessionManager sessionManager = new SessionManager(1800000); // 30 minutes timeout
 
         // Create a session
         String userId = "user123";

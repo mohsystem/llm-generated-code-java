@@ -5,31 +5,28 @@ import java.util.Scanner;
 
 public class Task37_CLAUDE_claude_3_5_sonnet_20240620 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+
         String url = "jdbc:mysql://localhost:3306/your_database";
         String user = "your_username";
         String password = "your_password";
 
-        try (Scanner scanner = new Scanner(System.in);
-             Connection conn = DriverManager.getConnection(url, user, password)) {
-
-            System.out.print("Enter username: ");
-            String username = scanner.nextLine();
-
+        try (Connection connection = DriverManager.getConnection(url, user, password)) {
             String query = "SELECT * FROM users WHERE username = ?";
-            try (PreparedStatement pstmt = conn.prepareStatement(query)) {
-                pstmt.setString(1, username);
-                try (ResultSet rs = pstmt.executeQuery()) {
-                    if (rs.next()) {
-                        System.out.println("User ID: " + rs.getInt("id"));
-                        System.out.println("Username: " + rs.getString("username"));
-                        System.out.println("Email: " + rs.getString("email"));
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+                statement.setString(1, username);
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        System.out.println("User found: " + resultSet.getString("username"));
                     } else {
-                        System.out.println("User not found.");
+                        System.out.println("User not found");
                     }
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

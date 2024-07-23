@@ -11,8 +11,4 @@ public class Task32_CLAUDE_claude_3_5_sonnet_20240620 {
         }
         return years;
     }
-
-    public static void main(String[] args) {
-        System.out.println(calculateYears(1000, 0.05, 0.18, 1100));
-    }
 }

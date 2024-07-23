@@ -1,26 +1,25 @@
 package claude.task80;
 
-import javax.net.ssl.*;
-import java.net.*;
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import java.io.IOException;
+import java.net.Inet6Address;
 
 public class Task80_CLAUDE_claude_3_5_sonnet_20240620 {
-    public static SSLSocket createSSLSocket(String host, int port) throws Exception {
+    public static SSLSocket createSSLIPv6Socket(String host, int port) throws IOException {
         SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-        InetAddress address = InetAddress.getByName(host);
-        
-        if (address instanceof Inet6Address) {
-            return (SSLSocket) factory.createSocket(address, port);
-        } else {
-            throw new IllegalArgumentException("The provided host is not an IPv6 address");
-        }
+        Inet6Address address = (Inet6Address) Inet6Address.getByName(host);
+        return (SSLSocket) factory.createSocket(address, port);
     }
 
     public static void main(String[] args) {
         try {
-            SSLSocket socket = createSSLSocket("2001:db8::1", 443);
-            System.out.println("SSL socket connected successfully");
+            String host = "example.com";
+            int port = 443;
+            SSLSocket socket = createSSLIPv6Socket(host, port);
+            // Use the socket here
             socket.close();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

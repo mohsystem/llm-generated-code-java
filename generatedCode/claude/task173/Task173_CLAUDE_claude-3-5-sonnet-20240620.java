@@ -4,48 +4,45 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Solution {
-    private static final long MOD = (1L << 63) - 1;
-    private String s;
-    
     public String longestDupSubstring(String s) {
-        this.s = s;
         int left = 0, right = s.length();
-        String res = "";
+        String result = "";
         while (left < right) {
             int mid = left + (right - left) / 2;
-            String candidate = rabinKarp(mid);
+            String candidate = rabinKarp(s, mid);
             if (candidate != null) {
                 left = mid + 1;
-                res = candidate;
+                result = candidate;
             } else {
                 right = mid;
             }
         }
-        return res;
+        return result;
     }
-    
-    private String rabinKarp(int len) {
-        long p = 1;
-        for (int i = 0; i < len - 1; i++) {
-            p = (p * 26) % MOD;
+
+    private String rabinKarp(String s, int length) {
+        long q = (1L << 31) - 1;
+        long h = 0;
+        for (int i = 0; i < length; i++) {
+            h = (h * 26 + s.charAt(i) - 'a') % q;
         }
-        
-        long cur = 0;
-        for (int i = 0; i < len; i++) {
-            cur = (cur * 26 + s.charAt(i) - 'a') % MOD;
-        }
-        
+
         Set<Long> seen = new HashSet<>();
-        seen.add(cur);
-        
-        for (int i = len; i < s.length(); i++) {
-            cur = (cur * 26 - (s.charAt(i - len) - 'a') * p % MOD + MOD) % MOD;
-            cur = (cur + s.charAt(i) - 'a') % MOD;
-            if (seen.contains(cur)) {
-                return s.substring(i - len + 1, i + 1);
-            }
-            seen.add(cur);
+        seen.add(h);
+        long aL = 1;
+        for (int i = 0; i < length; i++) {
+            aL = (aL * 26) % q;
         }
+
+        for (int start = 1; start <= s.length() - length; start++) {
+            h = (h * 26 - (s.charAt(start - 1) - 'a') * aL % q + q) % q;
+            h = (h + s.charAt(start + length - 1) - 'a') % q;
+            if (seen.contains(h)) {
+                return s.substring(start, start + length);
+            }
+            seen.add(h);
+        }
+
         return null;
     }
 }

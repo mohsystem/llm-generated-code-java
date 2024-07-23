@@ -3,8 +3,8 @@ package claude.task199;
 public class Task199_CLAUDE_claude_3_5_sonnet_20240620 {
     private int minutes;
 
-    public Task199_CLAUDE_claude_3_5_sonnet_20240620(int hours, int minutes) {
-        this.minutes = (hours * 60 + minutes) % 1440;
+    public Task199_CLAUDE_claude_3_5_sonnet_20240620(int hour, int minute) {
+        this.minutes = (hour * 60 + minute) % 1440;
     }
 
     @Override
@@ -34,13 +34,12 @@ public class Task199_CLAUDE_claude_3_5_sonnet_20240620 {
     }
 
     public static void main(String[] args) {
-        Task199_CLAUDE_claude_3_5_sonnet_20240620 clock1 = new Task199_CLAUDE_claude_3_5_sonnet_20240620(10, 30);
-        Task199_CLAUDE_claude_3_5_sonnet_20240620 clock2 = new Task199_CLAUDE_claude_3_5_sonnet_20240620(10, 30);
-        System.out.println(clock1);  // 10:30
-        System.out.println(clock1.equals(clock2));  // true
-        clock1.add(30);
-        System.out.println(clock1);  // 11:00
-        clock1.subtract(60);
-        System.out.println(clock1);  // 10:00
+        Task199_CLAUDE_claude_3_5_sonnet_20240620 clock = new Task199_CLAUDE_claude_3_5_sonnet_20240620(10, 30);
+        System.out.println(clock);  // 10:30
+        clock.add(60);
+        System.out.println(clock);  // 11:30
+        clock.subtract(90);
+        System.out.println(clock);  // 10:00
+        System.out.println(clock.equals(new Task199_CLAUDE_claude_3_5_sonnet_20240620(10, 0)));  // true
     }
 }

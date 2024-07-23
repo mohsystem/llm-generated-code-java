@@ -1,27 +1,21 @@
 package claude.task175;
 
 /**
- * // This is MountainArray\'s API interface.
+ * // This is MountainArray's API interface.
  * // You should not implement it, or speculate about its implementation
  * interface MountainArray {
- * public int get(int index) {}
- * public int length() {}
+ *     public int get(int index) {}
+ *     public int length() {}
  * }
  */
 interface MountainArray {
-    public default int get(int index) {
-        return index;
-    }
-
-    public default int length() {
-        return 0;
-    }
-}
-
+   public  int get(int index) ;
+   public  int length() ;
+ }
 class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int length = mountainArr.length();
-
+        
         // Find peak element
         int left = 0, right = length - 1;
         while (left < right) {
@@ -33,7 +27,7 @@ class Solution {
             }
         }
         int peak = left;
-
+        
         // Binary search in the left side
         left = 0;
         right = peak;
@@ -48,7 +42,7 @@ class Solution {
                 right = mid - 1;
             }
         }
-
+        
         // Binary search in the right side
         left = peak;
         right = length - 1;
@@ -63,7 +57,7 @@ class Solution {
                 right = mid - 1;
             }
         }
-
+        
         return -1;
     }
 }
