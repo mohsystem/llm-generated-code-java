@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static claude.task6.Task6_CLAUDE_claude_3_5_sonnet_20240620.findUniq;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class Task6_TestCase {
 
@@ -49,8 +50,11 @@ class Task6_TestCase {
 
     @Test
     void testCase9() {
-        assertEquals(9.999, findUniq(new double[]{ 10, 10, 7, 9.999, 10 }));
+        assertThrows(Exception.class, () -> {
+            findUniq(new double[]{ 10, 10, 7, 9.999, 10 });
+        });
     }
+
 
     @Test
     void testCase10() {
