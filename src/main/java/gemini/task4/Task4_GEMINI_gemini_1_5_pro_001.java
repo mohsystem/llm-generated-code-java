@@ -3,8 +3,8 @@ package gemini.task4;
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
-    public boolean isIsogram(String str) {
+class Task4_GEMINI_gemini_1_5_pro_001 {
+    public static boolean isIsogram(String str) {
         if (str.length() == 0){
           return true;
         }

@@ -8,9 +8,9 @@ public class Task2_OPENAI_gpt_4o {
             numbers[6], numbers[7], numbers[8], 
             numbers[9]);
     }
-    
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-        System.out.println(createPhoneNumber(numbers));
-    }
+//
+//    public static void main(String[] args) {
+//        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+//        System.out.println(createPhoneNumber(numbers));
+//    }
 }

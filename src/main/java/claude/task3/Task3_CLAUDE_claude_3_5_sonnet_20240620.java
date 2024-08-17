@@ -10,9 +10,9 @@ public class Task3_CLAUDE_claude_3_5_sonnet_20240620 {
         }
         return true;
     }
-
-    public static void main(String[] args) {
-        String test = "The quick brown fox jumps over the lazy dog";
-        System.out.println(isPangram(test));
-    }
+//
+//    public static void main(String[] args) {
+//        String test = "The quick brown fox jumps over the lazy dog";
+//        System.out.println(isPangram(test));
+//    }
 }
