@@ -1,6 +1,5 @@
 package llama3.task19;
 
-import llama3.task19.Task19_PERPLEXITY_llama_3_sonar_large_32k_chat;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
