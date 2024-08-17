@@ -76,9 +76,9 @@ public class Task7_GEMINI_gemini_1_5_pro_001 {
             try {
                 // Authentication
                 while (username == null) {
-                    out.println("Enter username:");
+//                    out.println("Enter username:");
                     String username = in.readLine();
-                    out.println("Enter password:");
+//                    out.println("Enter password:");
                     String password = in.readLine();
                     if (users.containsKey(username) && users.get(username).equals(password)) {
                         this.username = username;
