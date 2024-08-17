@@ -1,9 +1,11 @@
 package gemini.task6;
 
+import claude.task6.Task6_CLAUDE_claude_3_5_sonnet_20240620;
 import org.junit.jupiter.api.Test;
 
 import static gemini.task6.Task6_GEMINI_gemini_1_5_pro_001.findUniq;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class Task6_TestCase {
 
@@ -49,7 +51,9 @@ class Task6_TestCase {
 
     @Test
     void testCase9() {
-        assertEquals(9.999, findUniq(new double[]{ 10, 10, 7, 9.999, 10 }));
+        assertThrows(Exception.class, () -> {
+            findUniq(new double[]{ 10, 10, 7, 9.999, 10 });
+        });
     }
 
     @Test
