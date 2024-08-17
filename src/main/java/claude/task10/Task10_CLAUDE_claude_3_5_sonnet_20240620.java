@@ -1,7 +1,7 @@
 package claude.task10;
 
 public class Task10_CLAUDE_claude_3_5_sonnet_20240620 {
-    public int getSum(int a, int b) {
+    public static int getSum(int a, int b) {
         if (a == b) {
             return a;
         }

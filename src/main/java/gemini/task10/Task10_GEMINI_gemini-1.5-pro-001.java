@@ -1,7 +1,7 @@
 package gemini.task10;
 
 class Solution {
-    public int getSum(int a, int b) {
+    public static int getSum(int a, int b) {
         if (a == b) {
             return a;
         } else {
