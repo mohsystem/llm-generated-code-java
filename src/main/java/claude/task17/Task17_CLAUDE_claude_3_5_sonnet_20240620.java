@@ -5,7 +5,7 @@ public class Task17_CLAUDE_claude_3_5_sonnet_20240620 {
         if (phrase == null || phrase.isEmpty()) {
             return null;
         }
-        String[] words = phrase.split("\\\\s+");
+        String[] words = phrase.split("\\s+");
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
         }
