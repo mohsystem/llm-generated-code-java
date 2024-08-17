@@ -9,4 +9,8 @@ public class Task23_MISTRAL_codestral_latest {
         }
         return (m == n*n*n) ? n : -1;
     }
+
+    public static void main(String[] args) {
+        System.out.println(findNb(1000));
+    }
 }
