@@ -49,7 +49,7 @@ class Task6_TestCase {
 
     @Test
     void testCase9() {
-        assertEquals(9.999, findUniq(new double[]{ 10, 10, 9.999, 7, 10 }));
+        assertEquals(9.999, findUniq(new double[]{ 10, 10, 7, 9.999, 10 }));
     }
 
     @Test
