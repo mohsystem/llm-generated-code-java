@@ -34,7 +34,7 @@ class Task6_TestCase {
 
     @Test
     void testCase6() {
-        assertEquals(100.1, findUniq(new double[]{ 100, 100, 100.1, 100, 100 }));
+        assertEquals(100.1, findUniq(new double[]{ 100.1, 100, 100, 100, 100 }));
     }
 
     @Test
