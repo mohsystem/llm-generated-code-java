@@ -15,6 +15,8 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Task7_TestCase {
-//There is no implementation for the server. hence can't be tested. Running the code results in Exception in thread "main" java.net.ConnectException: Connection refused: connect
-
+/*
+ * There is no implementation for the server. hence can't be tested
+ * Running the code results in Exception in thread "main" java.net.ConnectException: Connection refused
+*/
 }
