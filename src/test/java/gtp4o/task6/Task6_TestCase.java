@@ -1,8 +1,8 @@
-package gemini.task6;
+package gtp4o.task6;
 
 import org.junit.jupiter.api.Test;
 
-import static gemini.task6.Task6_GEMINI_gemini_1_5_pro_001.findUniq;
+import static gtp4o.task6.Task6_OPENAI_gpt_4o.findUniq;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
