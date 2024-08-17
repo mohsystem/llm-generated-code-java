@@ -1,4 +1,4 @@
-package claude.task9;
+    package claude.task9;
 
 import java.util.Arrays;
 
