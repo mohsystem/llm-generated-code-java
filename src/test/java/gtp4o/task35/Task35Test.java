@@ -108,6 +108,7 @@ public class Task35Test {
         stops.add(new int[]{500, 300});
         stops.add(new int[]{200, 200});
         stops.add(new int[]{300, 100});
+
         assertEquals(1400, numberOfPeople(stops));
     }
 }
