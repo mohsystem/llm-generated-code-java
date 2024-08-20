@@ -56,7 +56,7 @@ public class Task28Test {
     @Test
     void testDuplicateNames() {
         // Test when names are duplicated in the array
-        assertEquals("Sam, Sam and 1 other like this", likes(new String[]{"Sam", "Sam", "Alex"}));
+        assertEquals("Sam, Sam and Alex like this", likes(new String[]{"Sam", "Sam", "Alex"}));
     }
 
     @Test
