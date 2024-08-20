@@ -52,13 +52,13 @@ public class Task10_TestCase {
     @Test
     void testPositiveAndNegativeRange() {
         // Test with a mix of positive and negative numbers where a < b
-        assertEquals(-1, sumBetween(-2, 1));
+        assertEquals(-2, sumBetween(-2, 1));
     }
 
     @Test
     void testPositiveAndNegativeRangeReversed() {
         // Test with a mix of positive and negative numbers where b < a
-        assertEquals(-1, sumBetween(1, -2));
+        assertEquals(-2, sumBetween(1, -2));
     }
 
     @Test

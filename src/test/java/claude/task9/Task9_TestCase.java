@@ -32,7 +32,7 @@ public class Task9_TestCase {
     @Test
     void testMultiplePositivesOddSum() {
         // Test with multiple positive numbers whose sum is odd
-        assertEquals("odd", oddOrEven(new int[] {1, 2, 3, 4}));
+        assertEquals("even", oddOrEven(new int[] {1, 2, 3, 4}));
     }
 
     @Test
@@ -44,7 +44,7 @@ public class Task9_TestCase {
     @Test
     void testMultipleNegativesOddSum() {
         // Test with multiple negative numbers whose sum is odd
-        assertEquals("odd", oddOrEven(new int[] {-1, -2, -3}));
+        assertEquals("even", oddOrEven(new int[] {-1, -2, -3}));
     }
 
     @Test
@@ -56,7 +56,7 @@ public class Task9_TestCase {
     @Test
     void testMixedNumbersOddSum() {
         // Test with a mix of positive and negative numbers whose sum is odd
-        assertEquals("odd", oddOrEven(new int[] {1, -1, 2}));
+        assertEquals("even", oddOrEven(new int[] {1, -1, 2}));
     }
 
     @Test

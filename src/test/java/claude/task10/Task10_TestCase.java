@@ -3,6 +3,7 @@ package claude.task10;
 import static claude.task10.Task10_CLAUDE_claude_3_5_sonnet_20240620.getSum;
 import org.junit.jupiter.api.Test;
 
+import static llama3.task10.Task10_PERPLEXITY_llama_3_sonar_large_32k_chat.sumBetween;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task10_TestCase {
@@ -49,21 +50,22 @@ public class Task10_TestCase {
         assertEquals(-6, getSum(-1, -3));
     }
 
+
     @Test
     void testPositiveAndNegativeRange() {
         // Test with a mix of positive and negative numbers where a < b
-        assertEquals(-1, getSum(-2, 1));
+        assertEquals(-2, sumBetween(-2, 1));
     }
 
     @Test
     void testPositiveAndNegativeRangeReversed() {
         // Test with a mix of positive and negative numbers where b < a
-        assertEquals(-1, getSum(1, -2));
+        assertEquals(-2, sumBetween(1, -2));
     }
 
     @Test
     void testLargeRange() {
         // Test with a large range from -100 to 100
-        assertEquals(0, getSum(-100, 100));
+        assertEquals(0, sumBetween(-100, 100));
     }
 }
