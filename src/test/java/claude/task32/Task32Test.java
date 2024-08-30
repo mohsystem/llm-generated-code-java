@@ -27,7 +27,7 @@ public class Task32Test {
     @Test
     void testLongTermInvestment() {
         // Test case where it takes many years to reach the desired sum
-        assertEquals(21, calculateYears(1000.00, 0.05, 0.18, 2000.00));
+        assertEquals(18, calculateYears(1000.00, 0.05, 0.18, 2000.00));//
     }
 
     @Test
@@ -39,30 +39,30 @@ public class Task32Test {
     @Test
     void testHighTax() {
         // Test case where the tax rate is high
-        assertEquals(41, calculateYears(1000.00, 0.05, 0.50, 2000.00));
+        assertEquals(29, calculateYears(1000.00, 0.05, 0.50, 2000.00));//
     }
 
     @Test
     void testHighInterestLowTax() {
         // Test case with high interest and low tax rate
-        assertEquals(7, calculateYears(1000.00, 0.10, 0.10, 2000.00));
+        assertEquals(9, calculateYears(1000.00, 0.10, 0.10, 2000.00));//
     }
 
     @Test
     void testLowInterestHighTax() {
         // Test case with low interest and high tax rate
-        assertEquals(77, calculateYears(1000.00, 0.02, 0.50, 2000.00));
+        assertEquals(70, calculateYears(1000.00, 0.02, 0.50, 2000.00));////
     }
 
     @Test
     void testMinimalInterest() {
         // Test case where the interest rate is very small
-        assertEquals(414, calculateYears(1000.00, 0.005, 0.18, 2000.00));
+        assertEquals(170, calculateYears(1000.00, 0.005, 0.18, 2000.00));//
     }
 
     @Test
     void testHighPrincipalAndDesiredSum() {
         // Test case where both the principal and desired sum are very large
-        assertEquals(14, calculateYears(1000000.00, 0.05, 0.18, 2000000.00));
+        assertEquals(18, calculateYears(1000000.00, 0.05, 0.18, 2000000.00));
     }
 }

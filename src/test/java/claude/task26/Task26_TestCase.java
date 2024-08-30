@@ -45,7 +45,7 @@ public class Task26_TestCase {
     @Test
     void testAllOddOccurrences() {
         // Test where each number appears an odd number of times
-        assertEquals(5, findOdd(new int[]{5, 5, 5, 7, 7, 7, 9}));
+        assertEquals(5, findOdd(new int[]{5, 5, 5, 7, 7, 7,7, 9, 9}));
     }
 
     @Test
