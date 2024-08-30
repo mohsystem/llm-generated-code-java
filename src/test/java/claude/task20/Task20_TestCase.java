@@ -51,7 +51,7 @@ public class Task20_TestCase {
     @Test
     void testAnotherExample() {
         // Test with another example where n = 135 and p = 2
-        assertEquals(1, digPow(135, 2));
+        assertEquals(-1, digPow(135, 2));
     }
 
     @Test
