@@ -51,18 +51,18 @@ public class Task33Test {
     @Test
     void testLongQueue() {
         // Long queue of customers with minimal tills
-        assertEquals(15, queueTime(new int[]{2, 2, 3, 3, 4, 4, 5, 5}, 1));
+        assertEquals(28, queueTime(new int[]{2, 2, 3, 3, 4, 4, 5, 5}, 1));
     }
 
     @Test
     void testComplexDistribution() {
         // Complex distribution of customers
-        assertEquals(10, queueTime(new int[]{2, 3, 4, 3, 2, 1}, 3));
+        assertEquals(5, queueTime(new int[]{2, 3, 4, 3, 2, 1}, 3));
     }
 
     @Test
     void testHighNumberOfTills() {
         // High number of tills, fewer customers
-        assertEquals(6, queueTime(new int[]{1, 1, 1, 1, 1, 1}, 10));
+        assertEquals(1, queueTime(new int[]{1, 1, 1, 1, 1, 1}, 1));
     }
 }
