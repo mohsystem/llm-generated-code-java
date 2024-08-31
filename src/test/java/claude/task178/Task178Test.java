@@ -48,21 +48,24 @@ class Task178Test {
     void testNegativeNumbersWithPositiveK() {
         int[] nums = {-1, -2, 3, 4};
         int k = 6;
-        assertEquals(-1, solution.shortestSubarray(nums, k));
+        assertEquals(2, solution.shortestSubarray(nums, k));//todo to fix it for all languages
     }
 
     @Test
     void testSubarrayWithNegativeAndPositiveNumbers() {
         int[] nums = {4, -1, 2, 1};
         int k = 5;
-        assertEquals(-1, solution.shortestSubarray(nums, k));
+        assertEquals(3, solution.shortestSubarray(nums, k));//todo to fix it for all languages
+//        assertEquals(-1, solution.shortestSubarray(nums, k));
     }
 
     @Test
     void testAllElementsNegative() {
         int[] nums = {-1, -2, -3, -4};
-        int k = -5;
-        assertEquals(-1, solution.shortestSubarray(nums, k));
+//        int k = -5;
+//        assertEquals(-1, solution.shortestSubarray(nums, k));
+        int k = -5;//todo to fix it for all languages
+        assertEquals(1, solution.shortestSubarray(nums, k));//todo to fix it for all languages
     }
 
     @Test
