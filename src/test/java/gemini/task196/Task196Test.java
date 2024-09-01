@@ -62,7 +62,7 @@ class Task196Test {
 
     @Test
     void testCase3() throws InterruptedException {
-        testZeroEvenOdd(8, "01");
+        testZeroEvenOdd(10, "010203040506070809010");
     }
 
     @Test

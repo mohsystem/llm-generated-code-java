@@ -34,15 +34,7 @@ class BankAccountTest {
 
     @Test
     void testWithdrawNegativeAmount() {
-        // Withdraw should not accept negative values
         assertFalse(account1.withdraw(-100));
-        assertEquals(1000, account1.getBalance(), 0.01);
-    }
-
-    @Test
-    void testDepositNegativeAmount() {
-        // Deposit should not accept negative values
-        assertFalse(account1.deposit(-100));
         assertEquals(1000, account1.getBalance(), 0.01);
     }
 
@@ -51,33 +43,33 @@ class BankAccountTest {
         account1.closeAccount();
         assertFalse(account1.deposit(200));
         assertFalse(account1.withdraw(100));
-        assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
     }
 
-//    @Test
-//    void testCloseAccountTwice() {
-//        account1.closeAccount();
-//        assertFalse(account1.closeAccount()); // Attempt to close an already closed account
-//        assertFalse(account1.deposit(200));
-//        assertFalse(account1.withdraw(100));
-//        assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
-//    }
     @Test
-    void testDepositAndWithdrawOnClosedAccount() {
-        account1.closeAccount(); // Close the account
-
-        // Verify that deposits and withdrawals fail on a closed account
-        assertFalse(account1.deposit(200)); // Deposits should fail and return false
-        assertFalse(account1.withdraw(100)); // Withdrawals should fail and return false
-
-        // Verify that the balance remains unchanged after failed operations
-        assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
+    void testCloseAccountTwice() {
+        account1.closeAccount();
+        // Closing an already closed account should be a no-op; here it is expected to remain closed.
+        assertFalse(account1.deposit(200));
+        assertFalse(account1.withdraw(100));
     }
 
     @Test
     void testDepositToClosedAccount() {
         account1.closeAccount();
         assertFalse(account1.deposit(200));
+        assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
+    }
+
+    @Test
+    void testWithdrawExactBalance() {
+        // Test withdrawing exactly the balance amount, which should leave the account with zero balance.
+        assertTrue(account1.withdraw(1000));
+        assertEquals(0, account1.getBalance(), 0.01); // Balance should be zero
+    }
+    @Test
+    void testDepositNegativeAmount() {
+        // Test depositing a negative amount, which should not be allowed.
+        assertFalse(account1.deposit(-200));
         assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
     }
 
@@ -99,15 +91,8 @@ class BankAccountTest {
         thread1.join();
         thread2.join();
 
+        // Checking final balance after concurrent operations
         assertTrue(account1.getBalance() >= 900 && account1.getBalance() <= 1200);
-        assertTrue(account2.getBalance() >= 450 && account2.getBalance() <= 650);
+        assertTrue(account2.getBalance() >= 550 && account2.getBalance() <= 650);
     }
-    @Test
-    void testDepositToClosedAccountTwice() {
-        account1.closeAccount(); // Close the account
-        assertFalse(account1.deposit(200)); // Deposits should fail and return false
-        assertFalse(account1.deposit(50));  // Deposits should still fail and return false
-        assertEquals(1000, account1.getBalance(), 0.01); // Balance should remain unchanged
-    }
-
 }

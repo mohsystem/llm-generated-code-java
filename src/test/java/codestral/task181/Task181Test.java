@@ -2,7 +2,6 @@ package codestral.task181;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class Task181Test {
@@ -24,25 +23,19 @@ class Task181Test {
     @Test
     void testWithdraw() {
         assertTrue(account1.withdraw(300));
-        assertEquals(700, getBalance(account1) , 0.01);
+        assertEquals(700, getBalance(account1), 0.01);
     }
 
     @Test
     void testWithdrawInsufficientFunds() {
         assertFalse(account1.withdraw(2000));
-        assertEquals(1000, getBalance(account1) , 0.01);
+        assertEquals(1000, getBalance(account1), 0.01);
     }
 
     @Test
     void testWithdrawNegativeAmount() {
         assertThrows(IllegalArgumentException.class, () -> account1.withdraw(-100));
-        assertEquals(1000, getBalance(account1) , 0.01);
-    }
-
-    @Test
-    void testDepositNegativeAmount() {
-        assertThrows(IllegalArgumentException.class, () -> account1.deposit(-100));
-        assertEquals(1000, getBalance(account1) , 0.01);
+        assertEquals(1000, getBalance(account1), 0.01);
     }
 
     @Test
@@ -55,20 +48,27 @@ class Task181Test {
     @Test
     void testCloseAccountTwice() {
         account1.close();
-        assertThrows(IllegalStateException.class, () -> account1.deposit(200));
-        assertThrows(IllegalStateException.class, () -> account1.withdraw(100));
-    }
-
-    @Test
-    void testCloseNonExistingAccount() {
-        // No equivalent test for non-existing accounts in the single account context
+        assertThrows(IllegalStateException.class, () -> account1.close());
     }
 
     @Test
     void testDepositToClosedAccount() {
         account1.close();
         assertThrows(IllegalStateException.class, () -> account1.deposit(200));
-        assertEquals(1000, getBalance(account1) , 0.01);
+        assertEquals(1000, getBalance(account1), 0.01);
+    }
+    @Test
+    void testWithdrawExactBalance() {
+        // Test withdrawing exactly the balance amount, which should leave the account with zero balance.
+        assertTrue(account1.withdraw(1000));
+        assertEquals(0, getBalance(account1), 0.01); // Balance should be zero
+    }
+
+    @Test
+    void testDepositNegativeAmount() {
+        // Test depositing a negative amount, which should not be allowed.
+        assertThrows(IllegalArgumentException.class, () -> account1.deposit(-200));
+        assertEquals(1000, getBalance(account1), 0.01); // Balance should remain unchanged
     }
 
     @Test
@@ -90,9 +90,10 @@ class Task181Test {
         thread2.join();
 
         // Checking final balance after concurrent operations
-        assertTrue(getBalance(account1) >= 900 && getBalance(account1)  <= 1200);
-        assertTrue(getBalance(account2) >= 550 && getBalance(account2)  <= 650);
+        assertTrue(getBalance(account1) >= 900 && getBalance(account1) <= 1200);
+        assertTrue(getBalance(account2) >= 550 && getBalance(account2) <= 650);
     }
+
     private double getBalance(BankAccount account) {
         // Reflection to access private field 'balance' if necessary
         try {

@@ -7,49 +7,49 @@ public class Task199Test {
 
     @Test
     public void testInitialTime() {
-        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(14, 30);
-        assertEquals("14:30", clock.toString());
+        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(10, 30);
+        assertEquals("10:30", clock.toString());
     }
 
     @Test
     public void testAddMinutes() {
-        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(14, 30);
-        clock.addMinutes(90);
-        assertEquals("16:00", clock.toString());
+        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(10, 30);
+        clock.addMinutes(60);
+        assertEquals("11:30", clock.toString());
     }
 
     @Test
     public void testSubtractMinutes() {
-        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(14, 30);
-        clock.subtractMinutes(70);
-        assertEquals("13:20", clock.toString());
+        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(10, 30);
+        clock.subtractMinutes(90);
+        assertEquals("09:00", clock.toString());
     }
 
     @Test
     public void testAddOverflowMinutes() {
-        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(23, 50);
-        clock.addMinutes(20);
-        assertEquals("00:10", clock.toString());
+        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(23, 45);
+        clock.addMinutes(30);
+        assertEquals("00:15", clock.toString());
     }
 
     @Test
     public void testSubtractUnderflowMinutes() {
-        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(0, 10);
-        clock.subtractMinutes(20);
-        assertEquals("23:50", clock.toString());
+        Task199_OPENAI_gpt_4o clock = new Task199_OPENAI_gpt_4o(0, 15);
+        clock.subtractMinutes(30);
+        assertEquals("23:45", clock.toString());
     }
 
     @Test
     public void testEqualityTrue() {
-        Task199_OPENAI_gpt_4o clock1 = new Task199_OPENAI_gpt_4o(16, 0);
-        Task199_OPENAI_gpt_4o clock2 = new Task199_OPENAI_gpt_4o(16, 0);
+        Task199_OPENAI_gpt_4o clock1 = new Task199_OPENAI_gpt_4o(10, 0);
+        Task199_OPENAI_gpt_4o clock2 = new Task199_OPENAI_gpt_4o(10, 0);
         assertTrue(clock1.equals(clock2));
     }
 
     @Test
     public void testEqualityFalse() {
-        Task199_OPENAI_gpt_4o clock1 = new Task199_OPENAI_gpt_4o(16, 0);
-        Task199_OPENAI_gpt_4o clock2 = new Task199_OPENAI_gpt_4o(15, 0);
+        Task199_OPENAI_gpt_4o clock1 = new Task199_OPENAI_gpt_4o(10, 0);
+        Task199_OPENAI_gpt_4o clock2 = new Task199_OPENAI_gpt_4o(9, 0);
         assertFalse(clock1.equals(clock2));
     }
 

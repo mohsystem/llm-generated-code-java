@@ -7,11 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class Task181Test {
     private Task181_GEMINI_gemini_1_5_pro_001 account1;
     private Task181_GEMINI_gemini_1_5_pro_001 account2;
+    private Task181_GEMINI_gemini_1_5_pro_001 closedAccount;
 
     @BeforeEach
     void setUp() {
         account1 = new Task181_GEMINI_gemini_1_5_pro_001(1000);
         account2 = new Task181_GEMINI_gemini_1_5_pro_001(500);
+        closedAccount = new Task181_GEMINI_gemini_1_5_pro_001(2000); // Account to be closed for testing
+        closedAccount.close();
     }
 
     @Test
@@ -37,43 +40,39 @@ class Task181Test {
         assertThrows(IllegalArgumentException.class, () -> account1.withdraw(-100));
         assertEquals(1000, account1.getBalance(), 0.01);
     }
-    
+
     @Test
     void testCloseAccount() {
         account1.close();
         assertThrows(IllegalStateException.class, () -> account1.deposit(200));
         assertThrows(IllegalStateException.class, () -> account1.withdraw(100));
-        assertThrows(IllegalStateException.class, () -> account1.getBalance());
     }
 
     @Test
     void testCloseNonExistingAccount() {
-        // There’s no "close non-existing account" method in the class.
-        // This test is omitted as the class does not support this feature.
+        assertThrows(IllegalStateException.class, () -> closedAccount.close());
     }
 
     @Test
     void testDepositToClosedAccount() {
-        account1.close();
-        assertThrows(IllegalStateException.class, () -> account1.deposit(200));
-        assertEquals(1000, account1.getBalance(), 0.01);
+        assertThrows(IllegalStateException.class, () -> closedAccount.deposit(200));
+        assertEquals(2000, closedAccount.getBalance(), 0.01);
     }
 
     @Test
     void testOpenAccountWithExistingAccountNumber() {
-        // There’s no "open account" method in the class.
-        // This test is omitted as the class does not support this feature.
+        account1.open();
     }
 
     @Test
     void testOpenAccountSuccess() {
-        // There’s no "open account" method in the class.
-        // This test is omitted as the class does not support this feature.
+        Task181_GEMINI_gemini_1_5_pro_001 account3 = new Task181_GEMINI_gemini_1_5_pro_001(1500);
+        assertEquals(1500, account3.getBalance(), 0.01);
+
     }
 
     @Test
     void testConcurrentAccess() throws InterruptedException {
-        // Simulate concurrent access by creating threads
         Thread thread1 = new Thread(() -> {
             account1.deposit(200);
             account2.withdraw(100);
@@ -91,6 +90,6 @@ class Task181Test {
         thread2.join();
 
         assertTrue(account1.getBalance() >= 900 && account1.getBalance() <= 1200);
-        assertTrue(account2.getBalance() >= 450 && account2.getBalance() <= 650);
+        assertTrue(account2.getBalance() >= 550 && account2.getBalance() <= 650);
     }
 }

@@ -9,7 +9,7 @@ class Task196Test {
 
     @Test
     void testZeroEvenOdd1() throws InterruptedException {
-        runTest(1, "010");
+        runTest(1, "01");
     }
 
     @Test
@@ -19,42 +19,42 @@ class Task196Test {
 
     @Test
     void testZeroEvenOdd3() throws InterruptedException {
-        runTest(3, "010203");
+        runTest(5, "0102030405");
     }
 
     @Test
     void testZeroEvenOdd4() throws InterruptedException {
-        runTest(4, "010204");
+        runTest(10, "010203040506070809010");
     }
 
     @Test
     void testZeroEvenOdd5() throws InterruptedException {
-        runTest(5, "010205");
+        runTest(3, "010203");
     }
 
     @Test
     void testZeroEvenOdd6() throws InterruptedException {
-        runTest(6, "010206");
+        runTest(4, "01020304");
     }
 
     @Test
     void testZeroEvenOdd7() throws InterruptedException {
-        runTest(7, "010207");
+        runTest(6, "010203040506");
     }
 
     @Test
     void testZeroEvenOdd8() throws InterruptedException {
-        runTest(8, "010208");
+        runTest(7, "01020304050607");
     }
 
     @Test
     void testZeroEvenOdd9() throws InterruptedException {
-        runTest(9, "010209");
+        runTest(8, "0102030405060708");
     }
 
     @Test
     void testZeroEvenOdd10() throws InterruptedException {
-        runTest(10, "0102010");
+        runTest(9, "010203040506070809");
     }
 
     private void runTest(int n, String expected) throws InterruptedException {
