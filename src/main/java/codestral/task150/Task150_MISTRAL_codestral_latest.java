@@ -54,4 +54,6 @@ public class Task150_MISTRAL_codestral_latest {
         }
         return false;
     }
+
+    public boolean isEmpty() {return head == null;}
 }

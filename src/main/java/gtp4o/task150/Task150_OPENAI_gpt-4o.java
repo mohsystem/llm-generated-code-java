@@ -59,6 +59,8 @@ class SinglyLinkedList {
         return false;
     }
 
+    public boolean isEmpty() {return head == null;}
+
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.insert(1);
