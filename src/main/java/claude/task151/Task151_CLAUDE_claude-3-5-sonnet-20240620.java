@@ -11,7 +11,7 @@ class Node {
 }
 
 class BinarySearchTree {
-    Node root;
+    private Node root;
 
     BinarySearchTree() {
         root = null;
@@ -76,6 +76,8 @@ class BinarySearchTree {
             return searchRecursive(root.left, key);
         return searchRecursive(root.right, key);
     }
+
+    public boolean isEmpty(){return root == null;}
 
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();

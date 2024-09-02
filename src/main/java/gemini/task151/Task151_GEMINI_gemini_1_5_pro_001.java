@@ -109,6 +109,8 @@ public class Task151_GEMINI_gemini_1_5_pro_001 {
     }
   }
 
+  public boolean isEmpty(){return root == null;}
+
   public static void main(String[] args) {
     Task151_GEMINI_gemini_1_5_pro_001 bst = new Task151_GEMINI_gemini_1_5_pro_001();
     int[] arr = {10, 5, 15, 2, 7, 12, 20};
