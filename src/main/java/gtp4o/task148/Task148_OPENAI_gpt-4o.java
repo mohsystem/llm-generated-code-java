@@ -27,8 +27,12 @@ class Stack {
         return null;
     }
 
+    public int size() {
+        return size();
+    }
+
     public boolean isEmpty() {
-        return stack.isEmpty();
+        return size() == 0;
     }
 
     public static void main(String[] args) {

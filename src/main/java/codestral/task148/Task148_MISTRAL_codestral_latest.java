@@ -27,4 +27,11 @@ public class Task148_MISTRAL_codestral_latest {
         }
         return stack.peek();
     }
+
+    public boolean isEmpty() {return size() == 0;}
+
+    public int size(){
+        return stack.size();
+    }
+
 }

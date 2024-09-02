@@ -31,8 +31,10 @@ class Stack {
     }
 
     public boolean is_empty() {
-        return this.items.size() == 0;
+        return size() == 0;
     }
 
-    
+    public int size() {
+        return this.items.size();
+    }
 }
