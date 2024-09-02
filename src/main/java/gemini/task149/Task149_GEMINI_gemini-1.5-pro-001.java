@@ -49,5 +49,8 @@ class Queue {
         return front.data;
     }
 
+    boolean isEmpty(){
+        return front == null;
+    }
     
 }

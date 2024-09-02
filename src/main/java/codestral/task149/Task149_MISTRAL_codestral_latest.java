@@ -26,4 +26,6 @@ public class Task149_MISTRAL_codestral_latest {
         }
         return queue.peek();
     }
+
+    public boolean isEmpty() {return queue.isEmpty();}
 }

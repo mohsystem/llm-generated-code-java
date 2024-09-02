@@ -25,6 +25,8 @@ class Queue {
         return queue.get(0);
     }
 
+    public boolean isEmpty() {return queue.isEmpty();}
+
     public static void main(String[] args) {
         Queue q = new Queue();
         q.enqueue("Apple");
