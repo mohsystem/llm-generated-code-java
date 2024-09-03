@@ -3,7 +3,7 @@ package codestral.task153;
 import java.util.*;
 
 public class Task153_MISTRAL_codestral_latest {
-    private static void bfs(Map<Character, List<Character>> graph, Character start) {
+    public static void bfs(Map<Character, List<Character>> graph, Character start) {
         Set<Character> visited = new HashSet<>();
         Queue<Character> queue = new LinkedList<>();
 

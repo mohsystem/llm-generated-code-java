@@ -3,7 +3,7 @@ package claude.task153;
 import java.util.*;
 
 public class Task153_CLAUDE_claude_3_5_sonnet_20240620 {
-    private static void bfs(Map<String, List<String>> graph, String start) {
+    public static void bfs(Map<String, List<String>> graph, String start) {
         Set<String> visited = new HashSet<>();
         Queue<String> queue = new LinkedList<>();
 
