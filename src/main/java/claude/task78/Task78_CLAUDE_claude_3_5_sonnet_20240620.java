@@ -18,11 +18,11 @@ public class Task78_CLAUDE_claude_3_5_sonnet_20240620 {
 
         // Format the key in OpenSSH format
         StringBuilder sshKey = new StringBuilder();
-        sshKey.append("-----BEGIN OPENSSH PRIVATE KEY-----\\n");
+        sshKey.append("-----BEGIN OPENSSH PRIVATE KEY-----\n");
         for (int i = 0; i < encodedKey.length(); i += 64) {
-            sshKey.append(encodedKey, i, Math.min(i + 64, encodedKey.length())).append("\\n");
+            sshKey.append(encodedKey, i, Math.min(i + 64, encodedKey.length())).append("\n");
         }
-        sshKey.append("-----END OPENSSH PRIVATE KEY-----\\n");
+        sshKey.append("-----END OPENSSH PRIVATE KEY-----\n");
 
         System.out.println(sshKey.toString());
     }

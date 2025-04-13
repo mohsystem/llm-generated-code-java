@@ -11,13 +11,13 @@ public class Task52_OPENAI_gpt_4o {
 
     private static final String ALGORITHM = "AES";
 
-    private static SecretKey generateKey() throws Exception {
+    static SecretKey generateKey() throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance(ALGORITHM);
         keyGen.init(128);
         return keyGen.generateKey();
     }
 
-    private static void saveKey(SecretKey key, Path path) throws IOException {
+    static void saveKey(SecretKey key, Path path) throws IOException {
         byte[] encoded = Base64.getEncoder().encode(key.getEncoded());
         Files.write(path, encoded);
     }
@@ -28,7 +28,7 @@ public class Task52_OPENAI_gpt_4o {
         return new SecretKeySpec(keyBytes, ALGORITHM);
     }
 
-    private static void encryptFile(SecretKey key, Path inputFile, Path outputFile) throws Exception {
+    static void encryptFile(SecretKey key, Path inputFile, Path outputFile) throws Exception {
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.ENCRYPT_MODE, key);
 
@@ -38,7 +38,7 @@ public class Task52_OPENAI_gpt_4o {
         Files.write(outputFile, outputBytes);
     }
 
-    private static void decryptFile(SecretKey key, Path inputFile, Path outputFile) throws Exception {
+    static void decryptFile(SecretKey key, Path inputFile, Path outputFile) throws Exception {
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, key);
 

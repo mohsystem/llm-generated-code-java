@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 
 public class Task37_OPENAI_gpt_4o {
     public static void main(String[] args) {
-        String url = "jdbc:sqlite:example.db"; // Change to your actual database
+        String url = "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1"; // H2 in-memory
         String username = System.console().readLine("Enter username: ");
 
         try (Connection conn = DriverManager.getConnection(url)) {

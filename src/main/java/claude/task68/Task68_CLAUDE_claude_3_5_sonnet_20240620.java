@@ -21,10 +21,10 @@ public class Task68_CLAUDE_claude_3_5_sonnet_20240620 {
         searchLDAP(username, dc);
     }
 
-    private static String[] extractDcAndUsername(String inputString) {
+    static String[] extractDcAndUsername(String inputString) {
         String[] parts = inputString.split("@");
         String username = parts[0];
-        String[] domainParts = parts[1].split("\\\\.");
+        String[] domainParts = parts[1].split("\\.");
         StringBuilder dcBuilder = new StringBuilder();
         for (String part : domainParts) {
             dcBuilder.append("dc=").append(part).append(",");

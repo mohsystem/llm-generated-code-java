@@ -24,6 +24,46 @@ public class Task67_CLAUDE_claude_3_5_sonnet_20240620 {
         }
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     private static Task67_CLAUDE_claude_3_5_sonnet_20240620 getCustomerInfo(String username) {
         String url = "jdbc:sqlite:customer_database.db";
         String sql = "SELECT * FROM customer WHERE customerusername = ?";

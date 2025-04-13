@@ -9,7 +9,7 @@ public class Task56_GEMINI_gemini_1_5_pro_001 {
     System.out.println(token);
   }
 
-  private static String generateToken(int length) {
+  static String generateToken(int length) {
     SecureRandom random = new SecureRandom();
     String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     StringBuilder sb = new StringBuilder(length);

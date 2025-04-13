@@ -36,7 +36,7 @@ public class Task91_CLAUDE_claude_3_5_sonnet_20240620 {
         }
     }
 
-    private static DNSMessage parseDNSQuery(byte[] data) {
+    public static DNSMessage parseDNSQuery(byte[] data) {
         ByteBuffer buffer = ByteBuffer.wrap(data);
         short id = buffer.getShort();
         buffer.getShort(); // flags
@@ -57,14 +57,14 @@ public class Task91_CLAUDE_claude_3_5_sonnet_20240620 {
         return new DNSMessage(id, domain.toString(), qtype, qclass);
     }
 
-    private static List<String> resolveDNS(String domain, short qtype) {
+    public static List<String> resolveDNS(String domain, short qtype) {
         // Implement DNS resolution logic here
         List<String> answers = new ArrayList<>();
         answers.add("93.184.216.34"); // Example IP for example.com
         return answers;
     }
 
-    private static byte[] createDNSResponse(DNSMessage query, List<String> answers) {
+    public static byte[] createDNSResponse(DNSMessage query, List<String> answers) {
         ByteBuffer response = ByteBuffer.allocate(512);
         response.putShort(query.id);
         response.putShort((short) 0x8180); // Flags
@@ -98,7 +98,7 @@ public class Task91_CLAUDE_claude_3_5_sonnet_20240620 {
         return result;
     }
 
-    private static class DNSMessage {
+    public static class DNSMessage {
         short id;
         String domain;
         short qtype;

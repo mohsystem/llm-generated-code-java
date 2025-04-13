@@ -24,6 +24,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    testImplementation 'com.h2database:h2:2.2.224'
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.postgresql:postgresql:42.7.3'
+
 // https://mvnrepository.com/artifact/javax.validation/validation-api
     implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
@@ -32,6 +41,7 @@ dependencies {
     implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
 // https://mvnrepository.com/artifact/com.sun.jna/jna
     implementation group: 'com.sun.jna', name: 'jna', version: '3.0.9'
+    implementation 'com.sun.net.httpserver:http:20070405'
 
 // https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on
     implementation group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.50'
@@ -43,7 +53,7 @@ dependencies {
 // https://mvnrepository.com/artifact/org.apache.commons/commons-compress
     implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.26.2'
 // https://mvnrepository.com/artifact/io.javalin/javalin
-    implementation group: 'io.javalin', name: 'javalin', version: '6.1.6'
+  implementation group: 'io.javalin', name: 'javalin', version: '6.1.6'
 
     // https://mvnrepository.com/artifact/org.mindrot/jbcrypt
     implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
@@ -74,6 +84,7 @@ dependencies {
 
 // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime
     implementation group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.3.1'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.9.3'
 
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -83,4 +94,5 @@ springBoot {
 }
 test {
     useJUnitPlatform()
+
 }

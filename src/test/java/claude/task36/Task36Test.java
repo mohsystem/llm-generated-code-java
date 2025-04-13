@@ -1,57 +1,105 @@
-package claude.task26;
+package claude.task36;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import java.io.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task26_CLAUDE_claude_3_5_sonnet_20240620Test {
+class Task36Test {
 
-    @Test
-    void testFindOdd_singleOddNumber() {
-        assertEquals(7, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{7}));
+    private final PrintStream originalOut = System.out;
+    private ByteArrayOutputStream outContent;
+
+    @BeforeEach
+    void setUpStreams() {
+        outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @AfterEach
+    void restoreStreams() {
+        System.setOut(originalOut);
+    }
+
+    private void createTempFile(String filename, String content) throws IOException {
+        try (FileWriter writer = new FileWriter(filename)) {
+            writer.write(content);
+        }
     }
 
     @Test
-    void testFindOdd_allEvenNumbers() {
-        assertEquals(0, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{0}));
+    void testReadFileSuccess() throws IOException {
+        String filename = "test_file.txt";
+        createTempFile(filename, "Hello, World!");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertEquals("Hello, World!", outContent.toString().trim());
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_oneOddMultipleTimes() {
-        assertEquals(2, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{1, 1, 2}));
+    void testFileNotFound() {
+        String filename = "missing_file.txt";
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertTrue(outContent.toString().contains("Error reading file"));
     }
 
     @Test
-    void testFindOdd_zerosAndOnes() {
-        assertEquals(0, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{0, 1, 0, 1, 0}));
+    void testReadEmptyFile() throws IOException {
+        String filename = "empty_file.txt";
+        createTempFile(filename, "");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertEquals("", outContent.toString().trim());
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_complexOddPattern() {
-        assertEquals(4, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1}));
+    void testNumericContent() throws IOException {
+        String filename = "numeric_file.txt";
+        createTempFile(filename, "12345");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertEquals("12345", outContent.toString().trim());
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_singleZero() {
-        assertEquals(0, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{0}));
+    void testSpecialCharacters() throws IOException {
+        String filename = "special_chars.txt";
+        createTempFile(filename, "Special Characters !@#$%^&*()");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertEquals("Special Characters !@#$%^&*()", outContent.toString().trim());
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_noOddNumbers() {
-        assertEquals(0, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{})); // Edge case: empty array
+    void testMultilineContent() throws IOException {
+        String filename = "multiline_file.txt";
+        createTempFile(filename, "Line 1\nLine 2");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        String[] lines = outContent.toString().split("\\R"); // \R matches any line break
+        assertEquals("Line 1", lines[0]);
+        assertEquals("Line 2", lines[1]);
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_largeArray() {
-        assertEquals(100, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{10, 10, 20, 20, 100}));
+    void testContentWithNewlines() throws IOException {
+        String filename = "newlines_file.txt";
+        createTempFile(filename, "File\nWith\nNewlines");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        String[] lines = outContent.toString().split("\\R");
+        assertEquals("File", lines[0]);
+        assertEquals("With", lines[1]);
+        assertEquals("Newlines", lines[2]);
+        new File(filename).delete();
     }
 
     @Test
-    void testFindOdd_allPairs() {
-        assertEquals(0, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{8, 8, 9, 9, 10, 10}));
+    void testTrailingSpaces() throws IOException {
+        String filename = "trailing_spaces.txt";
+        createTempFile(filename, "Trailing spaces    ");
+        Task36_CLAUDE_claude_3_5_sonnet_20240620.main(new String[]{filename});
+        assertEquals("Trailing spaces", outContent.toString().trim());
+        new File(filename).delete();
     }
 
-    @Test
-    void testFindOdd_singleNegativeOddNumber() {
-        assertEquals(-5, Task26_CLAUDE_claude_3_5_sonnet_20240620.findOdd(new int[]{-5, 1, 1}));
-    }
+
 }

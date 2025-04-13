@@ -12,8 +12,21 @@ public class Task53_MISTRAL_codestral_latest {
         this.isActive = true;
     }
 
-    // Getters and setters for userId and isActive
-}
+    public String getUserId() {
+        return userId;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }}
 
 
 

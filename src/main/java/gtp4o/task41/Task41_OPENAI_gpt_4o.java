@@ -17,6 +17,12 @@ public class Task41_OPENAI_gpt_4o {
         String[] args = {};
         CppPart.main(args);
     }
+    public static String processInput(String input) {
+        if (input.length() > 100) {
+            input = input.substring(0, 100);
+        }
+        return "Processed input: " + input;
+    }
 }
 
 class CppPart {

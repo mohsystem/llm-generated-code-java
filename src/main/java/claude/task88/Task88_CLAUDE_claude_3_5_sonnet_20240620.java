@@ -34,14 +34,15 @@ public class Task88_CLAUDE_claude_3_5_sonnet_20240620 {
         }
         return sb.toString();
     }
-    
+
     private static String convertToUnicode(String input) {
         StringBuilder sb = new StringBuilder();
         for (char c : input.toCharArray()) {
-            sb.append(String.format("\\\\u%04x", (int) c));
+            sb.append(String.format("\\u%04x", (int) c));
         }
         return sb.toString();
     }
+
     
     public static void main(String[] args) {
         try {
