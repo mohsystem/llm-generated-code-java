@@ -50,9 +50,9 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         return new KeyPair(new PublicKey(e, n), new PrivateKey(d, n));
     }
 
-    private static class KeyPair {
-        private PublicKey publicKey;
-        private PrivateKey privateKey;
+    static class KeyPair {
+        PublicKey publicKey;
+        PrivateKey privateKey;
 
         public KeyPair(PublicKey publicKey, PrivateKey privateKey) {
             this.publicKey = publicKey;
@@ -60,9 +60,9 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         }
     }
 
-    private static class PublicKey {
-        private BigInteger e;
-        private BigInteger n;
+    static class PublicKey {
+        BigInteger e;
+        BigInteger n;
 
         public PublicKey(BigInteger e, BigInteger n) {
             this.e = e;
@@ -70,9 +70,9 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         }
     }
 
-    private static class PrivateKey {
-        private BigInteger d;
-        private BigInteger n;
+    static class PrivateKey {
+        BigInteger d;
+        BigInteger n;
 
         public PrivateKey(BigInteger d, BigInteger n) {
             this.d = d;

@@ -1,6 +1,7 @@
 package llama3.task126;
 
- 
+import java.util.Scanner;
+
 // Java does not have a built-in way to open a web browser, so we'll use the Desktop class
 import java.awt.Desktop;
 import java.io.IOException;
@@ -9,7 +10,8 @@ import java.net.URI;
 public class Task126_PERPLEXITY_llama_3_sonar_large_32k_chat {
     public static void main(String[] args) {
         System.out.print("Enter 'google' to go to Google, 'facebook' to go to Facebook, or 'youtube' to go to YouTube: ");
-        String user_input = System.console().readLine();
+        Scanner scanner = new Scanner(System.in);
+        String user_input = scanner.nextLine();
         if (user_input.equals("google")) {
             openWebpage("https://www.google.com");
         } else if (user_input.equals("facebook")) {

@@ -19,7 +19,7 @@ public class Task102_MISTRAL_codestral_latest {
         }
     }
 
-    private static void updatePassword(String username, String newPassword) throws SQLException, NoSuchAlgorithmException {
+    static void updatePassword(String username, String newPassword) throws SQLException, NoSuchAlgorithmException {
         // Connect to the SQLite database
         Connection conn = DriverManager.getConnection("jdbc:sqlite:user_database.db");
 

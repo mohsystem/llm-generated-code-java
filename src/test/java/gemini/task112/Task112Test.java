@@ -1,0 +1,100 @@
+package gemini.task112;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import org.junit.jupiter.api.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class Task112Test {
+
+    static MongoClient mongoClient;
+    static MongoDatabase database;
+    static MongoCollection<Document> collection;
+
+    @BeforeAll
+    static void setUp() {
+        mongoClient = new MongoClient("localhost", 27017);
+        database = mongoClient.getDatabase("mydatabase");
+        collection = database.getCollection("customers");
+    }
+
+    @BeforeEach
+    void cleanCollection() {
+        collection.deleteMany(new Document());
+    }
+
+    @AfterAll
+    static void tearDown() {
+        mongoClient.close();
+    }
+
+    @Test
+    @Order(1)
+    void testCreateDocument() {
+        Document doc = new Document("name", "John")
+                .append("address", "Highway 37");
+        collection.insertOne(doc);
+
+        long count = collection.countDocuments();
+        assertEquals(1, count, "There should be exactly one document after insertion.");
+
+        Document insertedDoc = collection.find(new Document("name", "John")).first();
+        assertNotNull(insertedDoc, "Inserted document should not be null.");
+        assertEquals("Highway 37", insertedDoc.getString("address"), "Address should be Highway 37 after insertion.");
+    }
+
+    @Test
+    @Order(2)
+    void testUpdateDocument() {
+        Document doc = new Document("name", "John")
+                .append("address", "Highway 37");
+        collection.insertOne(doc);
+
+        collection.updateOne(new Document("name", "John"),
+                new Document("$set", new Document("address", "Canyon 123")));
+
+        Document updatedDoc = collection.find(new Document("name", "John")).first();
+        assertNotNull(updatedDoc, "Updated document should not be null.");
+        assertEquals("Canyon 123", updatedDoc.getString("address"), "Address should be updated to Canyon 123.");
+    }
+
+    @Test
+    @Order(3)
+    void testDeleteDocument() {
+        Document doc = new Document("name", "John")
+                .append("address", "Highway 37");
+        collection.insertOne(doc);
+
+        collection.deleteOne(new Document("name", "John"));
+
+        Document deletedDoc = collection.find(new Document("name", "John")).first();
+        assertNull(deletedDoc, "Document should be deleted and not found.");
+    }
+
+    @Test
+    @Order(4)
+    void testReadDocuments() {
+        List<Document> docs = new ArrayList<>();
+        docs.add(new Document("name", "Alice").append("address", "Street 1"));
+        docs.add(new Document("name", "Bob").append("address", "Street 2"));
+        collection.insertMany(docs);
+
+        List<Document> retrievedDocs = collection.find().into(new ArrayList<>());
+
+        assertEquals(2, retrievedDocs.size(), "There should be exactly 2 documents.");
+
+        List<String> names = new ArrayList<>();
+        for (Document d : retrievedDocs) {
+            names.add(d.getString("name"));
+        }
+        assertTrue(names.contains("Alice"), "Should contain Alice.");
+        assertTrue(names.contains("Bob"), "Should contain Bob.");
+    }
+}

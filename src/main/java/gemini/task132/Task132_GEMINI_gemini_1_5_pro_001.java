@@ -22,7 +22,7 @@ public class Task132_GEMINI_gemini_1_5_pro_001 {
         watchFileChanges(fileToMonitor);
     }
 
-    private static void watchFileChanges(String filePath) throws IOException {
+    static void watchFileChanges(String filePath) throws IOException {
         Path path = Paths.get(filePath);
         WatchService watchService = FileSystems.getDefault().newWatchService();
         path.getParent().register(watchService, StandardWatchEventKinds.ENTRY_MODIFY);

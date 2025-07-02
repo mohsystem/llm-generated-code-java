@@ -16,7 +16,7 @@ public class Task102_OPENAI_gpt_4o {
         return sb.toString();
     }
 
-    private static void updatePassword(String username, String password) throws NoSuchAlgorithmException, SQLException {
+    static void updatePassword(String username, String password) throws NoSuchAlgorithmException, SQLException {
         String hashedPassword = hashPassword(password);
         Connection conn = DriverManager.getConnection("jdbc:sqlite:users.db");
         Statement stmt = conn.createStatement();

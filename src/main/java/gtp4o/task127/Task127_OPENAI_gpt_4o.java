@@ -26,7 +26,7 @@ public class Task127_OPENAI_gpt_4o {
         }
     }
 
-    private static void copyFile(File source, File dest) throws IOException {
+    static void copyFile(File source, File dest) throws IOException {
         try (InputStream is = new FileInputStream(source); OutputStream os = new FileOutputStream(dest)) {
             byte[] buffer = new byte[1024];
             int length;
