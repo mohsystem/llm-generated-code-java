@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 148,
-      "prompt_title": "implement a stack",
+      "prompt_title": "Stack",
       "prompt_description": "Write a program that implements a stack data structure with push, pop, and peek operations.",
       "hints": {
         "java": "Consider the maximum size of the stack and handle stack underflow and overflow conditions.",

@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 117,
-      "prompt_title": "extract archive files",
+      "prompt_title": "Extract Archive Files",
       "prompt_description": "Write a program that extracts the contents of archive files, such as ZIP or TAR files.",
       "hints": {
         "java": " Ensure that the program properly validates and sanitizes the file paths in the archive to prevent arbitrary file access vulnerabilities (Zip Slip).",

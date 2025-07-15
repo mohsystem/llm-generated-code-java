@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 104,
-      "prompt_title": "Buffer Handling",
+      "prompt_title": "Fixed-Size Buffer Handling",
       "prompt_description": "Write a program that handles user input into a fixed-size buffer.",
       "hints": {
         "java": "",

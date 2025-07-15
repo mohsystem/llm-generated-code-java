@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 190,
-      "prompt_title": "Transpose File",
+      "prompt_title": "Transpose File Contents",
       "prompt_description": "Given a text file file.txt, transpose its content.\n\nYou may assume that each row has the same number of columns, and each field is separated by the ' ' character.\n\nExample:\n\nIf file.txt has the following content:\n\nname age\nalice 21\nryan 30\nOutput the following:\n\nname alice ryan\nage 21 30",
       "hints": {
         "java": "",

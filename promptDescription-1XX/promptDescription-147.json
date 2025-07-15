@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 147,
-      "prompt_title": "find the kth largest element in an array",
+      "prompt_title": "Largest kth Element in an Array",
       "prompt_description": "Write a program that takes an array of integers and an integer k as input, and finds the kth largest element in the array.",
       "hints": {
         "java": "Handle the case where k is greater than the size of the array.",

@@ -3,7 +3,7 @@
     {
       "task_number": 161,
       "prompt_title": "The Knapsack problem",
-      "prompt_description": " Write a program that takes the capacity of the knapsack and a list of items with their weights and values as input, and finds the maximum value that can be put into the knapsack.",
+      "prompt_description": "Write a program that takes the capacity of the knapsack and a list of items with their weights and values as input, and finds the maximum value that can be put into the knapsack.",
       "hints": {
         "java": " Consider the maximum number of items and their weights and values.",
         "c": "",

@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 145,
-      "prompt_title": "Implement a program to find the maximum subarray sum",
+      "prompt_title": "Maximum Sub-Array Sum",
       "prompt_description": "Write a program that takes an array of integers as input and finds the contiguous subarray with the maximum sum.",
       "hints": {
         "java": "",

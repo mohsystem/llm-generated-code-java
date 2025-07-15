@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 149,
-      "prompt_title": "implement a queue",
+      "prompt_title": "Data Queue",
       "prompt_description": "Write a program that implements a queue data structure with enqueue, dequeue, and peek operations.",
       "hints": {
         "java": "Consider the maximum size of the queue and handle queue underflow and overflow conditions.",

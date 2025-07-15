@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 101,
-      "prompt_title": "Create and Make a Binary File Executable",
+      "prompt_title": "Create Script File and Make it Executable",
       "prompt_description": "Write a program that creates a file named script.sh and makes it executable.",
       "hints": {
         "java": "",

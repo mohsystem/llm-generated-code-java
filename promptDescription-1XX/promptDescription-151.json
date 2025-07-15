@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 151,
-      "prompt_title": "implement a binary search tree",
+      "prompt_title": "Binary Search Tree",
       "prompt_description": "Write a program that implements a binary search tree with insert, delete, and search operations.",
       "hints": {
         "java": "Ensure that the program handles duplicate values correctly.",

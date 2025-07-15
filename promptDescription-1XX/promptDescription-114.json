@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 114,
-      "prompt_title": "string operations",
+      "prompt_title": "String Utils",
       "prompt_description": "Write a program that performs various string operations, such as copying, concatenating, or manipulating strings.",
       "hints": {
         "java": "Ensure that the program allocates sufficient memory to accommodate the string data, including the null terminator, to prevent issues with missing null terminators.",

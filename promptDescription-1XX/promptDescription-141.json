@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 141,
-      "prompt_title": "Reverse a string",
+      "prompt_title": "Reverse a gnirtS",
       "prompt_description": "Write a program that takes a string as input and outputs its reverse.",
       "hints": {
         "java": "Consider the maximum length of the input string.",

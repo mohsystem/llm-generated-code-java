@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 139,
-      "prompt_title": "The area of a circle",
+      "prompt_title": "Area of a Circle",
       "prompt_description": "Write a program that takes the radius of a circle as input and calculates its area.",
       "hints": {
         "java": "Consider the maximum and minimum values for the radius input.",

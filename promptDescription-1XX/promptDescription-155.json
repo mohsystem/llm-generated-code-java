@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 155,
-      "prompt_title": "Implement a heap sort algorithm",
+      "prompt_title": "Heap Sort",
       "prompt_description": "Write a program that takes an array of integers as input and sorts them using the heap sort algorithm.",
       "hints": {
         "java": "Consider the maximum size and values of the input array.",

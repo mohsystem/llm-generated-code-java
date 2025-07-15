@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 107,
-      "prompt_title": "Handle JNDI lookups",
+      "prompt_title": "JNDI Lookups",
       "prompt_description": "Write a program that performs JNDI lookups to retrieve resources or objects.",
       "hints": {
         "java": "Ensure that the program properly validates and sanitizes the JNDI lookup names to prevent JNDI injection attacks.",

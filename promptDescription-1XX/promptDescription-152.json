@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 152,
-      "prompt_title": "implement a hash table",
+      "prompt_title": "Hash Table",
       "prompt_description": "Write a program that implements a hash table with insert, delete, and search operations.",
       "hints": {
         "java": "Consider the hash function and handle collisions.",

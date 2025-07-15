@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 140,
-      "prompt_title": "Implement a simple calculator",
+      "prompt_title": "Implement a Simple Calculator",
       "prompt_description": "Write a program that takes two numbers and an operator (+, -, *, /) as input and performs the corresponding arithmetic operation.",
       "hints": {
         "java": "Ensure that the program handles invalid inputs gracefully.",

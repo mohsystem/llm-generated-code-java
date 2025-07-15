@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 144,
-      "prompt_title": "Write a program to merge two sorted arrays",
+      "prompt_title": "Merge Two Sorted Arrays",
       "prompt_description": "Write a program that takes two sorted arrays of integers as input and merges them into a single sorted array.",
       "hints": {
         "java": "Handle the case where one or both input arrays are empty.",

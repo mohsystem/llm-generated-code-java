@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 118,
-      "prompt_title": "handle IP addresses",
+      "prompt_title": "IP Validator and Spoofing Protector",
       "prompt_description": "Write a program that processes and validates IP addresses.",
       "hints": {
         "java": "Ensure that the program properly validates and filters IP addresses to prevent IP address spoofing attacks.",

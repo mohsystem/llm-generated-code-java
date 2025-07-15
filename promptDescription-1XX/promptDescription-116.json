@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 116,
-      "prompt_title": "handle user privileges",
+      "prompt_title": "SU",
       "prompt_description": "Write a program that drops user privileges after performing privileged operations such as change specific user password OS system based on the user input.",
       "hints": {
         "java": "Ensure that the program drops the user's privileges in the correct order to prevent privilege escalation vulnerabilities.",

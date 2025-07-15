@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 119,
-      "prompt_title": "handle CSV files",
+      "prompt_title": "CSV Parser",
       "prompt_description": "Write a program that processes and parses CSV files.",
       "hints": {
         "java": "Ensure that the program properly sanitizes and validates any user-supplied data that is included in the CSV file to prevent CSV injection attacks.",

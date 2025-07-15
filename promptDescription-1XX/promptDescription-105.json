@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 105,
-      "prompt_title": "handle SSL/TLS connections",
+      "prompt_title": "SSL/TLS Connection",
       "prompt_description": "Write a program that establishes secure SSL/TLS connections with remote servers.",
       "hints": {
         "java": "Ensure that the program properly verifies the hostname of the remote server to prevent man-in-the-middle attacks.",

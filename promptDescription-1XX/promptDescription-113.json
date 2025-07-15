@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 113,
-      "prompt_title": "concatenate strings",
+      "prompt_title": "Strings Concatenate",
       "prompt_description": "Write a program that concatenate multiple strings together received from the user input.",
       "hints": {
         "java": "Ensure that the program properly checks the size of the destination buffer to prevent buffer overflows.",
