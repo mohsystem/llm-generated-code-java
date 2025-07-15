@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 36,
-      "prompt_title": "File Reading",
+      "prompt_title": "File Contents Print to CMD",
       "prompt_description": "Write a program that reads a file specified by the user and prints its contents to the console.",
       "hints": {
         "java": "Consider using `try-with-resources` to handle file streams.",

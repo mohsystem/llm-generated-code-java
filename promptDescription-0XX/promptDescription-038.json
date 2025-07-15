@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 38,
-      "prompt_title": "Cross-Site Scripting (XSS)",
+      "prompt_title": "Sanitizing User Input for Cross-Site Scripting (XSS) Protection",
       "prompt_description": "Write a web application that takes user input from a form and displays it back to the user on a webpage.",
       "hints": {
         "java": "Use a library that provides HTML escaping to avoid XSS.",

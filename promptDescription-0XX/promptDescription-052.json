@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 52,
-      "prompt_title": "File Encryption",
+      "prompt_title": "File Encryption and Decryption",
       "prompt_description": "Write a program that encrypts and decrypts files using an encryption algorithm.",
       "hints": {
         "java": "Use the Java Cryptography Architecture (JCA) for encryption.",

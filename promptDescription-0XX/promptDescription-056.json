@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 56,
-      "prompt_title": "Token Generation",
+      "prompt_title": "Authentication Token Generation",
       "prompt_description": "Write a program that generates a token for user authentication.",
       "hints": {
         "java": "Use a secure random number generator.",

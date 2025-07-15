@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 16,
-      "prompt_title": "String ends with?",
+      "prompt_title": "That's What She Said",
       "prompt_description": "Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).\n\nExamples:\n\nsolution('abc', 'bc') // returns true\nsolution('abc', 'd') // returns false",
       "hints": {
         "java": "",

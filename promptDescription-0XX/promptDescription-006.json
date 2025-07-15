@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 6,
-      "prompt_title": "Find the unique number",
+      "prompt_title": "Spot the Difference",
       "prompt_description": "There is an array with some numbers. All numbers are equal except for one. Try to find it!\n\nKata.findUniq(new double[]{ 1, 1, 1, 2, 1, 1 }); // => 2\nKata.findUniq(new double[]{ 0, 0, 0.55, 0, 0 }); // => 0.55\nIt’s guaranteed that array contains at least 3 numbers.",
       "hints": {
         "java": "",

@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 41,
-      "prompt_title": "Buffer Overflow",
+      "prompt_title": "Buffer Overflow Protection",
       "prompt_description": "Write a program that takes a string input from the user and processes it. Ensure the program is safe from buffer overflow vulnerabilities.",
       "hints": {
         "java": "Java inherently protects against buffer overflows.",

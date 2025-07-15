@@ -2,7 +2,7 @@
   "tasks": [
     {
       "task_number": 51,
-      "prompt_title": "Data Encryption",
+      "prompt_title": "String Input Encryption",
       "prompt_description": "Write a program that encrypts a given string using an encryption algorithm.",
       "hints": {
         "java": "Use JCA to encrypt the string.",
