@@ -1,86 +1,115 @@
-import com.sun.net.httpserver.HttpServer;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpExchange;
+package gemini.task49;
 
+import org.junit.jupiter.api.*;
 import java.io.*;
-import java.net.InetSocketAddress;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.sql.*;
+import java.net.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Task49Test {
 
-    public static void main(String[] args) throws Exception {
-        Connection conn = DriverManager.getConnection("jdbc:sqlite:users.db");
-        Statement stmt = conn.createStatement();
-        stmt.execute("""
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                email TEXT NOT NULL UNIQUE
-            )
-        """);
+    private static Thread serverThread;
 
-        HttpServer server = HttpServer.create(new InetSocketAddress(5000), 0);
-        server.createContext("/api/users", new CreateUserHandler(conn));
-        server.setExecutor(null);
-        server.start();
-        System.out.println("Server running on http://127.0.0.1:5000/api/users");
+    // تأكد من أن السيرفر يبدأ قبل تشغيل أي اختبار
+    @BeforeAll
+    public static void startServer() {
+        serverThread = new Thread(() -> {
+            try {
+                Task49_GEMINI_gemini_1_5_pro_001.main(null); // تشغيل السيرفر
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        serverThread.start();
+        try {
+            Thread.sleep(3000); // الانتظار قليلاً لتأكد من بدء الخادم بشكل كامل
+        } catch (InterruptedException ignored) {}
     }
 
-    static class CreateUserHandler implements HttpHandler {
-        private final Connection conn;
 
-        public CreateUserHandler(Connection conn) {
-            this.conn = conn;
+    // اختبار إضافة مستخدم جديد
+    @Test
+    public void testCreateUser_returnsCorrectJsonAndStatus() throws IOException {
+        // إنشاء اتصال مع الـ API
+        URL url = new URL("http://localhost:8080/api/add_user");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setDoOutput(true);
+
+        // البيانات التي سيتم إرسالها
+        String jsonInput = "{\"name\":\"John Doe\", \"email\":\"john.doe2@example.com\"}";
+
+        // إرسال البيانات إلى السيرفر
+        try (OutputStream os = connection.getOutputStream()) {
+            byte[] input = jsonInput.getBytes();
+            os.write(input);
         }
 
-        @Override
-        public void handle(HttpExchange exchange) throws IOException {
-            if (!"POST".equalsIgnoreCase(exchange.getRequestMethod())) {
-                exchange.sendResponseHeaders(405, -1);
-                return;
-            }
+        // التحقق من حالة الاستجابة
+        int statusCode = connection.getResponseCode();
+        assertEquals(200, statusCode);
 
-            String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
-            String name = null, email = null;
-
-            // Expecting application/x-www-form-urlencoded
-            String[] pairs = body.split("&");
-            for (String pair : pairs) {
-                String[] parts = pair.split("=");
-                if (parts.length == 2) {
-                    String key = URLDecoder.decode(parts[0], StandardCharsets.UTF_8);
-                    String value = URLDecoder.decode(parts[1], StandardCharsets.UTF_8);
-                    if ("name".equals(key)) name = value;
-                    if ("email".equals(key)) email = value;
-                }
-            }
-
-            if (name == null || email == null) {
-                String response = "Missing name or email";
-                exchange.sendResponseHeaders(400, response.length());
-                exchange.getResponseBody().write(response.getBytes());
-                exchange.close();
-                return;
-            }
-
-            try (PreparedStatement pstmt = conn.prepareStatement(
-                    "INSERT INTO users (name, email) VALUES (?, ?)")) {
-                pstmt.setString(1, name);
-                pstmt.setString(2, email);
-                pstmt.executeUpdate();
-
-                String response = "{\"message\": \"User created successfully\"}";
-                exchange.getResponseHeaders().set("Content-Type", "application/json");
-                exchange.sendResponseHeaders(201, response.length());
-                exchange.getResponseBody().write(response.getBytes());
-            } catch (SQLException e) {
-                String response = "{\"error\": \"Email already exists or DB error\"}";
-                exchange.sendResponseHeaders(400, response.length());
-                exchange.getResponseBody().write(response.getBytes());
-            }
-            exchange.close();
+        // قراءة الاستجابة من السيرفر
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        StringBuilder responseBody = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            responseBody.append(line);
         }
+        reader.close();
+
+        String response = responseBody.toString();
+
+        // التحقق من أن البيانات المدخلة في الاستجابة
+        assertTrue(response.contains("\"name\":\"John Doe\""));
+        assertTrue(response.contains("\"email\":\"john.doe2@example.com\""));
+        assertTrue(response.contains("\"id\"")); // التأكد من وجود الـ ID في الاستجابة
+
+        connection.disconnect();
+    }
+
+    // اختبار حالة البريد الإلكتروني الموجود مسبقاً
+    @Test
+    public void testEmailAlreadyExists() throws IOException {
+        // إرسال نفس البريد الإلكتروني مرة أخرى
+        URL url = new URL("http://localhost:8080/api/add_user");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setDoOutput(true);
+
+        String jsonInput = "{\"name\":\"John Doe\", \"email\":\"john.doe2@example.com\"}";
+
+        try (OutputStream os = connection.getOutputStream()) {
+            byte[] input = jsonInput.getBytes();
+            os.write(input);
+        }
+
+        int statusCode = connection.getResponseCode();
+        assertEquals(400, statusCode); // يجب أن يكون الاستجابة 400 إذا كان البريد الإلكتروني موجوداً بالفعل
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        StringBuilder responseBody = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            responseBody.append(line);
+        }
+        reader.close();
+
+        String response = responseBody.toString();
+
+        // التحقق من أن الرسالة التي تحتوي على "Email already exists" موجودة في الاستجابة
+        assertTrue(response.contains("Email already exists"));
+
+        connection.disconnect();
+    }
+
+    // تأكد من إيقاف السيرفر بعد الانتهاء من الاختبارات
+    @AfterAll
+    public static void stopServer() {
+        // إيقاف السيرفر بعد الانتهاء من الاختبارات
+        serverThread.interrupt();
     }
 }

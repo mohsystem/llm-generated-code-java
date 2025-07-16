@@ -14,7 +14,7 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         }
     }
 
-    private static BigInteger multiplicativeInverse(BigInteger e, BigInteger phi) {
+    public static BigInteger multiplicativeInverse(BigInteger e, BigInteger phi) {
         BigInteger x = BigInteger.ZERO;
         BigInteger y = BigInteger.ONE;
         BigInteger a = phi;
@@ -37,7 +37,7 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         return y;
     }
 
-    private static KeyPair generateKeyPair(int p, int q) {
+    public static KeyPair generateKeyPair(int p, int q) {
         BigInteger n = BigInteger.valueOf(p).multiply(BigInteger.valueOf(q));
         BigInteger phi = BigInteger.valueOf(p - 1).multiply(BigInteger.valueOf(q - 1));
 
@@ -80,21 +80,26 @@ public class Task106_PERPLEXITY_llama_3_sonar_large_32k_chat {
         }
     }
 
-    private static byte[] encrypt(PublicKey publicKey, byte[] plaintext) {
+    public static byte[] encrypt(PublicKey publicKey, byte[] plaintext) {
         byte[] cipher = new byte[plaintext.length];
         for (int i = 0; i < plaintext.length; i++) {
-            cipher[i] = (byte) (Math.pow(plaintext[i], publicKey.e.intValue()) % publicKey.n.intValue());
+            BigInteger m = BigInteger.valueOf(Byte.toUnsignedInt(plaintext[i]));
+            BigInteger c = m.modPow(publicKey.e, publicKey.n);
+            cipher[i] = c.byteValue(); // Back to byte range
         }
         return cipher;
     }
 
-    private static byte[] decrypt(PrivateKey privateKey, byte[] ciphertext) {
+    public static byte[] decrypt(PrivateKey privateKey, byte[] ciphertext) {
         byte[] plain = new byte[ciphertext.length];
         for (int i = 0; i < ciphertext.length; i++) {
-            plain[i] = (byte) (Math.pow(ciphertext[i], privateKey.d.intValue()) % privateKey.n.intValue());
+            BigInteger c = BigInteger.valueOf(Byte.toUnsignedInt(ciphertext[i]));
+            BigInteger m = c.modPow(privateKey.d, privateKey.n);
+            plain[i] = m.byteValue(); // Back to byte
         }
         return plain;
     }
+
 
     public static void main(String[] args) {
         int p = 61;
