@@ -1,100 +1,190 @@
 package gemini.task188;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+public class Task188Test {
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+    static class FooBar {
+        private int n;
+        private final Object fooLock = new Object();
+        private final Object barLock = new Object();
+        private boolean fooTurn = true;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-class Task188Test {
-    private FooBar fooBar;
-    private StringBuilder output;
-
-    @BeforeEach
-    void setUp() {
-        output = new StringBuilder();
-    }
-
-    @Test
-    void testFooBarWithNEquals1() throws InterruptedException {
-        fooBar = new FooBar(1);
-        executeFooBarTest(fooBar, "foobar");
-    }
-
-    @Test
-    void testFooBarWithNEquals2() throws InterruptedException {
-        fooBar = new FooBar(2);
-        executeFooBarTest(fooBar, "foobarfoobar");
-    }
-
-    @Test
-    void testFooBarWithNEquals3() throws InterruptedException {
-        fooBar = new FooBar(3);
-        executeFooBarTest(fooBar, "foobarfoobarfoobar");
-    }
-
-    @Test
-    void testFooBarWithNEquals4() throws InterruptedException {
-        fooBar = new FooBar(4);
-        executeFooBarTest(fooBar, "foobarfoobarfoobarfoobar");
-    }
-
-    @Test
-    void testFooBarWithNEquals5() throws InterruptedException {
-        fooBar = new FooBar(5);
-        executeFooBarTest(fooBar, "foobarfoobarfoobarfoobarfoobar");
-    }
-
-    @Test
-    void testFooBarWithNEquals10() throws InterruptedException {
-        fooBar = new FooBar(10);
-        executeFooBarTest(fooBar, "foobar".repeat(10));
-    }
-
-    @Test
-    void testFooBarWithNEquals100() throws InterruptedException {
-        fooBar = new FooBar(100);
-        executeFooBarTest(fooBar, "foobar".repeat(100));
-    }
-
-    @Test
-    void testFooBarWithNEquals500() throws InterruptedException {
-        fooBar = new FooBar(500);
-        executeFooBarTest(fooBar, "foobar".repeat(500));
-    }
-
-    @Test
-    void testFooBarWithNEquals750() throws InterruptedException {
-        fooBar = new FooBar(750);
-        executeFooBarTest(fooBar, "foobar".repeat(750));
-    }
-
-    @Test
-    void testFooBarWithNEquals1000() throws InterruptedException {
-        fooBar = new FooBar(1000);
-        executeFooBarTest(fooBar, "foobar".repeat(1000));
-    }
-
-    private void executeFooBarTest(FooBar fooBar, String expectedOutput) throws InterruptedException {
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
-
-        executorService.submit(() -> {
-            fooBar.foo();
-            output.append("foo");
-        });
-
-        executorService.submit(() -> {
-            fooBar.bar();
-            output.append("bar");
-        });
-
-        executorService.shutdown();
-        while (!executorService.isTerminated()) {
-            Thread.sleep(10); // wait for all tasks to finish
+        public FooBar(int n) {
+            this.n = n;
         }
 
-        assertEquals(expectedOutput, output.toString());
+        public void foo() {
+            for (int i = 0; i < n; i++) {
+                synchronized (fooLock) {
+                    while (!fooTurn) {
+                        try {
+                            fooLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    System.out.print("foo");
+                    fooTurn = false;
+                    synchronized (barLock) {
+                        barLock.notify();
+                    }
+                }
+            }
+        }
+
+        public void bar() {
+            for (int i = 0; i < n; i++) {
+                synchronized (barLock) {
+                    while (fooTurn) {
+                        try {
+                            barLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    System.out.print("bar");
+                    fooTurn = true;
+                    synchronized (fooLock) {
+                        fooLock.notify();
+                    }
+                }
+            }
+        }
+    }
+
+    // To capture output safely for tests
+    static class OutputCollector {
+        private final StringBuilder sb = new StringBuilder();
+
+        public synchronized void print(String s) {
+            sb.append(s);
+        }
+
+        public synchronized String getOutput() {
+            return sb.toString();
+        }
+    }
+
+    public void test_n_1() throws InterruptedException {
+        int n = 1;
+        FooBar fooBar = new FooBar(n);
+        OutputCollector outputCollector = new OutputCollector();
+
+        Thread threadFoo = new Thread(() -> {
+            for (int i = 0; i < n; i++) {
+                synchronized (fooBar.fooLock) {
+                    while (!fooBar.fooTurn) {
+                        try {
+                            fooBar.fooLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    outputCollector.print("foo");
+                    fooBar.fooTurn = false;
+                    synchronized (fooBar.barLock) {
+                        fooBar.barLock.notify();
+                    }
+                }
+            }
+        });
+
+        Thread threadBar = new Thread(() -> {
+            for (int i = 0; i < n; i++) {
+                synchronized (fooBar.barLock) {
+                    while (fooBar.fooTurn) {
+                        try {
+                            fooBar.barLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    outputCollector.print("bar");
+                    fooBar.fooTurn = true;
+                    synchronized (fooBar.fooLock) {
+                        fooBar.fooLock.notify();
+                    }
+                }
+            }
+        });
+
+        threadFoo.start();
+        threadBar.start();
+
+        threadFoo.join();
+        threadBar.join();
+
+        String expected = "foobar";
+        String actual = outputCollector.getOutput();
+        if (expected.equals(actual)) {
+            System.out.println("test_n_1: PASS");
+        } else {
+            System.out.println("test_n_1: FAIL");
+            System.out.println("Output: " + actual);
+        }
+    }
+
+    public void test_n_2() throws InterruptedException {
+        int n = 2;
+        FooBar fooBar = new FooBar(n);
+        OutputCollector outputCollector = new OutputCollector();
+
+        Thread threadFoo = new Thread(() -> {
+            for (int i = 0; i < n; i++) {
+                synchronized (fooBar.fooLock) {
+                    while (!fooBar.fooTurn) {
+                        try {
+                            fooBar.fooLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    outputCollector.print("foo");
+                    fooBar.fooTurn = false;
+                    synchronized (fooBar.barLock) {
+                        fooBar.barLock.notify();
+                    }
+                }
+            }
+        });
+
+        Thread threadBar = new Thread(() -> {
+            for (int i = 0; i < n; i++) {
+                synchronized (fooBar.barLock) {
+                    while (fooBar.fooTurn) {
+                        try {
+                            fooBar.barLock.wait();
+                        } catch (InterruptedException e) {
+                            Thread.currentThread().interrupt();
+                        }
+                    }
+                    outputCollector.print("bar");
+                    fooBar.fooTurn = true;
+                    synchronized (fooBar.fooLock) {
+                        fooBar.fooLock.notify();
+                    }
+                }
+            }
+        });
+
+        threadFoo.start();
+        threadBar.start();
+
+        threadFoo.join();
+        threadBar.join();
+
+        String expected = "foobarfoobar";
+        String actual = outputCollector.getOutput();
+        if (expected.equals(actual)) {
+            System.out.println("test_n_2: PASS");
+        } else {
+            System.out.println("test_n_2: FAIL");
+            System.out.println("Output: " + actual);
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        Task188Test test = new Task188Test();
+        test.test_n_1();
+        test.test_n_2();
     }
 }

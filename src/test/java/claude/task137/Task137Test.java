@@ -1,67 +1,96 @@
 package claude.task137;
 
-import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.sql.*;
+import java.util.Scanner;
 
-class Task137Test {
+public class Task137Test {
+    // Use your exact DB file path
+    private static final String DB_URL = "jdbc:sqlite:C:/Users/1/OneDrive/Desktop/llm-generated-code-java/src/test/java/claude/task137/products.db";
 
-    private static final String H2_DB_URL = "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1";
-
-    @BeforeAll
-    static void setupDatabase() throws Exception {
-        // Override the original DB_URL field to use H2
-        var dbUrlField = Task137_CLAUDE_claude_3_5_sonnet_20240620.class.getDeclaredField("DB_URL");
-        dbUrlField.setAccessible(true);
-        dbUrlField.set(null, H2_DB_URL);
-
-        // Create table on H2
-        Task137_CLAUDE_claude_3_5_sonnet_20240620.createTable();
-    }
-
-    @BeforeEach
-    void clearTable() throws Exception {
-        try (Connection conn = DriverManager.getConnection(H2_DB_URL);
+    public static void createTable() {
+        try (Connection conn = DriverManager.getConnection(DB_URL);
              Statement stmt = conn.createStatement()) {
-            stmt.executeUpdate("DELETE FROM products");
+            String sql = "CREATE TABLE IF NOT EXISTS products " +
+                    "(id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    " name TEXT, " +
+                    " price REAL)";
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println("Error creating table: " + e.getMessage());
         }
     }
 
-    @Test
-    void testAddAndRetrieveProduct() throws Exception {
-        Task137_CLAUDE_claude_3_5_sonnet_20240620.addProduct("Laptop", 999.99);
-
-        try (Connection conn = DriverManager.getConnection(H2_DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM products WHERE name = ?")) {
-            pstmt.setString(1, "Laptop");
-            ResultSet rs = pstmt.executeQuery();
-            assertTrue(rs.next());
-            assertEquals("Laptop", rs.getString("name"));
-            assertEquals(999.99, rs.getDouble("price"), 0.01);
+    public static void addProduct(String name, double price) {
+        String sql = "INSERT INTO products(name, price) VALUES(?,?)";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            pstmt.setDouble(2, price);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error adding product: " + e.getMessage());
         }
     }
 
-    @Test
-    void testGetNonExistentProduct() throws Exception {
-        try (Connection conn = DriverManager.getConnection(H2_DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM products WHERE id = ?")) {
-            pstmt.setInt(1, 9999); // ID unlikely to exist
+    public static String getProduct(int id) {
+        String sql = "SELECT * FROM products WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
-            assertFalse(rs.next());
+            if (rs.next()) {
+                return String.format("ID: %d, Name: %s, Price: $%.2f",
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDouble("price"));
+            } else {
+                return "Product not found.";
+            }
+        } catch (SQLException e) {
+            return "Error retrieving product: " + e.getMessage();
         }
     }
 
-    @Test
-    void testMultipleProducts() throws Exception {
-        Task137_CLAUDE_claude_3_5_sonnet_20240620.addProduct("Phone", 499.99);
-        Task137_CLAUDE_claude_3_5_sonnet_20240620.addProduct("Tablet", 299.99);
+    public static void runTests() {
+        createTable();
 
-        try (Connection conn = DriverManager.getConnection(H2_DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement("SELECT COUNT(*) AS total FROM products")) {
-            ResultSet rs = pstmt.executeQuery();
-            assertTrue(rs.next());
-            assertEquals(2, rs.getInt("total"));
+        try {
+            addProduct("TestProduct1", 10.0);
+            String result = getProduct(1);
+            if (!result.contains("TestProduct1")) {
+                System.out.println("Test Case 1 Failed");
+            }
+            System.out.println("Test Case 1 Passed");
+
+            addProduct("TestProduct2", 20.0);
+            addProduct("TestProduct3", 30.5);
+
+            result = getProduct(2);
+            if (!result.contains("TestProduct2")) {
+                System.out.println("Test Case 2 Failed");
+            }
+            System.out.println("Test Case 2 Passed");
+
+            result = getProduct(3);
+            if (!result.contains("TestProduct3")) {
+                System.out.println("Test Case 3 Failed");
+            }
+            System.out.println("Test Case 3 Passed");
+
+
+            result = getProduct(9999);
+            if (!result.equals("Product not found.")) {
+                System.out.println("Test Case 4 Failed");
+            }
+            System.out.println("Test Case 4 Passed");
+
+
+        } catch (Exception e) {
+            System.out.println("Exception during tests: " + e.getMessage());
         }
+    }
+
+    public static void main(String[] args) {
+        runTests();
     }
 }

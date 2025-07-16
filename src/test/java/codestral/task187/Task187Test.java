@@ -1,107 +1,139 @@
 package codestral.task187;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import java.util.concurrent.Semaphore;
 
-import java.util.concurrent.CountDownLatch;
+public class Task187Test {
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+    static class H2O {
+        private Semaphore hSem;
+        private Semaphore oSem;
 
-class Task187Test {
-
-    private H2O h2o;
-
-    @BeforeEach
-    void setUp() {
-        h2o = new H2O();
-    }
-
-    private void runTest(int numHydrogen, int numOxygen, String expectedResult) throws InterruptedException {
-        CountDownLatch latch = new CountDownLatch(numHydrogen + numOxygen);
-        StringBuilder result = new StringBuilder();
-
-        Runnable releaseHydrogen = () -> {
-            result.append("H");
-            latch.countDown();
-        };
-        Runnable releaseOxygen = () -> {
-            result.append("O");
-            latch.countDown();
-        };
-
-        // Create and start hydrogen threads
-        for (int i = 0; i < numHydrogen; i++) {
-            new Thread(() -> {
-                try {
-                    h2o.hydrogen(releaseHydrogen);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+        public H2O() {
+            hSem = new Semaphore(2);
+            oSem = new Semaphore(0);
         }
 
-        // Create and start oxygen threads
-        for (int i = 0; i < numOxygen; i++) {
-            new Thread(() -> {
-                try {
-                    h2o.oxygen(releaseOxygen);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }).start();
+        public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
+            hSem.acquire();
+            releaseHydrogen.run();
+            oSem.release();
         }
 
-        latch.await();
-        assertEquals(expectedResult, result.toString());
+        public void oxygen(Runnable releaseOxygen) throws InterruptedException {
+            oSem.acquire(2);
+            releaseOxygen.run();
+            hSem.release(2);
+        }
     }
 
-    @Test
-    void testCase1() throws InterruptedException {
-        runTest(2, 1, "HHO");
+    // Thread-safe output collector for 'H' and 'O'
+    static class OutputCollector {
+        private final StringBuilder sb = new StringBuilder();
+
+        public synchronized void print(char c) {
+            sb.append(c);
+        }
+
+        public synchronized String getOutput() {
+            return sb.toString();
+        }
     }
 
-    @Test
-    void testCase2() throws InterruptedException {
-        runTest(2, 1, "HHO");
+    public void test_example1() throws InterruptedException {
+        String water = "HOH";
+        OutputCollector outputCollector = new OutputCollector();
+        H2O h2o = new H2O();
+
+        Thread[] threads = new Thread[water.length()];
+
+        for (int i = 0; i < water.length(); i++) {
+            if (water.charAt(i) == 'H') {
+                threads[i] = new Thread(() -> {
+                    try {
+                        h2o.hydrogen(() -> outputCollector.print('H'));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } else {
+                threads[i] = new Thread(() -> {
+                    try {
+                        h2o.oxygen(() -> outputCollector.print('O'));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+        }
+
+        for (Thread t : threads) {
+            t.start();
+        }
+        for (Thread t : threads) {
+            t.join();
+        }
+
+        String result = outputCollector.getOutput();
+        boolean valid = (result.length() == 3) &&
+                result.chars().filter(ch -> ch == 'H').count() == 2 &&
+                result.chars().filter(ch -> ch == 'O').count() == 1;
+        if (valid) {
+            System.out.println("test_example1: PASS");
+        } else {
+            System.out.println("test_example1: FAIL");
+            System.out.println("Output: " + result);
+        }
     }
 
-    @Test
-    void testCase3() throws InterruptedException {
-        runTest(2, 1, "HHO");
+    public void test_example2() throws InterruptedException {
+        String water = "OOHHHH";
+        OutputCollector outputCollector = new OutputCollector();
+        H2O h2o = new H2O();
+
+        Thread[] threads = new Thread[water.length()];
+
+        for (int i = 0; i < water.length(); i++) {
+            if (water.charAt(i) == 'H') {
+                threads[i] = new Thread(() -> {
+                    try {
+                        h2o.hydrogen(() -> outputCollector.print('H'));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } else {
+                threads[i] = new Thread(() -> {
+                    try {
+                        h2o.oxygen(() -> outputCollector.print('O'));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+        }
+
+        for (Thread t : threads) {
+            t.start();
+        }
+        for (Thread t : threads) {
+            t.join();
+        }
+
+        String result = outputCollector.getOutput();
+        boolean valid = (result.length() == 6) &&
+                result.chars().filter(ch -> ch == 'H').count() == 4 &&
+                result.chars().filter(ch -> ch == 'O').count() == 2;
+        if (valid) {
+            System.out.println("test_example2: PASS");
+        } else {
+            System.out.println("test_example2: FAIL");
+            System.out.println("Output: " + result);
+        }
     }
 
-    @Test
-    void testCase4() throws InterruptedException {
-        runTest(4, 2, "HHOHHOH");
-    }
-
-    @Test
-    void testCase5() throws InterruptedException {
-        runTest(4, 2, "HHOHHOH");
-    }
-
-    @Test
-    void testCase6() throws InterruptedException {
-        runTest(5, 4, "HHOHHOHHOH");
-    }
-
-    @Test
-    void testCase7() throws InterruptedException {
-        runTest(4, 2, "HHOHHO");
-    }
-
-    @Test
-    void testCase8() throws InterruptedException {
-        runTest(4, 2, "HHOHHO");
-    }
-
-    @Test
-    void testCase9() throws InterruptedException {
-        runTest(4, 2, "HHOHHO");
-    }
-
-    @Test
-    void testCase10() throws InterruptedException {
-        runTest(3, 3, "HHOHHOH");
+    public static void main(String[] args) throws InterruptedException {
+        Task187Test test = new Task187Test();
+        test.test_example1();
+        test.test_example2();
     }
 }

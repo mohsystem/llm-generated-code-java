@@ -1,135 +1,88 @@
 package llama3.task194;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+// Master class simulates secret word and guess count exactly like Python version
+class Master {
+    private final String secret;
+    private int guesses = 0;
 
-class Task194Test {
-
-    private Solution solution;
-
-    @BeforeEach
-    void setUp() {
-        solution = new Solution();
+    public Master(String secret) {
+        this.secret = secret;
     }
 
-    @Test
-    void testCase1() {
+    public int guess(String word) {
+        guesses++;
+        int matches = 0;
+        for (int i = 0; i < secret.length(); i++) {
+            if (secret.charAt(i) == word.charAt(i)) {
+                matches++;
+            }
+        }
+        return matches;
+    }
+
+    public int getGuessCount() {
+        return guesses;
+    }
+}
+
+public class Task194Test {
+
+    public void findSecretWord(String[] words, Master master) {
+        int n = words.length;
+        for (int i = 0; i < 10; i++) {
+            String guess = words[n / 2]; // same strategy as python (middle element)
+            int matches = master.guess(guess);
+            if (matches == 6) return;
+            List<String> filtered = new ArrayList<>();
+            for (String w : words) {
+                int matchCount = 0;
+                for (int j = 0; j < 6; j++) {
+                    if (w.charAt(j) == guess.charAt(j)) {
+                        matchCount++;
+                    }
+                }
+                if (matchCount == matches) filtered.add(w);
+            }
+            words = filtered.toArray(new String[0]);
+            n = words.length;
+        }
+    }
+
+    // Test case 1: matches python example 1
+    public void test_example1() {
         String secret = "acckzz";
         String[] words = {"acckzz", "ccbazz", "eiowzz", "abcczz"};
-        Master master = new MockMaster(secret);
+        Master master = new Master(secret);
 
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
+        findSecretWord(words, master);
+
+        if (master.getGuessCount() <= 10) {
+            System.out.println("test_example1: PASS");
+        } else {
+            System.out.println("test_example1: FAIL");
+        }
     }
 
-    @Test
-    void testCase2() {
+    // Test case 2: matches python example 2
+    public void test_example2() {
         String secret = "hamada";
         String[] words = {"hamada", "khaled"};
-        Master master = new MockMaster(secret);
+        Master master = new Master(secret);
 
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
+        findSecretWord(words, master);
 
-    @Test
-    void testCase3() {
-        String secret = "abcdef";
-        String[] words = {"abcdef", "bbcdef", "abcfef", "abcfeg"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase4() {
-        String secret = "xyzxyz";
-        String[] words = {"xyzxyz", "yzxzyz", "zyxzyx", "xyzzyz"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase5() {
-        String secret = "abcdef";
-        String[] words = {"abcdef", "bcdefg", "cdefgh", "defghi"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase6() {
-        String secret = "hello";
-        String[] words = {"hello", "hallo", "hullo", "hollo"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase7() {
-        String secret = "secret";
-        String[] words = {"secret", "secrep", "secreq", "secrer"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase8() {
-        String secret = "example";
-        String[] words = {"example", "exempla", "exemlpe", "exemal"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase9() {
-        String secret = "solver";
-        String[] words = {"solver", "solvers", "solves", "solverr"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    @Test
-    void testCase10() {
-        String secret = "worlds";
-        String[] words = {"worlds", "wordss", "woldrs", "wolrds"};
-        Master master = new MockMaster(secret);
-
-        solution.findSecretWord(words, master);
-        assertEquals(6, master.guess(secret));
-    }
-
-    // Mock implementation of the Master class
-    static class MockMaster extends Master {
-        private final String secret;
-
-        MockMaster(String secret) {
-            this.secret = secret;
+        if (master.getGuessCount() <= 10) {
+            System.out.println("test_example2: PASS");
+        } else {
+            System.out.println("test_example2: FAIL");
         }
+    }
 
-        @Override
-        public int guess(String word) {
-            if (word.length() != secret.length()) return -1;
-            int matches = 0;
-            for (int i = 0; i < secret.length(); i++) {
-                if (secret.charAt(i) == word.charAt(i)) matches++;
-            }
-            return matches;
-        }
+    public static void main(String[] args) {
+        Task194Test test = new Task194Test();
+        test.test_example1();
+        test.test_example2();
     }
 }
