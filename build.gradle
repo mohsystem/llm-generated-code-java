@@ -1,10 +1,15 @@
 plugins {
     id 'java'
+    id 'application'
+
     id "org.sonarqube" version "4.4.1.3373"
     id 'org.springframework.boot' version '3.3.2'
     id 'io.spring.dependency-management' version '1.1.6'
 }
 
+application {
+    mainClassName = 'llama3.task49.Task49_PERPLEXITY_llama_3_sonar_large_32k_chat'  // قم بتعديل هذا إذا كانت فئة التطبيق الخاصة بك تختلف
+}
 group = 'edu.bzu.llm'
 version = '1.0-SNAPSHOT'
 
@@ -15,6 +20,8 @@ sonar {
 //        property "sonar.host.url", "https://sonarcloud.io"
     }
 }
+
+
 repositories {
     mavenCentral()
 }
@@ -33,10 +40,10 @@ dependencies {
      implementation 'org.postgresql:postgresql:42.7.3'
     implementation 'io.javalin:javalin:5.6.2'
     implementation 'org.eclipse.jetty:jetty-servlet:11.0.17'
-     implementation 'org.eclipse.jetty:jetty-io:11.0.17'
+    implementation 'org.eclipse.jetty:jetty-io:11.0.17'
     implementation 'org.eclipse.jetty:jetty-util:11.0.17'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
-     implementation 'org.eclipse.jetty:jetty-servlet:11.0.15'
+
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 // https://mvnrepository.com/artifact/javax.validation/validation-api

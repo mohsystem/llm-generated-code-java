@@ -24,7 +24,7 @@ public class Task91_MISTRAL_codestral_latest {
         }
     }
 
-    private static Message resolveDNS(Message request) {
+    public static Message resolveDNS(Message request) {
         Header header = request.getHeader();
         header.setFlag(Flags.QR);
         header.setFlag(Flags.AA);

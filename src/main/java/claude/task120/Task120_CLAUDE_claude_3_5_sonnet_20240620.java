@@ -6,10 +6,10 @@ import javax.servlet.http.*;
 
 public class Task120_CLAUDE_claude_3_5_sonnet_20240620 extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        
+
         out.println("<html><body>");
         out.println("<form method='post'>");
         out.println("<input type='text' name='user_input'>");
@@ -19,12 +19,12 @@ public class Task120_CLAUDE_claude_3_5_sonnet_20240620 extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         String userInput = request.getParameter("user_input");
-        
+
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        
+
         out.println("<html><body>");
         out.println("<form method='post'>");
         out.println("<input type='text' name='user_input'>");
